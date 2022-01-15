@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 18px;
+  color: var(--color-secondary);
+  background-color: var(--color-primary);
+}
+
+a {
+  color: #0170b9;
+  text-decoration: none;
+  transition: all 0.2s linear;
+}

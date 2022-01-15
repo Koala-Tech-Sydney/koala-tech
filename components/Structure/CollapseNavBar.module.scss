@@ -1,0 +1,21 @@
+#collapseNavBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: red;
+  width: 40vw;
+  height: 100vh;
+  z-index: 10;
+  color: var(--color-primary);
+  background-color: var(--color-secondary);
+
+  ul {
+    list-style-type: none;
+  }
+}
+
+.headerSection {
+    display: flex;
+    color: var(--color-secondary);
+    background-color: var(--color-primary);
+}

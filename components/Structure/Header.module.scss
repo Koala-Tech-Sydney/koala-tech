@@ -1,0 +1,49 @@
+#header {
+  display: flex;
+  justify-content: space-around;
+  color: #ffffff;
+  background-color: var(--color-tertiary);
+  font-size: 1.2rem;
+  // prevent text from sliding to the second line
+  white-space: nowrap;
+
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.headerNavList {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+.headerNavListItem {
+  text-align: center;
+  margin: 0.8rem 1.5rem;
+}
+
+.headerNavListItem:hover .dropDownContainer {
+  display: block;
+}
+
+.headerNavLink {
+  display: block;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.5rem;
+}
+
+.headerNavLink:hover {
+  color: var(--color-accent);
+}
+
+.themeToggleBtn {
+  position: relative;
+  top: 0.4rem;
+}
+
+.dropDownContainer {
+  display: none;
+}

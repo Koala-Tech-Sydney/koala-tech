@@ -1,0 +1,41 @@
+// the root element, i.e. <html>
+:root {
+  // by default it's dark theme
+  // be cautious! these 6 variables are changing in useTheme hook
+  --color-primary: #18191a; // mainly for text
+  --color-secondary: #ffffff; // mainly for background
+  --color-tertiary: #20232a;
+  --color-tint: #242526;
+  --color-shade: #1c1e21;
+  --color-tone: #4d4d4d;
+  --color-accent: #61dafb;
+
+  --color-success: #2dd36f;
+  --color-success-shade: #28ba62;
+  --color-success-tint: #42d77d;
+
+  --color-warning: #ffc409;
+  --color-warning-shade: #e0ac08;
+  --color-warning-tint: #ffca22;
+
+  --color-danger: #eb445a;
+  --color-danger-shade: #cf3c4f;
+  --color-danger-tint: #ed576b;
+
+  --color-medium: #92949c;
+  --color-medium-shade: #808289;
+  --color-medium-tint: #9d9fa6;
+
+  --color-light: #f4f5f8;
+  --color-light-shade: #d7d8da;
+  --color-light-tint: #f5f6f9;
+
+  --font-size-1: 0.5rem;
+  --font-size-2: 1rem;
+  --font-size-3: 1.5rem;
+  --font-size-4: 2rem;
+  --font-size-5: 2.5rem;
+  --font-size-6: 3rem;
+  --font-size-7: 3.5rem;
+  --font-size-8: 4rem;
+}

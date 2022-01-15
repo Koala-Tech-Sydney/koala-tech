@@ -1,0 +1,45 @@
+$toggle-btn-height: 1.625rem;
+$toggle-btn-width: 3.25rem;
+
+.container {
+  position: relative;
+  height: $toggle-btn-height;
+  width: $toggle-btn-width;
+  border-radius: calc(#{$toggle-btn-height} / 2);
+  background-color: var(--color-tone);
+
+  // stops users from being able to select text (i.e. highlight)
+  user-select: none;
+}
+
+.button {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  height: $toggle-btn-height;
+  width: calc(#{$toggle-btn-width} / 2);
+  border-radius: 50%;
+  display: inline-block;
+  background-color: var(--color-light);
+  position: relative;
+  right: 25%;
+}
+
+.buttonOnHover {
+  box-shadow: 0 0 5px 5px var(--color-accent);
+}
+
+.buttonChecked {
+  right: -25%;
+}
+
+#lightThemeIcon {
+  position: absolute;
+  top: 0.2rem;
+  left: 0.2rem;
+}
+
+#darkThemeIcon {
+  position: absolute;
+  top: 0.2rem;
+  right: 0.3rem;
+}

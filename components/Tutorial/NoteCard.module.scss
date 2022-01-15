@@ -1,0 +1,31 @@
+.container {
+  color: var(--color-primary);
+  margin: 1rem 0;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+.title {
+  font-weight: 900;
+  margin: 0.5rem 0;
+  letter-spacing: 1px;
+}
+
+.content {
+  margin: 0.5rem 0;
+  letter-spacing: 1px;
+  line-height: 1.5;
+}
+
+.information {
+  background-color: RGBA(var(--color-success-tint), 0.7);
+  background-color: var(--color-success-tint);
+}
+
+.warning {
+  background-color: rgba(var(--color-warning-tint), 0.7);
+}
+
+.danger {
+  background-color: rgba(var(--color-danger-tint), 0.7);
+}
