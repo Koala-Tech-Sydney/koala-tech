@@ -1,7 +1,6 @@
 import { Fragment } from "react";
-import ResponsiveImage from "../../../components/Image/ResponsiveImage";
 import TwoSidesMainSection from "../../../components/Structure/TwoSidesMainSection";
-
+import Image from "next/image";
 import styles from "./setup.module.scss";
 
 import {
@@ -43,9 +42,17 @@ const SetupMainSection = () => {
         left bar. You can use the search bar here to search for extensions that
         you need.
       </Paragraph>
-      <ResponsiveImage src="/images/tutorials/react/setup/extension-tab.png" />
+      <Image
+        src="/images/tutorials/react/setup/extension-tab.png"
+        height="450"
+        width="454"
+      />
       <Subtitle2>Prettier</Subtitle2>
-      <ResponsiveImage src="/images/tutorials/react/setup/prettier.png" />
+      <Image
+        src="/images/tutorials/react/setup/prettier.png"
+        height="244"
+        width="844"
+      />
       <Paragraph>
         After that, go to &apos;Settings&apos; and search for the keyword
         &apos;format&apos;. Then select Prettier as your default formatter and
@@ -54,13 +61,29 @@ const SetupMainSection = () => {
         Command + X (Mac), then VS Code will automatically format the code for
         you.
       </Paragraph>
-      <ResponsiveImage src="/images/tutorials/react/setup/prettier-setting.png" />
+      <Image
+        src="/images/tutorials/react/setup/prettier-setting.png"
+        height="916"
+        width="1864"
+      />
       <Subtitle2>Bracket Pair Colorizer</Subtitle2>
-      <ResponsiveImage src="/images/tutorials/react/setup/bracket-pair-colorizer.png" />
+      <Image
+        src="/images/tutorials/react/setup/bracket-pair-colorizer.png"
+        height="243"
+        width="786"
+      />
       <Subtitle2>Material Icon Theme</Subtitle2>
-      <ResponsiveImage src="/images/tutorials/react/setup/material-icon-theme.png" />
+      <Image
+        src="/images/tutorials/react/setup/material-icon-theme.png"
+        height="234"
+        width="757"
+      />
       <Subtitle2>React Snippets</Subtitle2>
-      <ResponsiveImage src="/images/tutorials/react/setup/react-snippets.png" />
+      <Image
+        src="/images/tutorials/react/setup/react-snippets.png"
+        height="244"
+        width="1084"
+      />
     </Fragment>
   );
 };
