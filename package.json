@@ -8,6 +8,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@next/eslint-plugin-next": "^12.0.8",
     "@reduxjs/toolkit": "^1.7.1",
     "next": "12.0.7",
     "react": "17.0.2",
