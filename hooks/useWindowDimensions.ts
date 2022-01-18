@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 
-function getWindowDimensions() {
+type windowDimensions = [number | null, number | null];
+
+function getWindowDimensions(): windowDimensions {
   // checking for Next.js's SSR because the window object doesn't exist on the server
   const hasWindow = typeof window !== "undefined";
   const width = hasWindow ? window.innerWidth : null;
@@ -9,7 +11,10 @@ function getWindowDimensions() {
 }
 
 const useWindowDimensions = () => {
-  const [windowDimensions, setWindowDimensions] = useState([null, null]);
+  const [windowDimensions, setWindowDimensions] = useState<windowDimensions>([
+    null,
+    null,
+  ]);
 
   useEffect(() => {
     setWindowDimensions(getWindowDimensions());

@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { Fragment } from "react";
 
 import styles from "./ChapterList.module.scss";
 

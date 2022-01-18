@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 
+import HamburgerMenu from "../../public/images/buttons/hamburger-menu.svg";
+
 import styles from "./Header.module.scss";
 
 import ThemeToggleButton from "../Button/ThemeToggleButton";
@@ -9,7 +11,7 @@ import useWindowDimensions from "../../hooks/useWindowDimensions";
 
 const Header = () => {
   const [width, _] = useWindowDimensions();
-  const shouldShowHamburgerMenu = width < 1000;
+  const shouldShowHamburgerMenu = !!width ? width < 1000 : false;
 
   const tutorialDropDownItems = [
     { name: "React", path: "/tutorials/react" },
@@ -67,12 +69,7 @@ const Header = () => {
       )}
       {shouldShowHamburgerMenu && (
         <span>
-          <Image
-            src="/images/buttons/hamburger-menu.svg"
-            width="22px"
-            height="22px"
-            alt="A"
-          />
+          <HamburgerMenu style={{ color: "white" }} />
         </span>
       )}
     </header>
