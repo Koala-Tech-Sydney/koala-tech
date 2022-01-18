@@ -2,15 +2,23 @@ import Link from "next/link";
 
 import styles from "./DropDownNavItems.module.scss";
 
-const DropDownNavItems = (props) => {
-  console.log(props.items);
+type Props = {
+  items: {
+    name: string;
+    path: string;
+  }[];
+  className: string;
+};
 
-  const containerStyles = `${styles.dropdownContent} ${props.className}`;
-  console.log(containerStyles);
+const DropDownNavItems: React.FC<Props> = ({ items, className }) => {
+  // console.log(items);
+
+  const containerStyles = `${styles.dropdownContent} ${className}`;
+  // console.log(containerStyles);
 
   return (
     <div className={containerStyles}>
-      {props.items.map((item) => {
+      {items.map((item) => {
         return (
           <Link key={item.name} href={item.path}>
             <a>{item.name}</a>
