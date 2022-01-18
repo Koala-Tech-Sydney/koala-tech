@@ -1,6 +1,5 @@
 #header {
   display: flex;
-  justify-content: space-around;
   color: #ffffff;
   background-color: var(--color-tertiary);
   font-size: 1.2rem;
@@ -11,6 +10,14 @@
   position: sticky;
   top: 0;
   z-index: 1;
+}
+
+.headerExpandMode {
+  justify-content: space-around;
+}
+
+.headerCollapseMode {
+  justify-content: space-between;
 }
 
 .headerNavList {
@@ -46,4 +53,9 @@
 
 .dropDownContainer {
   display: none;
+}
+
+.hamburgerMenuBtn {
+  display: flex;
+  align-items: center;
 }
