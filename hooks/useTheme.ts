@@ -32,7 +32,7 @@ const darkTheme: Theme = {
 };
 
 const useTheme = (theme: Theme) => {
-  // console.log("useTheme");
+  console.log("useTheme");
   // console.log(theme);
   useEffect(
     () => {

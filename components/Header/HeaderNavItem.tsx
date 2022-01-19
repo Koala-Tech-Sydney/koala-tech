@@ -5,7 +5,7 @@ type Props = {
 };
 
 const HeaderNavItem: React.FC<Props> = ({ className, children }) => {
-  return <li className={`${className} ${styles.headerNavItem}`}>{children}</li>;
+  return <li className={`${styles.headerNavItem} ${className}`}>{children}</li>;
 };
 
 export default HeaderNavItem;

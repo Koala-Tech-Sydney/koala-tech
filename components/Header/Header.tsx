@@ -2,6 +2,7 @@ import { useState, Fragment } from "react";
 
 import HamburgerMenu from "../../public/images/buttons/hamburger-menu.svg";
 import CollapseNavBar from "../Structure/CollapseNavBar";
+import HeaderNavList from "./HeaderNavList";
 import HeaderNavItem from "./HeaderNavItem";
 import HeaderNavLink from "./HeaderNavLink";
 
@@ -13,7 +14,7 @@ import useWindowDimensions from "../../hooks/useWindowDimensions";
 
 const Header = () => {
   const [width, _] = useWindowDimensions();
-  const isCollapseMode = !!width ? width < 1000 : false;
+  const isCollapseMode = !!width ? width < 800 : false;
   const [isCollapseNavBarExpanded, setIsCollapseNavBarExpanded] =
     useState(false);
 
@@ -40,13 +41,25 @@ const Header = () => {
       {isCollapseNavBarExpanded && (
         <CollapseNavBar toggleCollapseNavBar={toggleCollapseNavBar} />
       )}
-      <ul className={styles.headerNavList}>
+
+      <HeaderNavList>
+        {isCollapseMode && (
+          <HeaderNavItem className={`${styles.hamburgerMenuBtnContainer}`}>
+            <HamburgerMenu
+              onClick={toggleCollapseNavBar}
+              className={styles.hamburgerMenuBtn}
+              fill="#fff"
+              height="1.2rem"
+              width="1.2rem"
+            />
+          </HeaderNavItem>
+        )}
         <HeaderNavItem>
           <HeaderNavLink title="Koala Tech" href="/" />
         </HeaderNavItem>
-      </ul>
+      </HeaderNavList>
 
-      <ul className={styles.headerNavList}>
+      <HeaderNavList>
         {!isCollapseMode && (
           <Fragment>
             <HeaderNavItem>
@@ -76,18 +89,7 @@ const Header = () => {
             </HeaderNavItem>
           </Fragment>
         )}
-        {isCollapseMode && (
-          <HeaderNavItem className={`${styles.hamburgerMenuBtnContainer}`}>
-            <HamburgerMenu
-              onClick={toggleCollapseNavBar}
-              className={styles.hamburgerMenuBtn}
-              fill="#fff"
-              height="1.2rem"
-              width="1.2rem"
-            />
-          </HeaderNavItem>
-        )}
-      </ul>
+      </HeaderNavList>
     </header>
   );
 };

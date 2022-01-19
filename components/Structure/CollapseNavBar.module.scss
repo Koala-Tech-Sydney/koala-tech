@@ -1,13 +1,13 @@
-#collapseNavBar {
+.collapseNavBar {
   position: fixed;
   top: 0;
-  right: 0;
+  left: 0;
   background-color: red;
-  width: 40vw;
+  width: 400px;
   height: 100vh;
   z-index: 10;
-  color: var(--color-primary);
-  background-color: var(--color-secondary);
+  color: var(--color-secondary);
+  background-color: var(--color-primary);
 
   ul {
     list-style-type: none;
@@ -16,14 +16,29 @@
 
 .headerSection {
   display: flex;
+  justify-content: space-between;
   color: var(--color-secondary);
-  background-color: var(--color-primary);
+  background-color: var(--color-tertiary);
+
+  li {
+    margin: 0.8rem 0.4rem;
+  }
 }
 
-.headerNavListItem {
-  text-align: center;
-  margin: 0.8rem 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.verticalNavList {
+  li {
+    justify-content: left;
+    margin-left: 0.4rem;
+  }
+}
+
+.closeButton {
+  cursor: pointer;
+  margin-right: 1rem;
+}
+
+@media (max-width: 400px) {
+  .collapseNavBar {
+    width: 100%;
+  }
 }

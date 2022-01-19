@@ -1,10 +1,13 @@
 import { Fragment } from "react";
-import Image from "next/image";
 import ThemeToggleButton from "../Button/ThemeToggleButton";
 import Backdrop from "./BackDrop";
 import HeaderNavItem from "../Header/HeaderNavItem";
+import HeaderNavList from "../Header/HeaderNavList";
+
+import CloseButton from "../../public/images/buttons/close-btn.svg";
 
 import styles from "./CollapseNavBar.module.scss";
+import HeaderNavLink from "../Header/HeaderNavLink";
 
 type Props = {
   toggleCollapseNavBar: () => void;
@@ -14,31 +17,43 @@ const CollapseNavBar: React.FC<Props> = ({ toggleCollapseNavBar }) => {
   return (
     <Fragment>
       <Backdrop onClick={toggleCollapseNavBar} />
-      <nav id={styles.collapseNavBar}>
-        <ul className={styles.headerSection}>
-          <HeaderNavItem></HeaderNavItem>
-          <HeaderNavItem className={styles.headerNavListItem}>
-            Koala Tech
-          </HeaderNavItem>
-          <HeaderNavItem className={styles.headerNavListItem}>
-            <ThemeToggleButton />
+      <section className={styles.collapseNavBar}>
+        <section className={styles.headerSection}>
+          <HeaderNavList>
+            <HeaderNavItem>
+              <HeaderNavLink title="Koala Tech" href="" />
+            </HeaderNavItem>
+            <HeaderNavItem>
+              <ThemeToggleButton />
+            </HeaderNavItem>
+          </HeaderNavList>
+          <HeaderNavList>
+            <HeaderNavItem>
+              <CloseButton
+                onClick={toggleCollapseNavBar}
+                className={styles.closeButton}
+                fill="#fff"
+                height="1.5rem"
+                width="1.5rem"
+              />
+            </HeaderNavItem>
+          </HeaderNavList>
+        </section>
+        <ul className={styles.verticalNavList}>
+          <HeaderNavItem>
+            <HeaderNavLink title="Home" href="/"></HeaderNavLink>
           </HeaderNavItem>
           <HeaderNavItem>
-            <Image
-              src="/images/buttons/cancel-btn.svg"
-              width="18px"
-              height="18px"
-              alt="Kiwi standing on oval"
-            />
+            <HeaderNavLink title="Tutorial" href="#"></HeaderNavLink>
+          </HeaderNavItem>
+          <HeaderNavItem>
+            <HeaderNavLink title="Support" href="#"></HeaderNavLink>
+          </HeaderNavItem>
+          <HeaderNavItem>
+            <HeaderNavLink title="About Us" href="#"></HeaderNavLink>
           </HeaderNavItem>
         </ul>
-        <ul>
-          <HeaderNavItem>Home</HeaderNavItem>
-          <HeaderNavItem>Tutorial</HeaderNavItem>
-          <HeaderNavItem>Support</HeaderNavItem>
-          <HeaderNavItem>About Us</HeaderNavItem>
-        </ul>
-      </nav>
+      </section>
     </Fragment>
   );
 };
