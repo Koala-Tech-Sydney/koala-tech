@@ -1,7 +1,7 @@
 #collapseNavBar {
   position: fixed;
   top: 0;
-  left: 0;
+  right: 0;
   background-color: red;
   width: 40vw;
   height: 100vh;
@@ -15,7 +15,15 @@
 }
 
 .headerSection {
-    display: flex;
-    color: var(--color-secondary);
-    background-color: var(--color-primary);
+  display: flex;
+  color: var(--color-secondary);
+  background-color: var(--color-primary);
+}
+
+.headerNavListItem {
+  text-align: center;
+  margin: 0.8rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

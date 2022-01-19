@@ -26,36 +26,11 @@
   list-style-type: none;
 }
 
-.headerNavListItem {
-  text-align: center;
-  margin: 0.8rem 1.5rem;
-}
-
-.headerNavListItem:hover .dropDownContainer {
-  display: block;
-}
-
-.headerNavLink {
-  display: block;
-  color: #ffffff;
-  text-decoration: none;
-  padding: 0.5rem;
-}
-
-.headerNavLink:hover {
-  color: var(--color-accent);
-}
-
-.themeToggleBtn {
-  position: relative;
-  top: 0.4rem;
-}
-
-.dropDownContainer {
-  display: none;
+.hamburgerMenuBtnContainer {
+  display: flex;
+  align-items: center;
 }
 
 .hamburgerMenuBtn {
-  display: flex;
-  align-items: center;
+  cursor: pointer;
 }

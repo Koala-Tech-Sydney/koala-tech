@@ -2,34 +2,41 @@ import { Fragment } from "react";
 import Image from "next/image";
 import ThemeToggleButton from "../Button/ThemeToggleButton";
 import Backdrop from "./BackDrop";
+import HeaderNavItem from "../Header/HeaderNavItem";
 
 import styles from "./CollapseNavBar.module.scss";
 
-const CollapseNavBar = () => {
+type Props = {
+  toggleCollapseNavBar: () => void;
+};
+
+const CollapseNavBar: React.FC<Props> = ({ toggleCollapseNavBar }) => {
   return (
     <Fragment>
-      <Backdrop />
+      <Backdrop onClick={toggleCollapseNavBar} />
       <nav id={styles.collapseNavBar}>
         <ul className={styles.headerSection}>
-          <li></li>
-          <li>Koala Tech</li>
-          <li>
+          <HeaderNavItem></HeaderNavItem>
+          <HeaderNavItem className={styles.headerNavListItem}>
+            Koala Tech
+          </HeaderNavItem>
+          <HeaderNavItem className={styles.headerNavListItem}>
             <ThemeToggleButton />
-          </li>
-          <li>
+          </HeaderNavItem>
+          <HeaderNavItem>
             <Image
               src="/images/buttons/cancel-btn.svg"
               width="18px"
               height="18px"
               alt="Kiwi standing on oval"
             />
-          </li>
+          </HeaderNavItem>
         </ul>
         <ul>
-          <li>Home</li>
-          <li>Tutorial</li>
-          <li>Support</li>
-          <li>About Us</li>
+          <HeaderNavItem>Home</HeaderNavItem>
+          <HeaderNavItem>Tutorial</HeaderNavItem>
+          <HeaderNavItem>Support</HeaderNavItem>
+          <HeaderNavItem>About Us</HeaderNavItem>
         </ul>
       </nav>
     </Fragment>

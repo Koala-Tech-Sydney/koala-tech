@@ -1,0 +1,95 @@
+import { useState, Fragment } from "react";
+
+import HamburgerMenu from "../../public/images/buttons/hamburger-menu.svg";
+import CollapseNavBar from "../Structure/CollapseNavBar";
+import HeaderNavItem from "./HeaderNavItem";
+import HeaderNavLink from "./HeaderNavLink";
+
+import styles from "./Header.module.scss";
+
+import ThemeToggleButton from "../Button/ThemeToggleButton";
+import DropDownNavItems from "../Structure/DropDownNavItems";
+import useWindowDimensions from "../../hooks/useWindowDimensions";
+
+const Header = () => {
+  const [width, _] = useWindowDimensions();
+  const isCollapseMode = !!width ? width < 1000 : false;
+  const [isCollapseNavBarExpanded, setIsCollapseNavBarExpanded] =
+    useState(false);
+
+  let headerClass = isCollapseMode
+    ? styles.headerCollapseMode
+    : styles.headerExpandMode;
+
+  const tutorialDropDownItems = [
+    { name: "React", path: "/tutorials/react" },
+    {
+      name: "Data Structure and Algorithm",
+      path: "/tutorials/data-structure-and-algorithm",
+    },
+    { name: "Blockchain", path: "/tutorials/blockchain" },
+  ];
+
+  let toggleCollapseNavBar = () => {
+    console.log("Expanded side menu");
+    setIsCollapseNavBarExpanded((prevState) => !prevState);
+  };
+
+  return (
+    <header id={styles.header} className={headerClass}>
+      {isCollapseNavBarExpanded && (
+        <CollapseNavBar toggleCollapseNavBar={toggleCollapseNavBar} />
+      )}
+      <ul className={styles.headerNavList}>
+        <HeaderNavItem>
+          <HeaderNavLink title="Koala Tech" href="/" />
+        </HeaderNavItem>
+      </ul>
+
+      <ul className={styles.headerNavList}>
+        {!isCollapseMode && (
+          <Fragment>
+            <HeaderNavItem>
+              <HeaderNavLink title="Home" href="/" />
+            </HeaderNavItem>
+            <HeaderNavItem>
+              <HeaderNavLink title="Tutorial" href="#">
+                <DropDownNavItems
+                  className={styles.dropDownContainer}
+                  items={tutorialDropDownItems}
+                />
+              </HeaderNavLink>
+            </HeaderNavItem>
+            <HeaderNavItem>
+              <HeaderNavLink title="Support" href="#" />
+            </HeaderNavItem>
+            <HeaderNavItem>
+              <HeaderNavLink title="About Us" href="#">
+                <DropDownNavItems
+                  className={styles.dropDownContainer}
+                  items={tutorialDropDownItems}
+                />
+              </HeaderNavLink>
+            </HeaderNavItem>
+            <HeaderNavItem>
+              <ThemeToggleButton />
+            </HeaderNavItem>
+          </Fragment>
+        )}
+        {isCollapseMode && (
+          <HeaderNavItem className={`${styles.hamburgerMenuBtnContainer}`}>
+            <HamburgerMenu
+              onClick={toggleCollapseNavBar}
+              className={styles.hamburgerMenuBtn}
+              fill="#fff"
+              height="1.2rem"
+              width="1.2rem"
+            />
+          </HeaderNavItem>
+        )}
+      </ul>
+    </header>
+  );
+};
+
+export default Header;

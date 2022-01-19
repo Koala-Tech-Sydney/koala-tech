@@ -1,7 +1,11 @@
 import styles from "./BackDrop.module.scss";
 
-const Backdrop = (props) => {
-  return <div className={styles.backdrop} onClick={props.onConfirm} />;
+type Props = {
+  onClick: () => void;
+};
+
+const Backdrop: React.FC<Props> = ({ onClick }) => {
+  return <div className={styles.backdrop} onClick={onClick} />;
 };
 
 export default Backdrop;

@@ -1,0 +1,18 @@
+.headerNavLink {
+  display: block;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.5rem;
+}
+
+.headerNavLink:hover {
+  color: var(--color-accent);
+}
+
+.headerNavLinkContainer .headerNavLinkChild {
+  display: none;
+}
+
+.headerNavLinkContainer:hover .headerNavLinkChild {
+  display: block;
+}

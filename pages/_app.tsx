@@ -6,7 +6,7 @@ import type { AppProps } from "next/app";
 
 import store from "../store/index";
 
-import Header from "../components/Structure/Header";
+import Header from "../components/Header/Header";
 import Footer from "../components/Structure/Footer";
 
 import "../styles/globals.scss";
