@@ -1,32 +1,39 @@
-import { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "../../store";
 import Image from "next/image";
 
 import useTheme, { lightTheme, darkTheme } from "../../hooks/useTheme";
-import { themeAction } from "../../store/theme";
+import { themeAction, lightMode } from "../../store/theme";
 
 import styles from "./ThemeToggleButton.module.scss";
 
 const ThemeToggleButton = () => {
-  // console.log("ToggleButton");
+  console.log("======= ToggleButton ======");
   const dispatch = useDispatch();
+  const currentThemeMode = useSelector<RootState>((state) => state.theme.theme);
+  console.log(currentThemeMode);
 
-  const [isLightMode, setIsLightMode] = useState(false);
+  const [isLightMode, setIsLightMode] = useState(currentThemeMode == lightMode);
   const [isShining, setIsShining] = useState(false);
+  console.log(isLightMode)
 
   const currentTheme = isLightMode ? lightTheme : darkTheme;
   useTheme(currentTheme);
 
   const toggleHandler = () => {
     setIsLightMode(!isLightMode);
+  };
+
+  useEffect(() => {
     if (isLightMode) {
-      console.log("toggleHandler -> isLightMode");
+      console.log("ThemeToggleButton -> isLightMode");
       dispatch(themeAction.useLightMode());
     } else {
-      console.log("toggleHandler -> isDarkMode");
+      console.log("ThemeToggleButton -> isDarkMode");
       dispatch(themeAction.useDarkMode());
     }
-  };
+  }, [isLightMode]);
 
   const onMouseEnterHandler = () => {
     setIsShining(true);
