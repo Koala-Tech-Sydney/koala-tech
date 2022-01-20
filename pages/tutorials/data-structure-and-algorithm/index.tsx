@@ -1,10 +1,20 @@
-import TutorialHome from "../../../components/Tutorial/TutorialHome";
+import TwoSidesMainSection from "../../../components/Structure/TwoSidesMainSection";
 import ChapterList from "../../../components/Structure/ChapterList";
-
+import { Fragment } from "react";
 import styles from "./index.module.scss";
 
+const DataStructureAndAlgorithmTutorialHomeMainSection = () => {
+  return <Fragment></Fragment>;
+};
+
 const DataStructureAndAlgorithmTutorialHome = () => {
-  return <TutorialHome title={"Data Structure And Algorithm"}></TutorialHome>;
+  return (
+    <TwoSidesMainSection
+      leftSection={<div></div>}
+      mainSection={<DataStructureAndAlgorithmTutorialHomeMainSection />}
+      rightSection={<div></div>}
+    />
+  );
 };
 
 export default DataStructureAndAlgorithmTutorialHome;

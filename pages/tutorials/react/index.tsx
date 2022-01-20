@@ -1,9 +1,9 @@
-import TutorialHome from "../../../components/Tutorial/TutorialHome";
+import TwoSidesMainSection from "../../../components/Structure/TwoSidesMainSection";
 import ChapterList from "../../../components/Structure/ChapterList";
-
+import { Fragment } from "react";
 import styles from "./index.module.scss";
 
-const ReactTutorialHome = () => {
+const ReactTutorialHomeMainSection = () => {
   const introductionChapterList = [
     {
       name: "Setup",
@@ -72,7 +72,7 @@ const ReactTutorialHome = () => {
     },
   ];
   return (
-    <TutorialHome title={"React"}>
+    <Fragment>
       <ChapterList title={"Introduction"} chapters={introductionChapterList} />
       <ChapterList
         title={"Components"}
@@ -86,7 +86,17 @@ const ReactTutorialHome = () => {
         title={"Props & States"}
         chapters={introductionChapterList}
       />
-    </TutorialHome>
+    </Fragment>
+  );
+};
+
+const ReactTutorialHome = () => {
+  return (
+    <TwoSidesMainSection
+      leftSection={<div></div>}
+      mainSection={<ReactTutorialHomeMainSection />}
+      rightSection={<div></div>}
+    />
   );
 };
 

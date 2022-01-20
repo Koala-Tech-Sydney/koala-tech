@@ -1,10 +1,20 @@
-import TutorialHome from "../../../components/Tutorial/TutorialHome";
+import TwoSidesMainSection from "../../../components/Structure/TwoSidesMainSection";
 import ChapterList from "../../../components/Structure/ChapterList";
-
+import { Fragment } from "react";
 import styles from "./index.module.scss";
 
+const BlockchainTutorialHomeMainSection = () => {
+  return <Fragment></Fragment>;
+};
+
 const BlockchainTutorialHome = () => {
-  return <TutorialHome title={"Blockchain"}></TutorialHome>;
+  return (
+    <TwoSidesMainSection
+      leftSection={<div></div>}
+      mainSection={<BlockchainTutorialHomeMainSection />}
+      rightSection={<div></div>}
+    />
+  );
 };
 
 export default BlockchainTutorialHome;

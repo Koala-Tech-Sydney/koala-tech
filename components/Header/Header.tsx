@@ -1,15 +1,15 @@
 import { useState, Fragment } from "react";
 
 import HamburgerMenu from "../../public/images/buttons/hamburger-menu.svg";
-import CollapseNavBar from "./CollapseNavBar";
-import HeaderNavList from "./HeaderNavList";
-import HeaderNavItem from "./HeaderNavItem";
-import HeaderNavLink from "./HeaderNavLink";
+import CollapseNavBar from "./CollapseNavBar/CollapseNavBar";
+import HeaderNavList from "./HeaderNavBar/HeaderNavList";
+import HeaderNavItem from "./HeaderNavBar/HeaderNavItem";
+import HeaderNavLink from "./HeaderNavBar/HeaderNavLink";
 
 import styles from "./Header.module.scss";
 
 import ThemeToggleButton from "../Button/ThemeToggleButton";
-import DropDownNavItems from "../Structure/DropDownNavItems";
+import DropDownNavItems from "./DropDownNavItems";
 import useWindowDimensions from "../../hooks/useWindowDimensions";
 
 const Header = () => {

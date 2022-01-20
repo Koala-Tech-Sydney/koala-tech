@@ -13,8 +13,8 @@ const TwoSidesMainSection: React.FC<Props> = ({
   rightSection,
 }) => {
   const [width, _] = useWindowDimensions();
-  const shouldDisplayNoSideSection = width < 800;
-  const shouldDisplayAtMostOneSideSection = width < 1250;
+  const shouldDisplayNoSideSection = !!width ? width < 800 : false;
+  const shouldDisplayAtMostOneSideSection = !!width ? width < 1250 : false;
 
   let mainSectionClasses: string = styles.mainSection;
 

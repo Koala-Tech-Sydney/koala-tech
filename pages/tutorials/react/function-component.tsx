@@ -9,7 +9,7 @@ import {
   Subtitle2,
   Paragraph,
   Hyperlink,
-} from "../../../components/Tutorial/TutorialText";
+} from "../../../components/Text/Text";
 import { Fragment } from "react";
 
 const FunctionComponentMainSection = () => {
