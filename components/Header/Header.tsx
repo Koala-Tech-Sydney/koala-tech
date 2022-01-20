@@ -1,7 +1,7 @@
 import { useState, Fragment } from "react";
 
 import HamburgerMenu from "../../public/images/buttons/hamburger-menu.svg";
-import CollapseNavBar from "../Structure/CollapseNavBar";
+import CollapseNavBar from "./CollapseNavBar";
 import HeaderNavList from "./HeaderNavList";
 import HeaderNavItem from "./HeaderNavItem";
 import HeaderNavLink from "./HeaderNavLink";

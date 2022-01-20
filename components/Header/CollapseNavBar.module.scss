@@ -2,7 +2,6 @@
   position: fixed;
   top: 0;
   left: 0;
-  background-color: red;
   width: 400px;
   height: 100vh;
   z-index: 10;
@@ -19,16 +18,10 @@
   justify-content: space-between;
   color: var(--color-secondary);
   background-color: var(--color-tertiary);
+  margin-bottom: 0.8rem;
 
   li {
     margin: 0.8rem 0.4rem;
-  }
-}
-
-.verticalNavList {
-  li {
-    justify-content: left;
-    margin-left: 0.4rem;
   }
 }
 

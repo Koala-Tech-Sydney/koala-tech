@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { Fragment } from "react";
 import styles from "./HeaderNavLink.module.scss";
 
 type Props = {
@@ -15,9 +14,9 @@ const HeaderNavLink: React.FC<Props> = ({
   children,
 }) => {
   return (
-    <div className={styles.headerNavLinkContainer}>
+    <div className={`${styles.headerNavLinkContainer} ${className}`}>
       <Link href={href}>
-        <a className={`${className} ${styles.headerNavLink}`}>{title}</a>
+        <a>{title}</a>
       </Link>
       <div className={styles.headerNavLinkChild}>{children}</div>
     </div>

@@ -1,6 +1,6 @@
-.headerNavLinkContainer {
+.collapseNavLinkContainer {
   a {
-    color: #ffffff;
+    color: var(--color-secondary);
     display: block;
     text-decoration: none;
     padding: 0.5rem;
@@ -10,11 +10,11 @@
     color: var(--color-accent);
   }
 
-  .headerNavLinkChild {
+  .collapseNavLinkChild {
     display: none;
   }
 
-  &:hover .headerNavLinkChild {
+  &:hover .collapseNavLinkChild {
     display: block;
   }
 }

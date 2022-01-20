@@ -1,13 +1,18 @@
 import { Fragment } from "react";
 import ThemeToggleButton from "../Button/ThemeToggleButton";
-import Backdrop from "./BackDrop";
-import HeaderNavItem from "../Header/HeaderNavItem";
-import HeaderNavList from "../Header/HeaderNavList";
+import Backdrop from "../Structure/BackDrop";
+import HeaderNavItem from "./HeaderNavItem";
+import HeaderNavList from "./HeaderNavList";
+import CollapseNavList from "./CollapseNavList";
+import CollapseNavItem from "./CollapseNavItem";
+import CollapseNavLink from "./CollapseNavLink";
+import Link from "next/link";
 
 import CloseButton from "../../public/images/buttons/close-btn.svg";
 
 import styles from "./CollapseNavBar.module.scss";
-import HeaderNavLink from "../Header/HeaderNavLink";
+import HeaderNavLink from "./HeaderNavLink";
+import ArrowButton from "../Button/ArrowButton";
 
 type Props = {
   toggleCollapseNavBar: () => void;
@@ -39,20 +44,21 @@ const CollapseNavBar: React.FC<Props> = ({ toggleCollapseNavBar }) => {
             </HeaderNavItem>
           </HeaderNavList>
         </section>
-        <ul className={styles.verticalNavList}>
-          <HeaderNavItem>
-            <HeaderNavLink title="Home" href="/"></HeaderNavLink>
-          </HeaderNavItem>
-          <HeaderNavItem>
-            <HeaderNavLink title="Tutorial" href="#"></HeaderNavLink>
-          </HeaderNavItem>
-          <HeaderNavItem>
-            <HeaderNavLink title="Support" href="#"></HeaderNavLink>
-          </HeaderNavItem>
-          <HeaderNavItem>
-            <HeaderNavLink title="About Us" href="#"></HeaderNavLink>
-          </HeaderNavItem>
-        </ul>
+        <CollapseNavList>
+          <CollapseNavItem>
+            <CollapseNavLink title="Home" href="/"></CollapseNavLink>
+            <ArrowButton />
+          </CollapseNavItem>
+          <CollapseNavItem>
+            <CollapseNavLink title="Tutorial" href="#"></CollapseNavLink>
+          </CollapseNavItem>
+          <CollapseNavItem>
+            <CollapseNavLink title="Support" href="#"></CollapseNavLink>
+          </CollapseNavItem>
+          <CollapseNavItem>
+            <CollapseNavLink title="About Us" href="#"></CollapseNavLink>
+          </CollapseNavItem>
+        </CollapseNavList>
       </section>
     </Fragment>
   );
