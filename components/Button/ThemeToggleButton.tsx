@@ -9,31 +9,23 @@ import { themeAction, lightMode } from "../../store/theme";
 import styles from "./ThemeToggleButton.module.scss";
 
 const ThemeToggleButton = () => {
-  console.log("======= ToggleButton ======");
+  console.log("===== ThemeToggleButton =====");
   const dispatch = useDispatch();
-  const currentThemeMode = useSelector<RootState>((state) => state.theme.theme);
-  console.log(currentThemeMode);
 
-  const [isLightMode, setIsLightMode] = useState(currentThemeMode == lightMode);
   const [isShining, setIsShining] = useState(false);
-  console.log(isLightMode)
 
-  const currentTheme = isLightMode ? lightTheme : darkTheme;
+  // Any change in the Redux store will cause the whole component to be re-evaluated.
+  const currentThemeMode = useSelector<RootState>((state) => state.theme.theme);
+  const currentTheme = currentThemeMode == lightMode ? lightTheme : darkTheme;
   useTheme(currentTheme);
 
   const toggleHandler = () => {
-    setIsLightMode(!isLightMode);
-  };
-
-  useEffect(() => {
-    if (isLightMode) {
-      console.log("ThemeToggleButton -> isLightMode");
+    if (currentThemeMode != lightMode) {
       dispatch(themeAction.useLightMode());
     } else {
-      console.log("ThemeToggleButton -> isDarkMode");
       dispatch(themeAction.useDarkMode());
     }
-  }, [isLightMode]);
+  };
 
   const onMouseEnterHandler = () => {
     setIsShining(true);
@@ -45,7 +37,7 @@ const ThemeToggleButton = () => {
 
   const buttonClass =
     styles.button +
-    ` ${isLightMode ? styles.buttonChecked : ""}
+    ` ${currentThemeMode == lightMode ? styles.buttonChecked : ""}
       ${isShining ? styles.buttonOnHover : ""}`;
 
   return (
@@ -60,7 +52,7 @@ const ThemeToggleButton = () => {
           src="/images/themes/light-theme.svg"
           width="22px"
           height="22px"
-          alt="Kiwi standing on oval"
+          alt="light theme icon"
         />
       </span>
       <span id={styles.darkThemeIcon}>
@@ -68,7 +60,7 @@ const ThemeToggleButton = () => {
           src="/images/themes/dark-theme.svg"
           width="18px"
           height="18px"
-          alt="Kiwi standing on oval"
+          alt="dark theme icon"
         />
       </span>
       <div className={buttonClass}></div>
