@@ -8,6 +8,7 @@ import store from "../store/index";
 
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
+import 'bootstrap/dist/css/bootstrap.css';
 
 import "../styles/globals.scss";
 import "../styles/variables.scss";
@@ -20,6 +21,8 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
         <title>Koala Tech</title>
         <meta name="description" content="online coding tutorial" />
         <link rel="icon" href="/koala.jpg" />
+        <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css' />
+
       </Head>
       <Header />
       <Component {...pageProps} />
