@@ -77,12 +77,7 @@ const Header = () => {
               <HeaderNavLink title="Support" href="#" />
             </HeaderNavItem>
             <HeaderNavItem>
-              <HeaderNavLink title="About Us" href="#">
-                <DropDownNavItems
-                  className={styles.dropDownContainer}
-                  items={tutorialDropDownItems}
-                />
-              </HeaderNavLink>
+              <HeaderNavLink title="About Us" href="#" />
             </HeaderNavItem>
             <HeaderNavItem>
               <ThemeToggleButton />
