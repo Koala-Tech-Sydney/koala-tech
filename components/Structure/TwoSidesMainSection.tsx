@@ -23,7 +23,13 @@ const TwoSidesMainSection: React.FC<Props> = ({
     mainSectionClasses += " " + styles["mainSection-100"];
   } else if (!leftSection || !rightSection) {
     // either left or right section is supplied
-    mainSectionClasses += " " + styles["mainSection-75"];
+    if (shouldDisplayNoSideSection) {
+      leftSection = null;
+      rightSection = null;
+      mainSectionClasses += " " + styles["mainSection-100"];
+    } else {
+      mainSectionClasses += " " + styles["mainSection-75"];
+    }
   } else {
     // both left and right section are supplied
     if (shouldDisplayNoSideSection) {
