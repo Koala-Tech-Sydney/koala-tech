@@ -1,5 +1,4 @@
-// the root element, i.e. <html>
-:root {
+@mixin color {
   // by default it's dark theme
   // be cautious! these 6 variables are changing in useTheme hook
   --color-primary: #18191a; // mainly for text
@@ -29,13 +28,4 @@
   --color-light: #f4f5f8;
   --color-light-shade: #d7d8da;
   --color-light-tint: #f5f6f9;
-
-  --font-size-1: 0.5rem;
-  --font-size-2: 1rem;
-  --font-size-3: 1.5rem;
-  --font-size-4: 2rem;
-  --font-size-5: 2.5rem;
-  --font-size-6: 3rem;
-  --font-size-7: 3.5rem;
-  --font-size-8: 4rem;
 }

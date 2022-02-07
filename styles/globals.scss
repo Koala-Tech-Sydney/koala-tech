@@ -1,3 +1,5 @@
+@use "variables";
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -14,4 +16,8 @@ a {
   color: #0170b9;
   text-decoration: none;
   transition: all 0.2s linear;
+}
+
+:root {
+  @include variables.color;
 }

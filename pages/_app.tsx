@@ -12,8 +12,6 @@ import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 
 import "../styles/globals.scss";
-import "../styles/variables.scss";
-import "../styles/colors.scss";
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   return (

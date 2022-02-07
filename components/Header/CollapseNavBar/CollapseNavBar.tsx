@@ -11,7 +11,6 @@ import CloseButton from "../../../public/images/buttons/close-btn.svg";
 
 import styles from "./CollapseNavBar.module.scss";
 import HeaderNavLink from "../HeaderNavBar/HeaderNavLink";
-import ArrowButton from "../../Button/ArrowButton";
 
 type Props = {
   toggleCollapseNavBar: () => void;
@@ -46,16 +45,21 @@ const CollapseNavBar: React.FC<Props> = ({ toggleCollapseNavBar }) => {
         <CollapseNavList>
           <CollapseNavItem>
             <CollapseNavLink title="Home" href="/"></CollapseNavLink>
-            <ArrowButton />
           </CollapseNavItem>
           <CollapseNavItem>
-            <CollapseNavLink title="Tutorial" href="#"></CollapseNavLink>
+            <CollapseNavLink
+              title="Tutorial"
+              href="/tutorial"
+            ></CollapseNavLink>
           </CollapseNavItem>
           <CollapseNavItem>
-            <CollapseNavLink title="Support" href="#"></CollapseNavLink>
+            <CollapseNavLink title="Support" href="/support"></CollapseNavLink>
           </CollapseNavItem>
           <CollapseNavItem>
-            <CollapseNavLink title="About Us" href="#"></CollapseNavLink>
+            <CollapseNavLink
+              title="About Us"
+              href="/about-us"
+            ></CollapseNavLink>
           </CollapseNavItem>
         </CollapseNavList>
       </section>
