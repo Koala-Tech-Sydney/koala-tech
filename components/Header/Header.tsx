@@ -10,11 +10,13 @@ import styles from "./Header.module.scss";
 
 import ThemeToggleButton from "../Button/ThemeToggleButton";
 import DropDownNavItems from "./DropDownNavItems";
-import useWindowDimensions from "../../hooks/useWindowDimensions";
+
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 const Header = () => {
-  const [width, _] = useWindowDimensions();
-  const isCollapseMode = !!width ? width < 800 : false;
+  const theme = useTheme();
+  const isCollapseMode = useMediaQuery(theme.breakpoints.down("md"));
   const [isCollapseNavBarExpanded, setIsCollapseNavBarExpanded] =
     useState(false);
 

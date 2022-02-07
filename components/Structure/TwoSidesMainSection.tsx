@@ -1,4 +1,6 @@
-import useWindowDimensions from "../../hooks/useWindowDimensions";
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
+
 import styles from "./TwoSidesMainSection.module.scss";
 
 type Props = {
@@ -12,9 +14,13 @@ const TwoSidesMainSection: React.FC<Props> = ({
   mainSection,
   rightSection,
 }) => {
-  const [width, _] = useWindowDimensions();
-  const shouldDisplayNoSideSection = !!width ? width < 800 : false;
-  const shouldDisplayAtMostOneSideSection = !!width ? width < 1250 : false;
+  const theme = useTheme();
+  const shouldDisplayNoSideSection = useMediaQuery(
+    theme.breakpoints.down("md")
+  );
+  const shouldDisplayAtMostOneSideSection = useMediaQuery(
+    theme.breakpoints.down("lg")
+  );
 
   let mainSectionClasses: string = styles.mainSection;
 
