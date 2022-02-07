@@ -1,6 +1,8 @@
 import { useState, Fragment } from "react";
 
-import HamburgerMenu from "../../public/images/buttons/hamburger-menu.svg";
+import IconButton from "@mui/material/IconButton";
+import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
+
 import CollapseNavBar from "./CollapseNavBar/CollapseNavBar";
 import HeaderNavList from "./HeaderNavBar/HeaderNavList";
 import HeaderNavItem from "./HeaderNavBar/HeaderNavItem";
@@ -47,13 +49,13 @@ const Header = () => {
       <HeaderNavList>
         {isCollapseMode && (
           <HeaderNavItem className={`${styles.hamburgerMenuBtnContainer}`}>
-            <HamburgerMenu
-              onClick={toggleCollapseNavBar}
+            <IconButton
+              aria-label="Side Menu"
               className={styles.hamburgerMenuBtn}
-              fill="#fff"
-              height="1.2rem"
-              width="1.2rem"
-            />
+              onClick={toggleCollapseNavBar}
+            >
+              <MenuRoundedIcon />
+            </IconButton>
           </HeaderNavItem>
         )}
         <HeaderNavItem>

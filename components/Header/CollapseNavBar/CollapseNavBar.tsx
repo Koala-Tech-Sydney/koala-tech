@@ -7,7 +7,8 @@ import CollapseNavList from "./CollapseNavList";
 import CollapseNavItem from "./CollapseNavItem";
 import CollapseNavLink from "./CollapseNavLink";
 
-import CloseButton from "../../../public/images/buttons/close-btn.svg";
+import IconButton from "@mui/material/IconButton";
+import CloseIcon from "@mui/icons-material/Close";
 
 import styles from "./CollapseNavBar.module.scss";
 import HeaderNavLink from "../HeaderNavBar/HeaderNavLink";
@@ -32,13 +33,13 @@ const CollapseNavBar: React.FC<Props> = ({ toggleCollapseNavBar }) => {
           </HeaderNavList>
           <HeaderNavList>
             <HeaderNavItem>
-              <CloseButton
-                onClick={toggleCollapseNavBar}
+              <IconButton
+                aria-label="Cancel"
                 className={styles.closeButton}
-                fill="#fff"
-                height="1.5rem"
-                width="1.5rem"
-              />
+                onClick={toggleCollapseNavBar}
+              >
+                <CloseIcon />
+              </IconButton>
             </HeaderNavItem>
           </HeaderNavList>
         </section>
