@@ -1,6 +1,9 @@
 import { useEffect } from "react";
 
-interface Theme {
+const lightMode = "light";
+const darkMode = "dark";
+
+interface ColorTheme {
   "--color-primary": string;
   "--color-secondary": string;
   "--color-tertiary": string;
@@ -11,7 +14,7 @@ interface Theme {
 }
 
 // tint => adds white, shade => adds black, tone => adds grey, accent => emphasize, contrast
-const lightTheme: Theme = {
+const lightTheme: ColorTheme = {
   "--color-primary": "#FFFFFF",
   "--color-secondary": "#18191A",
   "--color-tertiary": "#20232A",
@@ -21,7 +24,7 @@ const lightTheme: Theme = {
   "--color-accent": "#61DAFB",
 };
 
-const darkTheme: Theme = {
+const darkTheme: ColorTheme = {
   "--color-primary": "#18191A",
   "--color-secondary": "#FFFFFF",
   "--color-tertiary": "#20232A",
@@ -31,23 +34,23 @@ const darkTheme: Theme = {
   "--color-accent": "#61DAFB",
 };
 
-const useTheme = (theme: Theme) => {
+const useColorTheme = (colorTheme: ColorTheme) => {
   // console.log("useTheme");
   // console.log(theme);
   useEffect(
     () => {
       // console.log("useTheme -> useLayoutEffect");
-      for (const key in theme) {
+      for (const key in colorTheme) {
         // Update css variables in document's root element
         // [key as keyof Theme] tells TypeScript we are confident that 'key' is one of the keys of the 'Theme' type.
         document.documentElement.style.setProperty(
           `${key}`,
-          theme[key as keyof Theme]
+          colorTheme[key as keyof ColorTheme]
         );
       }
     },
-    [theme] // Only call again if theme object reference changes
+    [colorTheme] // Only call again if theme object reference changes
   );
 };
 
-export { useTheme as default, lightTheme, darkTheme };
+export { useColorTheme as default, lightTheme, darkTheme, lightMode, darkMode };

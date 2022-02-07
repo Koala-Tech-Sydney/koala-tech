@@ -34,7 +34,7 @@ const getSocialMediaButton = (name: string, uri: string) => {
     );
   } else if (name == "GitHub") {
     icon = (
-      <IconButton color="secondary" aria-label={name}>
+      <IconButton aria-label={name}>
         <GitHubIcon />
       </IconButton>
     );
