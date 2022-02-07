@@ -1,4 +1,9 @@
+@use "fonts" as *;
 @use "variables";
+
+:root {
+  font-family: Roboto, sans-serif !important;
+}
 
 * {
   box-sizing: border-box;
@@ -20,4 +25,5 @@ a {
 
 :root {
   @include variables.color;
+  @include variables.font-sizes;
 }
