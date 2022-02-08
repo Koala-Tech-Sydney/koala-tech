@@ -1,6 +1,7 @@
 import { Fragment } from "react";
 import ThemeToggleButton from "../../Button/ThemeToggleButton";
-import Backdrop from "../../Structure/BackDrop";
+// import Backdrop from "../../Structure/BackDrop";
+import Backdrop from "@mui/material/Backdrop";
 import HeaderNavItem from "../HeaderNavBar/HeaderNavItem";
 import HeaderNavList from "../HeaderNavBar/HeaderNavList";
 import CollapseNavList from "./CollapseNavList";
@@ -20,7 +21,11 @@ type Props = {
 const CollapseNavBar: React.FC<Props> = ({ toggleCollapseNavBar }) => {
   return (
     <Fragment>
-      <Backdrop onClick={toggleCollapseNavBar} />
+      <Backdrop
+        className={styles.backdrop}
+        open={true}
+        onClick={toggleCollapseNavBar}
+      />
       <section className={styles.collapseNavBar}>
         <section className={styles.headerSection}>
           <HeaderNavList>

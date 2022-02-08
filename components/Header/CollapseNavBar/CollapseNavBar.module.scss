@@ -13,6 +13,10 @@
   }
 }
 
+.backdrop {
+  z-index: 1;
+}
+
 .headerSection {
   display: flex;
   justify-content: space-between;
