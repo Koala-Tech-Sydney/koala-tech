@@ -1,5 +1,4 @@
 import TwoSidesMainSection from "../../../components/Structure/TwoSidesMainSection";
-import ChapterList from "../../../components/Structure/ChapterList";
 import { Fragment } from "react";
 import styles from "./index.module.scss";
 
