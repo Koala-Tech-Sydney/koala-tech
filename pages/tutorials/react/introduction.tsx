@@ -1,7 +1,7 @@
 import JavaScriptFormatter from "../../../components/Formatter/JavaScriptFormatter";
 import NoteCard from "../../../components/Tutorial/NoteCard";
 import styles from "./introduction.module.scss";
-import TwoSidesMainSection from "../../../components/Structure/TwoSidesMainSection";
+import Tutorial from "../../../components/Tutorial/Tutorial";
 
 import {
   Title,
@@ -12,10 +12,9 @@ import {
 } from "../../../components/Text/Text";
 import { Fragment } from "react";
 
-const IntroductionMainSection = () => {
+const Introduction = () => {
   return (
-    <Fragment>
-      <Title>Introduction</Title>
+    <Tutorial title="Introduction">
       <Paragraph>
         In this section, you will learn how to create a new React app and
         understand the structure of a React project.
@@ -51,17 +50,7 @@ npm start`}</JavaScriptFormatter>
         A folder for storing all of the things that are public to the browser,
         for example the images or other resources.
       </Paragraph>
-    </Fragment>
-  );
-};
-
-const Introduction = () => {
-  return (
-    <TwoSidesMainSection
-      leftSection={<div></div>}
-      mainSection={<IntroductionMainSection />}
-      rightSection={<div></div>}
-    />
+    </Tutorial>
   );
 };
 

@@ -1,5 +1,3 @@
-import { Fragment } from "react";
-import TwoSidesMainSection from "../../../components/Structure/TwoSidesMainSection";
 import Image from "next/image";
 import styles from "./setup.module.scss";
 
@@ -11,10 +9,11 @@ import {
   Hyperlink,
 } from "../../../components/Text/Text";
 
-const SetupMainSection = () => {
+import Tutorial from "../../../components/Tutorial/Tutorial";
+
+const Setup = () => {
   return (
-    <Fragment>
-      <Title>Setup</Title>
+    <Tutorial title="Setup">
       <Subtitle1>Node.js</Subtitle1>
       <Paragraph>
         The most conventient way to set up your React development environment is
@@ -44,12 +43,14 @@ const SetupMainSection = () => {
       </Paragraph>
       <Image
         src="/images/tutorials/react/setup/extension-tab.png"
+        alt="Visual Studio Code extension tab"
         height="450"
         width="454"
       />
       <Subtitle2>Prettier</Subtitle2>
       <Image
         src="/images/tutorials/react/setup/prettier.png"
+        alt="Prettier"
         height="244"
         width="844"
       />
@@ -63,38 +64,32 @@ const SetupMainSection = () => {
       </Paragraph>
       <Image
         src="/images/tutorials/react/setup/prettier-setting.png"
+        alt="Prettier setting"
         height="916"
         width="1864"
       />
       <Subtitle2>Bracket Pair Colorizer</Subtitle2>
       <Image
         src="/images/tutorials/react/setup/bracket-pair-colorizer.png"
+        alt="Bracket Pair Colorizer"
         height="243"
         width="786"
       />
       <Subtitle2>Material Icon Theme</Subtitle2>
       <Image
         src="/images/tutorials/react/setup/material-icon-theme.png"
+        alt="Material Icon Theme"
         height="234"
         width="757"
       />
       <Subtitle2>React Snippets</Subtitle2>
       <Image
         src="/images/tutorials/react/setup/react-snippets.png"
+        alt="React Snippets"
         height="244"
         width="1084"
       />
-    </Fragment>
-  );
-};
-
-const Setup = () => {
-  return (
-    <TwoSidesMainSection
-      leftSection={<div></div>}
-      mainSection={<SetupMainSection />}
-      rightSection={<div></div>}
-    />
+    </Tutorial>
   );
 };
 
