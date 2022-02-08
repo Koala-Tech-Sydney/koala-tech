@@ -28,10 +28,6 @@ const Header = () => {
 
   const tutorialDropDownItems = [
     { name: "React", path: "/tutorials/react" },
-    {
-      name: "Data Structure and Algorithm",
-      path: "/tutorials/data-structure-and-algorithm",
-    },
     { name: "Blockchain", path: "/tutorials/blockchain" },
   ];
 
