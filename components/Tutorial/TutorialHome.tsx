@@ -1,12 +1,12 @@
 import { Fragment } from "react";
-import { Title } from "../Text/Text";
 import TwoSidesMainSection from "../Structure/TwoSidesMainSection";
+import { Title } from "../Text/Text";
 
 type Props = {
   title: string;
 };
 
-const Tutorial: React.FC<Props> = ({ title, children }) => {
+const TutorialHome: React.FC<Props> = ({ title, children }) => {
   return (
     <TwoSidesMainSection
       leftSection={<div></div>}
@@ -21,4 +21,4 @@ const Tutorial: React.FC<Props> = ({ title, children }) => {
   );
 };
 
-export default Tutorial;
+export default TutorialHome;
