@@ -1,6 +1,7 @@
 .card {
   display: flex;
   margin: 2rem;
+  border-radius: 25px;
 }
 
 .cardColumn {
@@ -13,7 +14,6 @@
   align-items: center;
   flex-direction: column;
   flex: 2;
-  border-right: 1px solid var(--color-primary);
 
   .media_section {
     position: relative;
@@ -50,6 +50,10 @@
       text-align: center;
       margin: 0.5rem;
     }
+  }
+
+  .primary_section_border {
+    border-right: 1px solid var(--color-primary);
   }
 
   .socialMediaButtons {

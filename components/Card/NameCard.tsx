@@ -100,6 +100,11 @@ const NameCard: React.FC<NameCardProps> = ({ info }) => {
   const cardClass =
     styles.card + " " + (isExtraSmallScreen ? styles.cardColumn : "");
 
+  const primarySectionClass =
+    styles.primary_section +
+    " " +
+    (isExtraSmallScreen ? "" : styles.primary_section_border);
+
   const longDescription = (
     <CardContent className={styles.secondary_section}>
       {info.longDescription}
@@ -112,7 +117,7 @@ const NameCard: React.FC<NameCardProps> = ({ info }) => {
 
   return (
     <Card className={cardClass}>
-      <Box className={styles.primary_section}>
+      <Box className={primarySectionClass}>
         <Box className={styles.media_section}>
           <CardMedia
             component="img"
