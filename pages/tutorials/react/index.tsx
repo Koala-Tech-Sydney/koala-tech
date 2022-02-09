@@ -1,37 +1,8 @@
-import TwoSidesMainSection from "../../../components/Structure/TwoSidesMainSection";
+import TutorialHome from "../../../components/Tutorial/TutorialHome";
 import ChapterList from "../../../components/Tutorial/ChapterList";
-import { Fragment } from "react";
 import styles from "./index.module.scss";
 
-const chapters = [
-  {
-    name: "Setup",
-    path: "/tutorials/react/setup",
-  },
-  {
-    name: "Introduction",
-    path: "/tutorials/react/introduction",
-  },
-  { name: "JSX", path: "/tutorials/react/JSX" },
-  {
-    name: "JSX Deep Dive",
-    path: "/tutorials/react/JSX-deep-dive",
-  },
-  {
-    name: "Function Component",
-    path: "/tutorials/react/function-component",
-  },
-  {
-    name: "Props",
-    path: "/tutorials/react/props",
-  },
-  {
-    name: "State",
-    path: "/tutorials/react/state",
-  },
-];
-
-const ReactTutorialHomeMainSection = () => {
+const ReactTutorialHome = () => {
   const introductionChapterList = [
     {
       name: "Setup",
@@ -59,7 +30,7 @@ const ReactTutorialHomeMainSection = () => {
   ];
 
   return (
-    <Fragment>
+    <TutorialHome title="React">
       <ChapterList title={"Introduction"} chapters={introductionChapterList} />
       <ChapterList
         title={"Components"}
@@ -69,17 +40,11 @@ const ReactTutorialHomeMainSection = () => {
         title={"Props & States"}
         chapters={introductionChapterList}
       />
-    </Fragment>
-  );
-};
-
-const ReactTutorialHome = () => {
-  return (
-    <TwoSidesMainSection
-      leftSection={<div></div>}
-      mainSection={<ReactTutorialHomeMainSection />}
-      rightSection={<div></div>}
-    />
+      <ChapterList
+        title={"Props & States"}
+        chapters={introductionChapterList}
+      />
+    </TutorialHome>
   );
 };
 
