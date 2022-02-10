@@ -25,3 +25,11 @@ a {
   text-decoration: none;
   transition: all 0.2s linear;
 }
+
+.MuiAutocomplete-root {
+  background-color: var(--color-primary);
+
+  .MuiAutocomplete-inputRoot {
+    background-color: white;
+  }
+}

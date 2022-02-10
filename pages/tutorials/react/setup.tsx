@@ -1,8 +1,6 @@
 import Image from "next/image";
-import styles from "./setup.module.scss";
 
 import {
-  Title,
   Subtitle1,
   Subtitle2,
   Paragraph,

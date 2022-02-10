@@ -1,5 +1,4 @@
 import {
-  Title,
   Subtitle1,
   Subtitle2,
   Paragraph,

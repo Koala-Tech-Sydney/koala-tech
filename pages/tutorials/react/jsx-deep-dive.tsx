@@ -1,7 +1,3 @@
-import JavaScriptFormatter from "../../../components/Formatter/JavaScriptFormatter";
-import NoteCard from "../../../components/Tutorial/NoteCard";
-import styles from "./jsxdeepdive.module.scss";
-
 import {
   Title,
   Subtitle1,
