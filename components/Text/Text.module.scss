@@ -1,12 +1,12 @@
 .title {
-  font-size: var(--h3);
+  font-size: var(--h4);
   font-weight: 600;
   margin: 2rem 0;
   letter-spacing: 1px;
 }
 
 .subtitle1 {
-  font-size: 2rem;
+  font-size: var(--h2);
   font-weight: 700;
   margin: 1.5rem 0;
   letter-spacing: 1px;
@@ -14,13 +14,14 @@
 
 .subtitle2 {
   color: var(--color-medium-shade);
-  font-size: 1.25rem;
+  font-size: var(--h1);
   font-weight: 700;
   margin: 1.5rem 0;
   letter-spacing: 1px;
 }
 
 .paragraph {
+  font-size: var(--p);
   font-weight: 200;
   margin: 1rem 0;
   letter-spacing: 1px;
