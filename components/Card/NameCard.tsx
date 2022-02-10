@@ -34,13 +34,17 @@ const getSocialMediaButton = (name: string, uri: string) => {
     );
   } else if (name == "GitHub") {
     icon = (
-      <IconButton aria-label={name}>
+      <IconButton key={name} aria-label={name}>
         <GitHubIcon />
       </IconButton>
     );
   }
 
-  return <a href={uri}>{icon}</a>;
+  return (
+    <a key={name} href={uri}>
+      {icon}
+    </a>
+  );
 };
 
 type ExpandMoreProps = {
@@ -111,7 +115,7 @@ const NameCard: React.FC<NameCardProps> = ({ info }) => {
     </CardContent>
   );
 
-  const SocialMediaButtons = info.socialMedia.map((item) => {
+  const socialMediaButtons = info.socialMedia.map((item) => {
     return getSocialMediaButton(item.name, item.uri);
   });
 
@@ -147,7 +151,7 @@ const NameCard: React.FC<NameCardProps> = ({ info }) => {
           direction="row"
           spacing={1}
         >
-          {SocialMediaButtons}
+          {socialMediaButtons}
         </Stack>
 
         {isExtraSmallScreen ? (

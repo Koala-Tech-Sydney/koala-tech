@@ -30,7 +30,11 @@ const CollapseNavBar: React.FC<Props> = ({ toggleCollapseNavBar }) => {
         <section className={styles.headerSection}>
           <HeaderNavList>
             <HeaderNavItem>
-              <HeaderNavLink title="Koala Tech" href="" />
+              <HeaderNavLink
+                title="Koala Tech"
+                href=""
+                onClick={toggleCollapseNavBar}
+              />
             </HeaderNavItem>
             <HeaderNavItem>
               <ThemeToggleButton />
@@ -50,7 +54,11 @@ const CollapseNavBar: React.FC<Props> = ({ toggleCollapseNavBar }) => {
         </section>
         <CollapseNavList>
           <CollapseNavItem>
-            <CollapseNavLink title="Home" href="/"></CollapseNavLink>
+            <CollapseNavLink
+              title="Home"
+              href="/"
+              onClick={toggleCollapseNavBar}
+            />
           </CollapseNavItem>
           <CollapseNavItem>
             <CollapseNavLink
@@ -59,13 +67,18 @@ const CollapseNavBar: React.FC<Props> = ({ toggleCollapseNavBar }) => {
             ></CollapseNavLink>
           </CollapseNavItem>
           <CollapseNavItem>
-            <CollapseNavLink title="Support" href="/support"></CollapseNavLink>
+            <CollapseNavLink
+              title="Support"
+              href="/support"
+              onClick={toggleCollapseNavBar}
+            />
           </CollapseNavItem>
           <CollapseNavItem>
             <CollapseNavLink
               title="About Us"
               href="/about-us"
-            ></CollapseNavLink>
+              onClick={toggleCollapseNavBar}
+            />
           </CollapseNavItem>
         </CollapseNavList>
       </section>

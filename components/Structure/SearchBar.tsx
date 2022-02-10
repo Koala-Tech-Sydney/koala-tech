@@ -42,7 +42,7 @@ const SearchBar: React.FC<Props> = ({ chapters }) => {
         <TextField {...params} placeholder="Search Content" />
       )}
       renderOption={(props, option) => (
-        <Link href={option.path}>
+        <Link key={option.name} href={option.path}>
           <a className={styles.option}>{option.name}</a>
         </Link>
       )}

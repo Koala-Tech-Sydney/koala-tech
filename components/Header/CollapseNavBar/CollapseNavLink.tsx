@@ -5,19 +5,21 @@ import styles from "./CollapseNavLink.module.scss";
 type Props = {
   title: string;
   href: string;
+  onClick?: () => void;
   className?: string;
 };
 
 const CollapseNavLink: React.FC<Props> = ({
   title,
   href,
+  onClick,
   className,
   children,
 }) => {
   return (
     <div className={`${styles.collapseNavLinkContainer} ${className}`}>
       <Link href={href}>
-        <a>{title}</a>
+        <a onClick={onClick}>{title}</a>
       </Link>
       <div className={styles.collapseNavLinkChild}>{children}</div>
     </div>
