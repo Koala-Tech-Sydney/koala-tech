@@ -1,7 +1,9 @@
 import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
-
+import Link from "next/link";
 import { usePathProps } from "../../hooks/usePath";
+
+import styles from "./SearchBar.module.scss";
 
 type Props = {
   chapters: usePathProps;
@@ -38,6 +40,13 @@ const SearchBar: React.FC<Props> = ({ chapters }) => {
       getOptionLabel={(option) => option.name}
       renderInput={(params) => (
         <TextField {...params} placeholder="Search Content" />
+      )}
+      renderOption={(props, option) => (
+        <div className={styles.optionContainer}>
+          <Link href={option.path}>
+            <a className={styles.option}>{option.name}</a>
+          </Link>
+        </div>
       )}
     />
   );
