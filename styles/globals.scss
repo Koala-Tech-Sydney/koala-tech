@@ -18,7 +18,9 @@ html {
   font-size: 18px;
   color: var(--color-secondary);
   background-color: var(--color-primary);
-  // fix the bug where the html element is narrower than the child content in mobile viewport
+  // fix the bug where one of the child div of the html element is wider than the
+  // html element caused by a word that is wider than 100vw (due to large font size
+  // , the word is too long or the viewport is simply too narrow).
   min-width: fit-content;
 }
 
