@@ -9,6 +9,10 @@ let chapters: usePathProps = [
         name: "Introduction of Blockchain",
         path: "",
       },
+      {
+        name: "Advantages of Blockchain",
+        path: "",
+      },
     ],
   },
 ];

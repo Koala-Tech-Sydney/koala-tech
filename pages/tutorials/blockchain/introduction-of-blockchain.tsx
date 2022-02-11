@@ -7,7 +7,7 @@ import {
 } from "../../../components/Text/Text";
 import Tutorial from "../../../components/Tutorial/Tutorial";
 
-const Introduction = () => {
+const IntroductionOfBlockchain = () => {
   return (
     <Tutorial title="Introduction of Blockchain">
       <Subtitle1>History</Subtitle1>
@@ -201,4 +201,4 @@ const Introduction = () => {
   );
 };
 
-export default Introduction;
+export default IntroductionOfBlockchain;
