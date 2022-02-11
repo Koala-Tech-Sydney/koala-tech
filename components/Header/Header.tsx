@@ -1,5 +1,7 @@
 import { useState, Fragment } from "react";
 
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
 import IconButton from "@mui/material/IconButton";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 
@@ -7,14 +9,9 @@ import CollapseNavBar from "./CollapseNavBar/CollapseNavBar";
 import HeaderNavList from "./HeaderNavBar/HeaderNavList";
 import HeaderNavItem from "./HeaderNavBar/HeaderNavItem";
 import HeaderNavLink from "./HeaderNavBar/HeaderNavLink";
+import ThemeToggleButton from "../Button/ThemeToggleButton";
 
 import styles from "./Header.module.scss";
-
-import ThemeToggleButton from "../Button/ThemeToggleButton";
-import DropDownNavItems from "./DropDownNavItems";
-
-import { useTheme } from "@mui/material/styles";
-import useMediaQuery from "@mui/material/useMediaQuery";
 
 const Header = () => {
   const theme = useTheme();
@@ -25,11 +22,6 @@ const Header = () => {
   let headerClass = isCollapseMode
     ? styles.headerCollapseMode
     : styles.headerExpandMode;
-
-  const tutorialDropDownItems = [
-    { name: "React", path: "/tutorials/react" },
-    { name: "Blockchain", path: "/tutorials/blockchain" },
-  ];
 
   let toggleCollapseNavBar = () => {
     console.log("Expanded side menu");
@@ -66,12 +58,7 @@ const Header = () => {
               <HeaderNavLink title="Home" href="/" />
             </HeaderNavItem>
             <HeaderNavItem>
-              <HeaderNavLink title="Tutorials" href="/tutorials">
-                <DropDownNavItems
-                  className={styles.dropDownContainer}
-                  items={tutorialDropDownItems}
-                />
-              </HeaderNavLink>
+              <HeaderNavLink title="Tutorials" href="/tutorials" />
             </HeaderNavItem>
             <HeaderNavItem>
               <HeaderNavLink title="Support" href="/support" />
