@@ -9,7 +9,10 @@ import Tutorial from "../../../components/Tutorial/Tutorial";
 
 const IntroductionOfBlockchain = () => {
   return (
-    <Tutorial title="Introduction of Blockchain">
+    <Tutorial
+      title="Introduction of Blockchain"
+      requiredReadingTimeInMinute="3"
+    >
       <Subtitle1>History</Subtitle1>
       <Paragraph>
         Bitcoin was one of the first protocols to use a revolutionary technology

@@ -8,7 +8,7 @@ import Tutorial from "../../../components/Tutorial/Tutorial";
 
 const AdvantagesOfBlockchain = () => {
   return (
-    <Tutorial title="Advantages of Blockchain">
+    <Tutorial title="Advantages of Blockchain" requiredReadingTimeInMinute="3">
       <Paragraph>
         Now you understand a little bit what a smart contract is, before
         understanding the inner working mechanism of a blockchain, it is a good

@@ -28,6 +28,12 @@
   line-height: 1.5;
 }
 
+.small_text {
+  font-size: var(--sm);
+  margin: 1rem 0;
+  letter-spacing: 1px;
+}
+
 .hyperlink {
   text-decoration: none;
   border-bottom: 1px solid #71c21b;

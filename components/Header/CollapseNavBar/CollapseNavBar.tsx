@@ -32,7 +32,7 @@ const CollapseNavBar: React.FC<Props> = ({ toggleCollapseNavBar }) => {
             <HeaderNavItem>
               <HeaderNavLink
                 title="Koala Tech"
-                href=""
+                href="/"
                 onClick={toggleCollapseNavBar}
               />
             </HeaderNavItem>
