@@ -30,7 +30,7 @@ const JSX = () => {
         &apos;react&apos; library.
       </Paragraph>
       <JavaScriptFormatter>{"import React from 'react';"}</JavaScriptFormatter>
-      <NoteCard type="information" title="Note">
+      <NoteCard type="info" title="Note">
         Many modern React project setups nowadays (like{" "}
         <Hyperlink href="https://create-react-app.dev/">
           create-react-app

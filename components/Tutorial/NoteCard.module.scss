@@ -1,5 +1,5 @@
 .container {
-  color: var(--color-primary);
+  color: #000;
   margin: 1rem 0;
   padding: 0.5rem;
   border-radius: 5px;
@@ -17,15 +17,22 @@
   line-height: 1.5;
 }
 
-.information {
-  background-color: RGBA(var(--color-success-tint), 0.7);
-  background-color: var(--color-success-tint);
+.info {
+  color: #326a83;
+  background-color: #1ab1f5;
+}
+
+.success {
+  color: #1e4620;
+  background-color: #5cb660;
 }
 
 .warning {
-  background-color: rgba(var(--color-warning-tint), 0.7);
+  color: #dc9122;
+  background-color: #ffe28c;
 }
 
 .danger {
-  background-color: rgba(var(--color-danger-tint), 0.7);
+  color: #5f2120;
+  background-color: #f16360;
 }
