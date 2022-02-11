@@ -66,7 +66,7 @@ const Header = () => {
               <HeaderNavLink title="Home" href="/" />
             </HeaderNavItem>
             <HeaderNavItem>
-              <HeaderNavLink title="Tutorial" href="#">
+              <HeaderNavLink title="Tutorials" href="/tutorials">
                 <DropDownNavItems
                   className={styles.dropDownContainer}
                   items={tutorialDropDownItems}
@@ -74,7 +74,7 @@ const Header = () => {
               </HeaderNavLink>
             </HeaderNavItem>
             <HeaderNavItem>
-              <HeaderNavLink title="Support" href="#" />
+              <HeaderNavLink title="Support" href="/support" />
             </HeaderNavItem>
             <HeaderNavItem>
               <HeaderNavLink title="About Us" href="/about-us" />
