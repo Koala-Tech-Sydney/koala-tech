@@ -18,6 +18,8 @@ html {
   font-size: 18px;
   color: var(--color-secondary);
   background-color: var(--color-primary);
+  // fix the bug where the html element is narrower than the child content in mobile viewport
+  min-width: fit-content;
 }
 
 a {
