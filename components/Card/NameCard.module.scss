@@ -2,53 +2,71 @@
   display: flex;
   margin: 2rem;
   border-radius: 25px;
-}
 
-.cardColumn {
-  flex-direction: column;
-}
+  .primary_section {
+    flex: 2;
 
-.primary_section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  flex: 2;
+    .media_section {
+      position: relative;
+      flex: 1;
 
-  .media_section {
-    position: relative;
-    flex: 1;
-  }
-
-  .avatar {
-    position: absolute;
-    left: 37.5%;
-    bottom: -10%;
-    height: 40.5%;
-    width: 25%;
-  }
-
-  .main_section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-    position: relative;
-    margin-top: 5%;
-
-    .name {
-      font-size: 1.5rem;
-      font-weight: 700;
+      .avatar {
+        position: absolute;
+        left: 35%;
+        height: 45%;
+        width: 30%;
+        bottom: -10%;
+      }
     }
 
-    .shortDescription {
-      font-size: 0.8rem;
-    }
+    .main_section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
 
-    .textSection {
-      text-align: center;
-      margin: 0.5rem;
+      .short_description_section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex: 5;
+        position: relative;
+        margin-top: 5%;
+
+        .name {
+          font-size: 1.5rem;
+          font-weight: 700;
+        }
+
+        .textSection {
+          text-align: center;
+          margin: 0.5rem;
+        }
+      }
+
+      .socialMediaButtons {
+        margin-bottom: 1rem;
+
+        * {
+          font-size: 2rem;
+        }
+
+        @media (max-width: 900px) and (min-width: 600px) {
+          * {
+            font-size: 1.5rem;
+          }
+        }
+
+        .github {
+          color: #3b3b3b;
+        }
+
+        .facebook,
+        .twitter {
+          color: #1976d2;
+        }
+      }
     }
   }
 
@@ -56,38 +74,28 @@
     border-right: 1px solid var(--color-primary);
   }
 
-  .socialMediaButtons {
-    margin-bottom: 1rem;
+  .secondary_section {
+    flex: 2;
+    padding: 2rem 3rem !important;
 
-    * {
-      font-size: 2rem;
-    }
-
-    @media (max-width: 900px) and (min-width: 600px) {
-      * {
-        font-size: 1.5rem;
-      }
+    @media (max-width: 600px) {
+      padding: 1rem 2rem !important;
     }
   }
 }
 
-.secondary_section {
-  flex: 2;
-  padding: 2rem 3rem !important;
-
-  @media (max-width: 600px) {
-    padding: 1rem 2rem !important;
-  }
+.cardColumn {
+  flex-direction: column;
 }
 
 .expandMoreButton {
   transition: all 0.5s ease;
-}
 
-.expandLess {
-  transform: rotate(180deg);
-}
+  &.expandLess {
+    transform: rotate(180deg);
+  }
 
-.expandMore {
-  transform: rotate(0deg);
+  &.expandMore {
+    transform: rotate(0deg);
+  }
 }

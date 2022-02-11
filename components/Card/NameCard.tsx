@@ -3,6 +3,7 @@ import Avatar from "@mui/material/Avatar";
 import Box from "@mui/material/Box";
 import IconButton from "@mui/material/IconButton";
 import FacebookRoundedIcon from "@mui/icons-material/FacebookRounded";
+import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
@@ -17,24 +18,39 @@ import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 
 import styles from "./NameCard.module.scss";
+import { SmallText } from "../Text/Text";
 
 const getSocialMediaButton = (name: string, uri: string) => {
   let icon: any;
   if (name == "Facebook") {
     icon = (
-      <IconButton color="primary" aria-label={name}>
+      <IconButton className={styles.facebook} aria-label={name}>
         <FacebookRoundedIcon />
       </IconButton>
     );
+  } else if (name == "Instagram") {
+    icon = (
+      <>
+        <svg width={0} height={0}>
+          <linearGradient id="linearColors" x1={1} y1={0} x2={1} y2={1}>
+            <stop offset={0} stopColor="#4160D5" />
+            <stop offset={1} stopColor="#F6B754" />
+          </linearGradient>
+        </svg>
+        <IconButton aria-label={name}>
+          <InstagramIcon sx={{ fill: "url(#linearColors)" }} />
+        </IconButton>
+      </>
+    );
   } else if (name == "Twitter") {
     icon = (
-      <IconButton color="primary" aria-label={name}>
+      <IconButton className={styles.twitter} aria-label={name}>
         <TwitterIcon />
       </IconButton>
     );
   } else if (name == "GitHub") {
     icon = (
-      <IconButton key={name} aria-label={name}>
+      <IconButton className={styles.github} aria-label={name}>
         <GitHubIcon />
       </IconButton>
     );
@@ -83,8 +99,8 @@ type NameCardProps = {
       alt?: string;
     };
     position: string;
-    shortDescription: string;
-    longDescription: string;
+    shortDescription: string | JSX.Element;
+    longDescription: string | JSX.Element;
     socialMedia: {
       name: string;
       uri: string;
@@ -111,7 +127,7 @@ const NameCard: React.FC<NameCardProps> = ({ info }) => {
 
   const longDescription = (
     <CardContent className={styles.secondary_section}>
-      <span className={styles.secondary_section_content}>{info.longDescription}</span>
+      {info.longDescription}
     </CardContent>
   );
 
@@ -135,28 +151,31 @@ const NameCard: React.FC<NameCardProps> = ({ info }) => {
             alt={info.avatarImage.alt || info.name}
           />
         </Box>
+        <Box className={styles.main_section}>
+          <CardContent className={styles.short_description_section}>
+            <div className={`${styles.name} ${styles.textSection}`}>
+              {info.name}
+            </div>
+            <div className={styles.textSection}>{info.position}</div>
+            <SmallText
+              className={`${styles.shortDescription} ${styles.textSection}`}
+            >
+              {info.shortDescription}
+            </SmallText>
+          </CardContent>
 
-        <CardContent className={styles.main_section}>
-          <div className={`${styles.name} ${styles.textSection}`}>
-            {info.name}
-          </div>
-          <div className={styles.textSection}>{info.position}</div>
-          <div className={`${styles.shortDescription} ${styles.textSection}`}>
-            {info.shortDescription}
-          </div>
-        </CardContent>
+          <Stack
+            className={styles.socialMediaButtons}
+            direction="row"
+            spacing={1}
+          >
+            {socialMediaButtons}
+          </Stack>
 
-        <Stack
-          className={styles.socialMediaButtons}
-          direction="row"
-          spacing={1}
-        >
-          {socialMediaButtons}
-        </Stack>
-
-        {isExtraSmallScreen ? (
-          <ExpandMore expanded={expanded} onClick={handleExpandClick} />
-        ) : null}
+          {isExtraSmallScreen ? (
+            <ExpandMore expanded={expanded} onClick={handleExpandClick} />
+          ) : null}
+        </Box>
       </Box>
 
       {isExtraSmallScreen ? (
