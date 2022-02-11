@@ -6,7 +6,11 @@ let chapters: usePathProps = [
     sectionName: "Introduction",
     subSections: [
       {
-        name: "Introduction",
+        name: "Introduction of Blockchain",
+        path: "",
+      },
+      {
+        name: "Advantages of Blockchain",
         path: "",
       },
     ],

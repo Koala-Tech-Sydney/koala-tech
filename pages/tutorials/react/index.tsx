@@ -1,7 +1,6 @@
 import usePath, { usePathProps } from "../../../hooks/usePath";
 
 import TutorialHome from "../../../components/Tutorial/TutorialHome";
-import ChapterList from "../../../components/Tutorial/ChapterList";
 
 let chapters: usePathProps = [
   {
@@ -40,19 +39,7 @@ const ReactTutorialHome = () => {
   chapters = usePath(chapters);
   // console.log(chapters);
 
-  return (
-    <TutorialHome title="React" chapters={chapters}>
-      {chapters.map((chapter) => {
-        return (
-          <ChapterList
-            key={chapter.sectionName}
-            title={chapter.sectionName}
-            subChapters={chapter.subSections}
-          />
-        );
-      })}
-    </TutorialHome>
-  );
+  return <TutorialHome title="React" chapters={chapters} />;
 };
 
 export default ReactTutorialHome;
