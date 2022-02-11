@@ -111,7 +111,7 @@ const NameCard: React.FC<NameCardProps> = ({ info }) => {
 
   const longDescription = (
     <CardContent className={styles.secondary_section}>
-      {info.longDescription}
+      <span className={styles.secondary_section_content}>{info.longDescription}</span>
     </CardContent>
   );
 

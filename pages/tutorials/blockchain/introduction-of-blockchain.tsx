@@ -30,7 +30,7 @@ const IntroductionOfBlockchain = () => {
         centralized governing.
       </Paragraph>
       <Paragraph>
-        Their idea was to take the same pieces that made bitcoin great and add
+        Their idea was to take the same pieces that made Bitcoin great and add
         smart contracts to it. You can think of a blockchain as a decentralized
         database and with Ethereum it also can do computation in a decentralized
         manner.

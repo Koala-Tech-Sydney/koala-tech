@@ -73,7 +73,11 @@
 
 .secondary_section {
   flex: 2;
-  padding: 2rem 3rem;
+  padding: 2rem 3rem !important;
+
+  @media (max-width: 600px) {
+    padding: 1rem 2rem !important;
+  }
 }
 
 .expandMoreButton {
