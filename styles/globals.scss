@@ -31,3 +31,14 @@ a {
   text-decoration: none;
   transition: all 0.2s linear;
 }
+
+/* This part turns the whole page into three sections such that the footer always stay at the bottom */
+#root {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  margin-top: auto;
+}

@@ -22,9 +22,11 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
           <meta name="description" content="online coding tutorial" />
           <link rel="icon" href="/koala.jpg" />
         </Head>
-        <Header />
-        <Component {...pageProps} />
-        <Footer />
+        <div id="root">
+          <Header />
+          <Component {...pageProps} />
+          <Footer />
+        </div>
       </Provider>
     </ThemeProvider>
   );
