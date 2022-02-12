@@ -24,7 +24,7 @@ const useContentTree = (props: ContentTree): ContentTree => {
   const router = useRouter();
   return props.map((section, index) => {
     return {
-      id: `root-${index}`,
+      id: `${section.name}-${index}`,
       name: section.name,
       path: "",
       children: !!section.children

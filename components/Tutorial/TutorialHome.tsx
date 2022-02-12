@@ -4,6 +4,7 @@ import SearchBar from "../Structure/SearchBar";
 import { Title } from "../Text/Text";
 import { ContentTree } from "../../hooks/useContentTree";
 import ChapterList from "../../components/Tutorial/ChapterList";
+import SideNavBar from "../../components/Structure/SideNavBar";
 
 type Props = {
   title: string;
@@ -13,7 +14,7 @@ type Props = {
 const TutorialHome: React.FC<Props> = ({ title, chapters }) => {
   return (
     <TwoSidesMainSection
-      leftSection={<div></div>}
+      leftSection={<SideNavBar data={chapters} />}
       mainSection={
         <Fragment>
           <Title>{title}</Title>
