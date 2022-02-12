@@ -1,33 +1,42 @@
-import usePath, { usePathProps } from "../../../hooks/usePath";
+import useContentTree, { ContentTree } from "../../../hooks/useContentTree";
 
 import TutorialHome from "../../../components/Tutorial/TutorialHome";
 
-let chapters: usePathProps = [
+let chapters: ContentTree = [
   {
-    sectionName: "Introduction",
-    subSections: [
+    id: "",
+    name: "Introduction",
+    path: "",
+    children: [
       {
+        id: "",
         name: "Setup",
         path: "",
       },
       {
+        id: "",
         name: "Introduction",
         path: "",
       },
       {
+        id: "",
         name: "JSX",
         path: "",
       },
       {
+        id: "",
         name: "JSX Deep Dive",
         path: "",
       },
     ],
   },
   {
-    sectionName: "Chapter 2",
-    subSections: [
+    id: "",
+    name: "Chapter 2",
+    path: "",
+    children: [
       {
+        id: "",
         name: "Function Component",
         path: "",
       },
@@ -36,7 +45,7 @@ let chapters: usePathProps = [
 ];
 
 const ReactTutorialHome = () => {
-  chapters = usePath(chapters);
+  chapters = useContentTree(chapters);
   // console.log(chapters);
 
   return <TutorialHome title="React" chapters={chapters} />;

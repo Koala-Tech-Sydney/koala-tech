@@ -1,10 +1,11 @@
 import Link from "next/link";
+import { ContentTree } from "../../hooks/useContentTree";
 
 import styles from "./ChapterList.module.scss";
 
 type Props = {
   title: string;
-  subChapters: { name: string; path: string }[];
+  subChapters?: ContentTree;
 };
 
 const ChapterList: React.FC<Props> = ({ title, subChapters }) => {
@@ -12,15 +13,17 @@ const ChapterList: React.FC<Props> = ({ title, subChapters }) => {
     <section className={styles.container}>
       <div className={styles.title}>{title}</div>
       <ol className={styles.list}>
-        {subChapters.map((chapter) => {
-          return (
-            <li className={styles.item} key={chapter.name}>
-              <Link href={chapter.path}>
-                <a className={styles.chapterLink}>{chapter.name}</a>
-              </Link>
-            </li>
-          );
-        })}
+        {!!subChapters
+          ? subChapters.map((chapter) => {
+              return (
+                <li className={styles.item} key={chapter.name}>
+                  <Link href={chapter.path}>
+                    <a className={styles.chapterLink}>{chapter.name}</a>
+                  </Link>
+                </li>
+              );
+            })
+          : null}
       </ol>
     </section>
   );

@@ -1,27 +1,29 @@
 import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
 import Link from "next/link";
-import { usePathProps } from "../../hooks/usePath";
+import { ContentTree } from "../../hooks/useContentTree";
 
 import styles from "./SearchBar.module.scss";
 
 type Props = {
-  chapters: usePathProps;
+  chapters: ContentTree;
 };
 
 const SearchBar: React.FC<Props> = ({ chapters }) => {
   console.log(chapters);
 
-  const getSearchList = (sections: usePathProps) => {
+  const getSearchList = (sections: ContentTree) => {
     let result: { group: string; name: string; path: string }[] = [];
     sections.forEach((section) => {
-      section.subSections.forEach((subSection) => {
-        result.push({
-          group: section.sectionName,
-          name: subSection.name,
-          path: subSection.path,
-        });
-      });
+      !!section.children
+        ? section.children.forEach((subSection) => {
+            result.push({
+              group: section.name,
+              name: subSection.name,
+              path: subSection.path,
+            });
+          })
+        : null;
     });
     return result;
   };

@@ -2,15 +2,15 @@ import { Fragment } from "react";
 import TwoSidesMainSection from "../Structure/TwoSidesMainSection";
 import SearchBar from "../Structure/SearchBar";
 import { Title } from "../Text/Text";
-import { usePathProps } from "../../hooks/usePath";
+import { ContentTree } from "../../hooks/useContentTree";
 import ChapterList from "../../components/Tutorial/ChapterList";
 
 type Props = {
   title: string;
-  chapters: usePathProps;
+  chapters: ContentTree;
 };
 
-const TutorialHome: React.FC<Props> = ({ title, chapters, children }) => {
+const TutorialHome: React.FC<Props> = ({ title, chapters }) => {
   return (
     <TwoSidesMainSection
       leftSection={<div></div>}
@@ -21,9 +21,9 @@ const TutorialHome: React.FC<Props> = ({ title, chapters, children }) => {
           {chapters.map((chapter) => {
             return (
               <ChapterList
-                key={chapter.sectionName}
-                title={chapter.sectionName}
-                subChapters={chapter.subSections}
+                key={chapter.name}
+                title={chapter.name}
+                subChapters={chapter.children}
               />
             );
           })}

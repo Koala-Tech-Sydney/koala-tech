@@ -1,15 +1,19 @@
 import TutorialHome from "../../../components/Tutorial/TutorialHome";
-import usePath, { usePathProps } from "../../../hooks/usePath";
+import useContentTree, { ContentTree } from "../../../hooks/useContentTree";
 
-let chapters: usePathProps = [
+let chapters: ContentTree = [
   {
-    sectionName: "Introduction",
-    subSections: [
+    id: "",
+    name: "Introduction",
+    path: "",
+    children: [
       {
+        id: "",
         name: "Introduction of Blockchain",
         path: "",
       },
       {
+        id: "",
         name: "Advantages of Blockchain",
         path: "",
       },
@@ -18,7 +22,7 @@ let chapters: usePathProps = [
 ];
 
 const BlockchainTutorialHome = () => {
-  chapters = usePath(chapters);
+  chapters = useContentTree(chapters);
   return <TutorialHome title="Blockchain" chapters={chapters}></TutorialHome>;
 };
 
