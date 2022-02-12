@@ -12,7 +12,7 @@ const renderTree = (data: {
   id: string;
   name: string;
   path: string;
-  children: ContentTree | null;
+  children: ContentTree;
 }) => {
   return (
     <Link href={data.path} passHref>
@@ -26,7 +26,7 @@ const renderTree = (data: {
 };
 
 type Props = {
-  data: ContentTree | null;
+  data: ContentTree;
 };
 
 const SideNavBar: React.FC<Props> = ({ data }) => {
@@ -42,11 +42,9 @@ const SideNavBar: React.FC<Props> = ({ data }) => {
       defaultExpandIcon={<ChevronRightIcon />}
       sx={{ height: 110, flexGrow: 1, maxWidth: 400, overflowY: "auto" }}
     >
-      {!!data
-        ? data.map((child) => {
-            return renderTree(child);
-          })
-        : null}
+      {data.map((child) => {
+        return renderTree(child);
+      })}
     </TreeView>
   );
 };

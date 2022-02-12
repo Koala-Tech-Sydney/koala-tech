@@ -11,11 +11,13 @@ let chapters: ContentTree = [
         id: "",
         name: "Introduction of Blockchain",
         path: "",
+        children: [],
       },
       {
         id: "",
         name: "Advantages of Blockchain",
         path: "",
+        children: [],
       },
     ],
   },

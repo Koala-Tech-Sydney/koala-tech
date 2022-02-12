@@ -8,7 +8,7 @@ import SideNavBar from "../../components/Structure/SideNavBar";
 
 type Props = {
   title: string;
-  chapters: ContentTree | null;
+  chapters: ContentTree;
 };
 
 const TutorialHome: React.FC<Props> = ({ title, chapters }) => {

@@ -19,23 +19,19 @@ export type ContentTree = {
   id: string;
   name: string;
   path: string;
-  children: ContentTree | null;
+  children: ContentTree;
 }[];
 
-const useContentTree = (props: ContentTree | null): ContentTree | null => {
+const useContentTree = (props: ContentTree): ContentTree => {
   const router = useRouter();
-  return !!props
-    ? props.map((section, index) => {
-        return {
-          id: `${section.name}-${index}`,
-          name: section.name,
-          path: "",
-          children: !!section.children
-            ? addPaths(router.pathname, section.children)
-            : null,
-        };
-      })
-    : null;
+  return props.map((section, index) => {
+    return {
+      id: `${section.name}-${index}`,
+      name: section.name,
+      path: "",
+      children: addPaths(router.pathname, section.children),
+    };
+  });
 };
 
 export { useContentTree as default, normalizePathName };
