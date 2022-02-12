@@ -1,6 +1,7 @@
 import { Fragment } from "react";
-import { Title, SmallText, Paragraph } from "../Text/Text";
+import { Title, SmallText } from "../Text/Text";
 import TwoSidesMainSection from "../Structure/TwoSidesMainSection";
+import SideNavBar from "../Structure/SideNavBar";
 
 import styles from "./Tutorial.module.scss";
 

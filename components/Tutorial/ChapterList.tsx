@@ -5,7 +5,7 @@ import styles from "./ChapterList.module.scss";
 
 type Props = {
   title: string;
-  subChapters?: ContentTree;
+  subChapters: ContentTree | null;
 };
 
 const ChapterList: React.FC<Props> = ({ title, subChapters }) => {
