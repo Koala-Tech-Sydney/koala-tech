@@ -63,6 +63,10 @@ const tutorList = [
         name: "GitHub",
         uri: "https://github.com/fongchinghinunsw",
       },
+      {
+        name: "LinkedIn",
+        uri: "https://www.linkedin.com/in/stephen-fong-173a0715a/",
+      },
     ],
   },
 ];

@@ -2,10 +2,10 @@ import { Fragment, useState } from "react";
 import Avatar from "@mui/material/Avatar";
 import Box from "@mui/material/Box";
 import IconButton from "@mui/material/IconButton";
-import FacebookRoundedIcon from "@mui/icons-material/FacebookRounded";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import TwitterIcon from "@mui/icons-material/Twitter";
-import GitHubIcon from "@mui/icons-material/GitHub";
+import InstagramIcon from "../Icon/InstagramIcon";
+import FacebookIcon from "../Icon/FacebookIcon";
+import TwitterIcon from "../Icon/TwitterIcon";
+import GitHubIcon from "../Icon/GitHubIcon";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Stack from "@mui/material/Stack";
 
@@ -19,46 +19,25 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 
 import styles from "./NameCard.module.scss";
 import { SmallText } from "../Text/Text";
+import LinkedInIcon from "../Icon/LinkedinIcon";
 
 const getSocialMediaButton = (name: string, uri: string) => {
   let icon: any;
   if (name == "Facebook") {
-    icon = (
-      <IconButton className={styles.facebook} aria-label={name}>
-        <FacebookRoundedIcon />
-      </IconButton>
-    );
+    icon = <FacebookIcon />;
   } else if (name == "Instagram") {
-    icon = (
-      <>
-        <svg width={0} height={0}>
-          <linearGradient id="linearColors" x1={1} y1={0} x2={1} y2={1}>
-            <stop offset={0} stopColor="#4160D5" />
-            <stop offset={1} stopColor="#F6B754" />
-          </linearGradient>
-        </svg>
-        <IconButton aria-label={name}>
-          <InstagramIcon sx={{ fill: "url(#linearColors)" }} />
-        </IconButton>
-      </>
-    );
+    icon = <InstagramIcon />;
   } else if (name == "Twitter") {
-    icon = (
-      <IconButton className={styles.twitter} aria-label={name}>
-        <TwitterIcon />
-      </IconButton>
-    );
+    icon = <TwitterIcon />;
   } else if (name == "GitHub") {
-    icon = (
-      <IconButton className={styles.github} aria-label={name}>
-        <GitHubIcon />
-      </IconButton>
-    );
+    icon = <GitHubIcon />;
+  } else if (name == "LinkedIn") {
+    icon = <LinkedInIcon />;
   }
 
   return (
     <a key={name} href={uri}>
-      {icon}
+      <IconButton aria-label={name}>{icon}</IconButton>
     </a>
   );
 };
