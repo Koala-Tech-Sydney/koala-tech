@@ -37,4 +37,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 [Wireframe](https://drive.google.com/file/d/1N9XNMrCXVhMypS8oc6JfU6knwpR1xSbJ/view?usp=sharing)
 
-[Production](https://koala-tech.vercel.app/)
+[Production](https://koala-tech-sydney.vercel.app/)
