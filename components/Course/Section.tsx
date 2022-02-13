@@ -8,7 +8,8 @@ type Props = {
 const Section: React.FC<Props> = ({ name }) => {
   return (
     <>
-      <div id={normalizePathName(name)} />
+      {/* make some space so that the top navigation bar won't cover up the title */}
+      <div id={normalizePathName(name)} style={{ marginBottom: "6rem" }} />
       <Subtitle1>{name}</Subtitle1>
     </>
   );

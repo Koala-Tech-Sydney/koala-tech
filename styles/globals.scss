@@ -39,6 +39,11 @@ a {
   flex-direction: column;
 }
 
+#main {
+  // add some margin to prevent header and content overlapping
+  margin-top: 4rem;
+}
+
 footer {
   margin-top: auto;
 }

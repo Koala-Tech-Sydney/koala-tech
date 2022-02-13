@@ -24,7 +24,9 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
         </Head>
         <div id="root">
           <Header />
-          <Component {...pageProps} />
+          <main id="main">
+            <Component {...pageProps} />
+          </main>
           <Footer />
         </div>
         <script
