@@ -75,7 +75,7 @@ const configureSections = (
   sections: Section[]
 ): Section[] => {
   return sections.map((section) => {
-    // {"id":"/courses/blockchain/introduction/introduction-of-blockchain#smart-contract","name":"Smart Contract"}
+    // {"id":"/courses/blockchain/introduction/what-is-a-blockchain#smart-contract","name":"Smart Contract"}
     const pathToSection = `${basePath}#${normalizePathName(section.name)}`;
     return { ...section, id: pathToSection, path: pathToSection };
   });

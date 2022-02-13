@@ -46,7 +46,7 @@ const tutorList = [
         are modularized and they are designed to be suitable for both beginners
         and experienced developers so that beginners can learn starting from the
         very beginning of a course while more experienced developers can jump
-        directly into a particular tutorial and get the hang of the concepts
+        directly into a particular chapter and get the hang of the concepts
         quickly.
       </SmallText>
     ),

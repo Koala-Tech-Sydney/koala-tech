@@ -1,9 +1,5 @@
-import {
-  Subtitle1,
-  Subtitle2,
-  Paragraph,
-  Hyperlink,
-} from "../../../../components/Text/Text";
+import Section from "../../../../components/Course/Section";
+import { Paragraph } from "../../../../components/Text/Text";
 import Course from "../../../../components/Course/SubChapter";
 import { blockchainCourse } from "..";
 
@@ -12,7 +8,7 @@ const AdvantagesOfBlockchain = () => {
     <Course
       title="Advantages of Blockchain"
       course={blockchainCourse}
-      requiredReadingTimeInMinute="3"
+      requiredReadingTimeInMinute="4"
     >
       <Paragraph>
         Now you understand a little bit what a smart contract is, before
@@ -41,7 +37,7 @@ const AdvantagesOfBlockchain = () => {
         blockchain allows us to be free of these oppressors and live in a world
         that&apos;s truly free and trustless.
       </Paragraph>
-      <Subtitle1>Decentralization</Subtitle1>
+      <Section name="Decentralization" />
       <Paragraph>
         There&apos;s no centralized entity that controls the blockchain, it is
         run by a network of independent users. The individuals that make up
@@ -50,7 +46,7 @@ const AdvantagesOfBlockchain = () => {
         whole blockchain together. It&apos;s all these different independent
         individuals that form the decentralized network.
       </Paragraph>
-      <Subtitle1>Transparency and Flexibility</Subtitle1>
+      <Section name="Transparency and Flexibility" />
       <Paragraph>
         Everything that&apos;s done on a blockchain and all the rules that are
         made can be seen by everyone, there&apos;s no backdoor deals and no
@@ -66,7 +62,7 @@ const AdvantagesOfBlockchain = () => {
         recognize you from your account as long as you don’t tell other people
         you own the account.
       </Paragraph>
-      <Subtitle1>Speed and Efficiency</Subtitle1>
+      <Section name="Speed and Efficiency" />
       <Paragraph>
         Have you ever tried to make a withdrawal from the bank and it took three
         to five days? All the bank is doing is adding and subtracting numbers,
@@ -80,7 +76,7 @@ const AdvantagesOfBlockchain = () => {
         using it can be from 10 minutes all the way down to just a couple of
         seconds.
       </Paragraph>
-      <Subtitle1>Security and Immutability</Subtitle1>
+      <Section name="Security and Immutability" />
       <Paragraph>
         Blockchains are immutable which means they can&apos;t be changed without
         other peers noticing and because of that, they can&apos;t be tampered
@@ -103,7 +99,7 @@ const AdvantagesOfBlockchain = () => {
         lug your gold around or lug your contracts around with you. It is always
         stored in the blockchain’s smart contracts.
       </Paragraph>
-      <Subtitle1>Removal of Counterparty Party</Subtitle1>
+      <Section name="Removal of Counterparty Party" />
       <Paragraph>
         In the traditional world when we engage with individuals they don&apos;t
         always have our best interests at heart, a lot of them are usually
@@ -133,7 +129,7 @@ const AdvantagesOfBlockchain = () => {
         all this time going through this long process to get something that you
         should have originally gotten in the first place.
       </Paragraph>
-      <Subtitle1>Trust Minimized Agreements</Subtitle1>
+      <Section name="Trust Minimized Agreements" />
       <Paragraph>
         Smart contracts allow us to engage in trustless and trust minimized
         agreements. We currently live in a world of brand-based agreements. If I

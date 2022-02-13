@@ -4,12 +4,12 @@ import { Paragraph, Hyperlink } from "../../../../components/Text/Text";
 import Course from "../../../../components/Course/SubChapter";
 import { blockchainCourse } from "..";
 
-const IntroductionOfBlockchain = () => {
+const WhatIsABlockchain = () => {
   return (
     <Course
-      title="Introduction of Blockchain"
+      title="What is a Blockchain?"
       course={blockchainCourse}
-      requiredReadingTimeInMinute="3"
+      requiredReadingTimeInMinute="4"
     >
       <Section name="History" />
       <Paragraph>
@@ -153,7 +153,7 @@ const IntroductionOfBlockchain = () => {
         networks, they represent different blockchains.
       </Paragraph>
       <Image
-        src="/images/courses/blockchain/introduction/introduction-of-blockchain/chainlink-data-feeds-networks.png"
+        src="/images/courses/blockchain/introduction/what-is-a-blockchain/chainlink-data-feeds-networks.png"
         alt="Chainlink data feeds networks"
         height="565"
         width="889"
@@ -164,7 +164,7 @@ const IntroductionOfBlockchain = () => {
         data feeds.
       </Paragraph>
       <Image
-        src="/images/courses/blockchain/introduction/introduction-of-blockchain/mainnet-data-feeds.png"
+        src="/images/courses/blockchain/introduction/what-is-a-blockchain/mainnet-data-feeds.png"
         alt="Data feeds on the Ethereum Mainnet"
         height="763"
         width="1843"
@@ -176,7 +176,7 @@ const IntroductionOfBlockchain = () => {
         from these oracles and taking the average.
       </Paragraph>
       <Image
-        src="/images/courses/blockchain/introduction/introduction-of-blockchain/eth-usd-data-feeds.png"
+        src="/images/courses/blockchain/introduction/what-is-a-blockchain/eth-usd-data-feeds.png"
         alt="Ethereum to US dollars data feeds"
         height="774"
         width="1230"
@@ -202,4 +202,4 @@ const IntroductionOfBlockchain = () => {
   );
 };
 
-export default IntroductionOfBlockchain;
+export default WhatIsABlockchain;
