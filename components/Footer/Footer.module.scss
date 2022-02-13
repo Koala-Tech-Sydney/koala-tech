@@ -19,4 +19,21 @@
   & > * {
     padding: 1rem 0;
   }
+
+  @media (max-width: 1200px) and (min-width: 600px) {
+    padding: 1.5rem;
+
+    & > * {
+      padding: 0.8rem 0;
+    }
+  }
+
+  @media (max-width: 600px) {
+    font-size: 0.8rem;
+    padding: 1rem;
+
+    & > * {
+      padding: 0.5rem 0;
+    }
+  }
 }
