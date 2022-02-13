@@ -1,19 +1,17 @@
 import Image from "next/image";
-import {
-  Subtitle1,
-  Subtitle2,
-  Paragraph,
-  Hyperlink,
-} from "../../../components/Text/Text";
-import Tutorial from "../../../components/Tutorial/Tutorial";
+import Section from "../../../../components/Course/Section";
+import { Paragraph, Hyperlink } from "../../../../components/Text/Text";
+import Course from "../../../../components/Course/SubChapter";
+import { blockchainCourse } from "..";
 
 const IntroductionOfBlockchain = () => {
   return (
-    <Tutorial
+    <Course
       title="Introduction of Blockchain"
+      course={blockchainCourse}
       requiredReadingTimeInMinute="3"
     >
-      <Subtitle1>History</Subtitle1>
+      <Section name="History" />
       <Paragraph>
         Bitcoin was one of the first protocols to use a revolutionary technology
         called blockchain. The Bitcoin whitepaper was released by a pseudonymous
@@ -43,14 +41,14 @@ const IntroductionOfBlockchain = () => {
         blockchain, you can apply it to other blockchains as well because the
         concepts are the same.
       </Paragraph>
-      <Subtitle1>Web 3.0</Subtitle1>
+      <Section name="Web 3.0" />
       <Paragraph>
         This is an idea for a new version of the World Wide Web based on the
         blockchain (can connect and interact with the blockchain), which
         incorporates concepts including decentralization and token-based
         economics.
       </Paragraph>
-      <Subtitle1>Smart Contract</Subtitle1>
+      <Section name="Smart Contract" />
       <Paragraph>
         Smart contracts are pieces of code on the blockchain that are not run by
         any centralized intermediary. They are similar to regular traditional
@@ -68,7 +66,7 @@ const IntroductionOfBlockchain = () => {
         whereas the Ethereum developers view that network as an asset and also a
         utility for people to build these smart contracts.
       </Paragraph>
-      <Subtitle1>Oracle Problem</Subtitle1>
+      <Section name="Oracle Problem" />
       <Paragraph>
         Smart contracts are amazing but they come with a natural fatal flaw,
         which is known as the oracle problem. If you want these smart contracts
@@ -124,7 +122,7 @@ const IntroductionOfBlockchain = () => {
         majority of DeFi (Decentralized Finance) applications today are hybrid
         smart contracts.
       </Paragraph>
-      <Subtitle1>Chainlink</Subtitle1>
+      <Section name="Chainlink" />
       <Paragraph>
         Chainlink is the most popular and powerful decentralized blockchain
         oracle network built on Ethereum. The network is intended to be used to
@@ -155,7 +153,7 @@ const IntroductionOfBlockchain = () => {
         networks, they represent different blockchains.
       </Paragraph>
       <Image
-        src="/images/tutorials/blockchain/introduction/introduction-of-blockchain/chainlink-data-feeds-networks.png"
+        src="/images/courses/blockchain/introduction/introduction-of-blockchain/chainlink-data-feeds-networks.png"
         alt="Chainlink data feeds networks"
         height="565"
         width="889"
@@ -166,7 +164,7 @@ const IntroductionOfBlockchain = () => {
         data feeds.
       </Paragraph>
       <Image
-        src="/images/tutorials/blockchain/introduction/introduction-of-blockchain/mainnet-data-feeds.png"
+        src="/images/courses/blockchain/introduction/introduction-of-blockchain/mainnet-data-feeds.png"
         alt="Data feeds on the Ethereum Mainnet"
         height="763"
         width="1843"
@@ -178,7 +176,7 @@ const IntroductionOfBlockchain = () => {
         from these oracles and taking the average.
       </Paragraph>
       <Image
-        src="/images/tutorials/blockchain/introduction/introduction-of-blockchain/eth-usd-data-feeds.png"
+        src="/images/courses/blockchain/introduction/introduction-of-blockchain/eth-usd-data-feeds.png"
         alt="Ethereum to US dollars data feeds"
         height="774"
         width="1230"
@@ -200,7 +198,7 @@ const IntroductionOfBlockchain = () => {
         to keep in mind is that we need a decentralized way to bring data from
         the outside world to the blockchain and oracles is our solution.
       </Paragraph>
-    </Tutorial>
+    </Course>
   );
 };
 

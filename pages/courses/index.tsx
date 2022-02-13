@@ -3,13 +3,13 @@ import Link from "next/link";
 import TwoSidesMainSection from "../../components/Structure/TwoSidesMainSection";
 
 const tutorialList = [
-  { name: "React", path: "/tutorials/react" },
-  { name: "Blockchain", path: "/tutorials/blockchain" },
+  { name: "React", path: "/courses/react" },
+  { name: "Blockchain", path: "/courses/blockchain" },
 ];
 
-const TutorialListMainSection = () => {
+const CourseListMainSection = () => {
   return (
-    // TODO: just a temporary solution to make the tutorials accessible!
+    // TODO: just a temporary solution to make the courses accessible!
     <Fragment>
       {tutorialList.map((tutorial) => {
         return (
@@ -25,14 +25,14 @@ const TutorialListMainSection = () => {
   );
 };
 
-const TutorialList = () => {
+const CourseList = () => {
   return (
     <TwoSidesMainSection
       leftSection={<div></div>}
-      mainSection={<TutorialListMainSection />}
+      mainSection={<CourseListMainSection />}
       rightSection={<div></div>}
     />
   );
 };
 
-export default TutorialList;
+export default CourseList;

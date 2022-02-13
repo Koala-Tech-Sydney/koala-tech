@@ -5,13 +5,14 @@ import {
   Subtitle2,
   Paragraph,
   Hyperlink,
-} from "../../../components/Text/Text";
+} from "../../../../components/Text/Text";
 
-import Tutorial from "../../../components/Tutorial/Tutorial";
+import Course from "../../../../components/Course/SubChapter";
+import { reactCourse } from "..";
 
 const Setup = () => {
   return (
-    <Tutorial title="Setup">
+    <Course title="Setup" course={reactCourse}>
       <Subtitle1>Node.js</Subtitle1>
       <Paragraph>
         The most conventient way to set up your React development environment is
@@ -40,14 +41,14 @@ const Setup = () => {
         you need.
       </Paragraph>
       <Image
-        src="/images/tutorials/react/setup/extension-tab.png"
+        src="/images/courses/react/setup/extension-tab.png"
         alt="Visual Studio Code extension tab"
         height="450"
         width="454"
       />
       <Subtitle2>Prettier</Subtitle2>
       <Image
-        src="/images/tutorials/react/setup/prettier.png"
+        src="/images/courses/react/setup/prettier.png"
         alt="Prettier"
         height="244"
         width="844"
@@ -61,33 +62,33 @@ const Setup = () => {
         you.
       </Paragraph>
       <Image
-        src="/images/tutorials/react/setup/prettier-setting.png"
+        src="/images/courses/react/setup/prettier-setting.png"
         alt="Prettier setting"
         height="916"
         width="1864"
       />
       <Subtitle2>Bracket Pair Colorizer</Subtitle2>
       <Image
-        src="/images/tutorials/react/setup/bracket-pair-colorizer.png"
+        src="/images/courses/react/setup/bracket-pair-colorizer.png"
         alt="Bracket Pair Colorizer"
         height="243"
         width="786"
       />
       <Subtitle2>Material Icon Theme</Subtitle2>
       <Image
-        src="/images/tutorials/react/setup/material-icon-theme.png"
+        src="/images/courses/react/setup/material-icon-theme.png"
         alt="Material Icon Theme"
         height="234"
         width="757"
       />
       <Subtitle2>React Snippets</Subtitle2>
       <Image
-        src="/images/tutorials/react/setup/react-snippets.png"
+        src="/images/courses/react/setup/react-snippets.png"
         alt="React Snippets"
         height="244"
         width="1084"
       />
-    </Tutorial>
+    </Course>
   );
 };
 

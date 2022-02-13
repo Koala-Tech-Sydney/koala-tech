@@ -6,6 +6,7 @@ import InstagramIcon from "../Icon/InstagramIcon";
 import FacebookIcon from "../Icon/FacebookIcon";
 import TwitterIcon from "../Icon/TwitterIcon";
 import GitHubIcon from "../Icon/GitHubIcon";
+import LinkedInIcon from "../Icon/LinkedinIcon";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Stack from "@mui/material/Stack";
 
@@ -19,7 +20,6 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 
 import styles from "./NameCard.module.scss";
 import { SmallText } from "../Text/Text";
-import LinkedInIcon from "../Icon/LinkedinIcon";
 
 const getSocialMediaButton = (name: string, uri: string) => {
   let icon: any;

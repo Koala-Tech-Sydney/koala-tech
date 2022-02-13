@@ -58,7 +58,7 @@ const Header = () => {
               <HeaderNavLink title="Home" href="/" />
             </HeaderNavItem>
             <HeaderNavItem>
-              <HeaderNavLink title="Tutorials" href="/tutorials" />
+              <HeaderNavLink title="Courses" href="/courses" />
             </HeaderNavItem>
             <HeaderNavItem>
               <HeaderNavLink title="Support" href="/support" />

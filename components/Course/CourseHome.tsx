@@ -2,24 +2,24 @@ import { Fragment } from "react";
 import TwoSidesMainSection from "../Structure/TwoSidesMainSection";
 import SearchBar from "../Structure/SearchBar";
 import { Title } from "../Text/Text";
-import { ContentTree } from "../../hooks/useContentTree";
-import ChapterList from "../../components/Tutorial/ChapterList";
-import SideNavBar from "../../components/Structure/SideNavBar";
+import { Course } from "../../hooks/useCourse";
+import ChapterList from "./ChapterList";
+import SideNavBar from "./SideNavBar";
 
 type Props = {
   title: string;
-  chapters: ContentTree;
+  course: Course;
 };
 
-const TutorialHome: React.FC<Props> = ({ title, chapters }) => {
+const CourseHome: React.FC<Props> = ({ title, course }) => {
   return (
     <TwoSidesMainSection
-      leftSection={<SideNavBar data={chapters} />}
+      leftSection={<SideNavBar course={course} />}
       mainSection={
         <Fragment>
           <Title>{title}</Title>
-          <SearchBar chapters={chapters} />
-          {chapters.map((chapter) => {
+          <SearchBar course={course} />
+          {course.chapters.map((chapter) => {
             return (
               <ChapterList
                 key={chapter.name}
@@ -35,4 +35,4 @@ const TutorialHome: React.FC<Props> = ({ title, chapters }) => {
   );
 };
 
-export default TutorialHome;
+export default CourseHome;

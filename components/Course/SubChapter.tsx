@@ -1,29 +1,31 @@
 import { Fragment } from "react";
 import { Title, SmallText } from "../Text/Text";
 import TwoSidesMainSection from "../Structure/TwoSidesMainSection";
-import SideNavBar from "../Structure/SideNavBar";
+import { Course } from "../../hooks/useCourse";
+import SideNavBar from "./SideNavBar";
 
-import styles from "./Tutorial.module.scss";
+import styles from "./SubChapter.module.scss";
 
 type Props = {
   title: string;
+  course: Course;
   requiredReadingTimeInMinute?: string;
 };
 
-const Tutorial: React.FC<Props> = ({
+const Course: React.FC<Props> = ({
   title,
+  course,
   requiredReadingTimeInMinute,
   children,
 }) => {
   return (
     <TwoSidesMainSection
-      leftSection={<div></div>}
+      leftSection={<SideNavBar course={course} />}
       mainSection={
         <Fragment>
           <Title>
             {title}
             {!!requiredReadingTimeInMinute && (
-              // <Paragraph>{`${requiredReadingTimeInMinute} minutes of reading`}</Paragraph>
               <SmallText
                 className={styles.requiredReadingTimeInMinute}
               >{`${requiredReadingTimeInMinute} minutes of reading`}</SmallText>
@@ -37,4 +39,4 @@ const Tutorial: React.FC<Props> = ({
   );
 };
 
-export default Tutorial;
+export default Course;

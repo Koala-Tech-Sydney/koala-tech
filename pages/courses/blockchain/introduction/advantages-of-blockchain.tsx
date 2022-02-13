@@ -3,12 +3,17 @@ import {
   Subtitle2,
   Paragraph,
   Hyperlink,
-} from "../../../components/Text/Text";
-import Tutorial from "../../../components/Tutorial/Tutorial";
+} from "../../../../components/Text/Text";
+import Course from "../../../../components/Course/SubChapter";
+import { blockchainCourse } from "..";
 
 const AdvantagesOfBlockchain = () => {
   return (
-    <Tutorial title="Advantages of Blockchain" requiredReadingTimeInMinute="3">
+    <Course
+      title="Advantages of Blockchain"
+      course={blockchainCourse}
+      requiredReadingTimeInMinute="3"
+    >
       <Paragraph>
         Now you understand a little bit what a smart contract is, before
         understanding the inner working mechanism of a blockchain, it is a good
@@ -145,7 +150,7 @@ const AdvantagesOfBlockchain = () => {
         determines is the input output that&apos;s exactly what&apos;s gonna
         happen every single time.
       </Paragraph>
-    </Tutorial>
+    </Course>
   );
 };
 

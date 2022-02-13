@@ -62,8 +62,8 @@ const CollapseNavBar: React.FC<Props> = ({ toggleCollapseNavBar }) => {
           </CollapseNavItem>
           <CollapseNavItem>
             <CollapseNavLink
-              title="Tutorials"
-              href="/tutorials"
+              title="Courses"
+              href="/courses"
               onClick={toggleCollapseNavBar}
             />
           </CollapseNavItem>
