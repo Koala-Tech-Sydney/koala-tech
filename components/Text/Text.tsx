@@ -13,6 +13,10 @@ const Subtitle2: React.FC = (props) => {
   return <div className={styles.subtitle2}>{props.children}</div>;
 };
 
+const Subtitle3: React.FC = (props) => {
+  return <div className={styles.subtitle3}>{props.children}</div>;
+};
+
 const Paragraph: React.FC = (props) => {
   return <div className={styles.paragraph}>{props.children}</div>;
 };
@@ -40,4 +44,12 @@ const Hyperlink: React.FC<HyperlinkProps> = ({ href, children }) => {
   );
 };
 
-export { Title, Subtitle1, Subtitle2, Paragraph, SmallText, Hyperlink };
+export {
+  Title,
+  Subtitle1,
+  Subtitle2,
+  Subtitle3,
+  Paragraph,
+  SmallText,
+  Hyperlink,
+};
