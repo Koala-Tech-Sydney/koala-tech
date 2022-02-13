@@ -46,21 +46,21 @@ const HowDoBlockchainsWork = () => {
       </Paragraph>
       <Subtitle3>Proof of Work</Subtitle3>
       <Paragraph>
-        The mining feature is what's known as proof of work. ETH and BTC are
-        currently proof of work blockchain that follows Nakamoto consensus. ETH2
-        will be using proof of stake.
+        The mining feature is what&apos;s known as proof of work. ETH and BTC
+        are currently proof of work blockchain that follows Nakamoto consensus.
+        ETH2 will be using proof of stake.
       </Paragraph>
       <Paragraph>
         Proof of work is known as a sybil resistance mechanism because it
         defines a way to figure out who is the block author, i.e. who did the
         work to find that mine (solved the mathematical problem) and be the
-        author of that block so all the other nodes can verify that it's
-        accurate. Sybil resistance is a blockchain's ability to defend against
-        users creating a large number of pseudo-anonymous identities to gain a
-        disproportionately advantageous influence over the system and in
-        layman's terms it's basically a way for a blockchain to defend against
-        somebody making a bunch of fake blockchains so that they can get more
-        and more rewards.
+        author of that block so all the other nodes can verify that it&apos;s
+        accurate. Sybil resistance is a blockchain&apos;s ability to defend
+        against users creating a large number of pseudo-anonymous identities to
+        gain a disproportionately advantageous influence over the system and in
+        layman&apos;s terms it&apos;s basically a way for a blockchain to defend
+        against somebody making a bunch of fake blockchains so that they can get
+        more and more rewards.
       </Paragraph>
       <Paragraph>
         Proof of work is sybil resistant because mining a single node has to go
@@ -71,17 +71,17 @@ const HowDoBlockchainsWork = () => {
         section it was finding a nonce which gives a hash output starting with
         four zeros but again each blockchain might have a different problem, in
         fact some of these blockchains make this riddle intentionally hard or
-        intentionally easy to change what's called the block time, the block
-        time is how long it takes between blocks being published (solved) and
-        it's proportional to how hard these algorithms are, so these problems
-        actually can change depending on how long they want the block time to
-        be.
+        intentionally easy to change what&apos;s called the block time, the
+        block time is how long it takes between blocks being published (solved)
+        and it&apos;s proportional to how hard these algorithms are, so these
+        problems actually can change depending on how long they want the block
+        time to be.
       </Paragraph>
       <Paragraph>
         Proof of work also tells us where these transaction fees and these block
         rewards go to. When we made a transaction we had to talk about gas and a
-        transaction fee. In a proof of work network they're called miners and in
-        the proof of stake network they're called validators.
+        transaction fee. In a proof of work network they&apos;re called miners
+        and in the proof of stake network they&apos;re called validators.
       </Paragraph>
       <Paragraph>
         In this proof of work system, all these nodes are competing against each
@@ -93,13 +93,13 @@ const HowDoBlockchainsWork = () => {
         When a node gets paid they actually get paid in two different ways: one
         is going to be the transaction fee and another piece is going to be the
         block reward. The gas price we were altering during a transaction is the
-        transaction fee that we're going to pay to these blockchain nodes for
-        including our transaction.
+        transaction fee that we&apos;re going to pay to these blockchain nodes
+        for including our transaction.
       </Paragraph>
       <Paragraph>
-        You've probably heard of the Bitcoin halving before, the halving is
-        referring to this block reward getting cut in half and it's supposed to
-        be cut in half roughly every four years.
+        You&apos;ve probably heard of the Bitcoin halving before, the halving is
+        referring to this block reward getting cut in half and it&apos;s
+        supposed to be cut in half roughly every four years.
       </Paragraph>
       <Paragraph>
         The block reward is given to these nodes who successfully mined a block
@@ -134,53 +134,54 @@ const HowDoBlockchainsWork = () => {
       </Paragraph>
       <Paragraph>
         Additionally, ethereum has decided to upgrade to ETH2 which will use
-        this proof of stake algorithm as well it'll also have some other
+        this proof of stake algorithm as well it&apos;ll also have some other
         features.
       </Paragraph>
       <Subtitle3>Proof Of Stake</Subtitle3>
       <Paragraph>
-        In proof of stake there's also a gas fee but it's paid out to validators
-        instead of miners.
+        In proof of stake there&apos;s also a gas fee but it&apos;s paid out to
+        validators instead of miners.
       </Paragraph>
       <Paragraph>
         Instead of solving a difficult problem, proof of stake nodes put up some
-        collateral that they're going to behave honestly, aka they stake.
+        collateral that they&apos;re going to behave honestly, aka they stake.
       </Paragraph>
       <Paragraph>
         In the case of Ethereum 2, nodes put up some Ethers as a stake that
-        they're going to behave honestly in the network and if they misbehave to
-        the network they are going to be removed some of their stake.
+        they&apos;re going to behave honestly in the network and if they
+        misbehave to the network they are going to be removed some of their
+        stake.
       </Paragraph>
       <Paragraph>
         This is a very good Sybil resistance mechanism because if you try to
         create a whole bunch of accounts then each one of those accounts you
-        have to put up some stake and if you misbehave you're going to run the
-        risk of losing all the money that you put up.
+        have to put up some stake and if you misbehave you&apos;re going to run
+        the risk of losing all the money that you put up.
       </Paragraph>
       <Paragraph>
-        In this system miners are actually called validators because they're no
-        longer mining anything, they're just validating other nodes. Unlike
-        proof of work which every node is racing to be the first one to find the
-        block, in proof of stake nodes are actually randomly chosen to propose
-        the new block and then the rest of the validators will validate if that
-        node has proposed the block honestly as we saw in our previous section
-        it's usually very easy for other nodes to verify if a proposal or a
-        transaction is honest.
+        In this system miners are actually called validators because
+        they&apos;re no longer mining anything, they&apos;re just validating
+        other nodes. Unlike proof of work which every node is racing to be the
+        first one to find the block, in proof of stake nodes are actually
+        randomly chosen to propose the new block and then the rest of the
+        validators will validate if that node has proposed the block honestly as
+        we saw in our previous section it&apos;s usually very easy for other
+        nodes to verify if a proposal or a transaction is honest.
       </Paragraph>
       <Paragraph>
         Proof of stake obviously has some pros and cons as well. Pros are that
         it is a great Sybil resistance mechanism and a great way to figure out
-        who the author of a block should be, the other pros are that it's way
-        less computationally expensive to figure out the new block because
+        who the author of a block should be, the other pros are that it&apos;s
+        way less computationally expensive to figure out the new block because
         instead of every single node on the network trying to do this only one
         node needs to do this and then the rest of the nodes just need to
         validate it.
       </Paragraph>
       <Paragraph>
-        The cons are that it's usually considered a slightly less decentralized
-        network due to the upfront staking costs it costs to participate. This
-        gets into a little bit of a philosophical battle on how decentralized is
-        decentralized enough.
+        The cons are that it&apos;s usually considered a slightly less
+        decentralized network due to the upfront staking costs it costs to
+        participate. This gets into a little bit of a philosophical battle on
+        how decentralized is decentralized enough.
       </Paragraph>
       <Paragraph>
         The general consensus amongst blockchain engineers is that proof of
@@ -196,8 +197,8 @@ const HowDoBlockchainsWork = () => {
       </Paragraph>
       <Paragraph>
         This makes a lot of sense because every additional block that a chain is
-        behind it's going to take more and more computation for it to come up,
-        that's why when we saw in our transaction we saw confirmations.
+        behind it&apos;s going to take more and more computation for it to come
+        up, that&apos;s why when we saw in our transaction we saw confirmations.
       </Paragraph>
       <Image
         src="/images/courses/blockchain/introduction/how-do-blockchains-work/block-confirmations.png"
@@ -225,15 +226,16 @@ const HowDoBlockchainsWork = () => {
       </Paragraph>
       <Subtitle2>51% Attack</Subtitle2>
       <Paragraph>
-        A more prevalent attack is what's known as a 51 percent attack. As we
-        saw as part of the consensus protocol these blockchains are going to
-        agree that the longest chain is the one that they're going to go with.
+        A more prevalent attack is what&apos;s known as a 51 percent attack. As
+        we saw as part of the consensus protocol these blockchains are going to
+        agree that the longest chain is the one that they&apos;re going to go
+        with.
       </Paragraph>
       <Paragraph>
         So as long as it matches up with 51 percent of the rest of the network,
         this means that if you have the longest chain and you own more than 51
-        percent of the network you can do what's called a fork in the network
-        and bring the whole network onto your now longest chain.
+        percent of the network you can do what&apos;s called a fork in the
+        network and bring the whole network onto your now longest chain.
       </Paragraph>
       <Paragraph>
         You can see now that blockchains are very democratic whichever
@@ -245,10 +247,11 @@ const HowDoBlockchainsWork = () => {
       <Paragraph>
         However if a group of nodes had enough nodes or enough computational
         power they could essentially be 51% of the network and influence the
-        network in whatever direction that they wanted, this is what's known as
-        a 51% attack and it's happened on blockchains like Ethereum classic
-        which is not Ethereum. This is why the bigger a blockchain network is
-        the more decentralized and the more secure it becomes.
+        network in whatever direction that they wanted, this is what&apos;s
+        known as a 51% attack and it&apos;s happened on blockchains like
+        Ethereum classic which is not Ethereum. This is why the bigger a
+        blockchain network is the more decentralized and the more secure it
+        becomes.
       </Paragraph>
       <Paragraph>
         So if you choose run a node as well you are going to increase the
@@ -264,10 +267,10 @@ const HowDoBlockchainsWork = () => {
       </Paragraph>
       <Paragraph>
         This is not very scalable because if we want to add more and more people
-        to these blockchains it's going to cost more and more to use the
+        to these blockchains it&apos;s going to cost more and more to use the
         blockchains. Because more people are going to want to get into these
-        blocks this means that there's kind of a ceiling to how many people can
-        use the system because of the financial constraints that will get
+        blocks this means that there&apos;s kind of a ceiling to how many people
+        can use the system because of the financial constraints that will get
         imposed as gas prices keep rising.
       </Paragraph>
       <Subtitle2>Sharding</Subtitle2>
@@ -275,13 +278,13 @@ const HowDoBlockchainsWork = () => {
         Ethereum 2 is not only tackling the environmental impact of proof of
         work by switching to proof of stake but they are also implementing this
         new methodology called sharding and sharding is a solution to the
-        scalability problem, a sharded blockchain really just means that it's
-        going to be a blockchain of blockchains there is a main chain that's
-        going to coordinate everything amongst several chains that hook into
-        this main chain, this means that there's more chains for people to make
-        transactions on, effectively increasing the amount of block space.
-        Sharding can greatly increase the number of transactions on layer 1 of
-        the blockchain.
+        scalability problem, a sharded blockchain really just means that
+        it&apos;s going to be a blockchain of blockchains there is a main chain
+        that&apos;s going to coordinate everything amongst several chains that
+        hook into this main chain, this means that there&apos;s more chains for
+        people to make transactions on, effectively increasing the amount of
+        block space. Sharding can greatly increase the number of transactions on
+        layer 1 of the blockchain.
       </Paragraph>
       <Subtitle2>Rollups</Subtitle2>
       <Paragraph>
@@ -292,7 +295,7 @@ const HowDoBlockchainsWork = () => {
         outside of layer 1 is a defining characteristic of rollups.
       </Paragraph>
       <Paragraph>
-        They're different from side chains because side chains derive their
+        They&apos;re different from side chains because side chains derive their
         security from their own protocols, rollups derive their security from
         the base layers, so examples like Arbitrum and Optimism are going to be
         as secure as Ethereum.
@@ -300,8 +303,8 @@ const HowDoBlockchainsWork = () => {
       <Subtitle2>Layer 1</Subtitle2>
       <Paragraph>
         Layer one refers to any base layer blockchain implementation like
-        Bitcoin's layer one and Ethereum's a layer one, these are the base layer
-        blockchain solutions.
+        Bitcoin&apos;s layer one and Ethereum&apos;s a layer one, these are the
+        base layer blockchain solutions.
       </Paragraph>
       <Subtitle2>Layer 2</Subtitle2>
       <Paragraph>
@@ -309,8 +312,8 @@ const HowDoBlockchainsWork = () => {
         top of a blockchain. Some examples of layer twos are going to be
         Chainlink, Arbitraum or Optimism Arbitraum and Optimism are very
         interesting because they are layer twos that also look to solve this
-        scalability issue, they are what's known as rollups and they roll up
-        their transactions into a layer one like Ethereum.
+        scalability issue, they are what&apos;s known as rollups and they roll
+        up their transactions into a layer one like Ethereum.
       </Paragraph>
     </Course>
   );
