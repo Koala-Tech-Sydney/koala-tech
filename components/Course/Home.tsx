@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import TwoSidesMainSection from "../Structure/TwoSidesMainSection";
-import SearchBar from "../Structure/SearchBar";
+import SearchBar from "./SearchBar";
 import { Title } from "../Text/Text";
 import { Course } from "../../hooks/useCourse";
 import ChapterList from "./ChapterList";

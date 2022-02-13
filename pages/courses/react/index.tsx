@@ -1,5 +1,5 @@
 import useCourse, { Course } from "../../../hooks/useCourse";
-import CourseHome from "../../../components/Course/CourseHome";
+import Home from "../../../components/Course/Home";
 
 let reactCourse: Course = {
   baseURI: "react/",
@@ -54,7 +54,7 @@ const ReactCourseHome = () => {
   reactCourse = useCourse(reactCourse);
   // console.log(chapters);
 
-  return <CourseHome title="React" course={reactCourse} />;
+  return <Home title="React" course={reactCourse} />;
 };
 
 export { ReactCourseHome as default, reactCourse };

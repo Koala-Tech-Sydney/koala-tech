@@ -1,4 +1,4 @@
-import CourseHome from "../../../components/Course/CourseHome";
+import Home from "../../../components/Course/Home";
 import useCourse, { Course } from "../../../hooks/useCourse";
 
 let blockchainCourse: Course = {
@@ -13,11 +13,11 @@ let blockchainCourse: Course = {
           name: "Introduction of Blockchain",
           path: "",
           children: [
-            { id: "", name: "History" },
-            { id: "", name: "Web 3.0" },
-            { id: "", name: "Smart Contract" },
-            { id: "", name: "Oracle Problem" },
-            { id: "", name: "Chainlink" },
+            { id: "", name: "History", path: "" },
+            { id: "", name: "Web 3.0", path: "" },
+            { id: "", name: "Smart Contract", path: "" },
+            { id: "", name: "Oracle Problem", path: "" },
+            { id: "", name: "Chainlink", path: "" },
           ],
         },
         {
@@ -33,7 +33,7 @@ let blockchainCourse: Course = {
 
 const BlockchainCourseHome = () => {
   blockchainCourse = useCourse(blockchainCourse);
-  return <CourseHome title="Blockchain" course={blockchainCourse}></CourseHome>;
+  return <Home title="Blockchain" course={blockchainCourse} />;
 };
 
 export { BlockchainCourseHome as default, blockchainCourse };

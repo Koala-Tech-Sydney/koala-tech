@@ -7,10 +7,6 @@ const normalizePathName = (pathname: string) => {
   return pathname.toLowerCase().replace(/ /g, "-");
 };
 
-// 1st layer determines the chapter.
-// 2nd layer determines the subchapter.
-// 3rd layer determines the section within a subchapter.
-
 // A course is comprised of a number of chapters.
 export type Course = {
   baseURI: string;
@@ -34,6 +30,7 @@ export type SubChapters = {
 type Section = {
   id: string;
   name: string;
+  path: string;
 };
 
 const useCourse = (course: Course): Course => {
@@ -79,7 +76,8 @@ const configureSections = (
 ): Section[] => {
   return sections.map((section) => {
     // {"id":"/courses/blockchain/introduction/introduction-of-blockchain#smart-contract","name":"Smart Contract"}
-    return { ...section, id: `${basePath}#${normalizePathName(section.name)}` };
+    const pathToSection = `${basePath}#${normalizePathName(section.name)}`;
+    return { ...section, id: pathToSection, path: pathToSection };
   });
 };
 

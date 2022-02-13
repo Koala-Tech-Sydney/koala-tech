@@ -15,15 +15,15 @@ const SearchBar: React.FC<Props> = ({ course }) => {
   const getSearchList = (chapters: Chapter[]) => {
     let result: { group: string; name: string; path: string }[] = [];
     chapters.forEach((chapter) => {
-      !!chapter.children
-        ? chapter.children.forEach((subChapter) => {
-            result.push({
-              group: chapter.name,
-              name: subChapter.name,
-              path: subChapter.path,
-            });
-          })
-        : null;
+      chapter.children.forEach((subChapter) => {
+        subChapter.children?.forEach((section => {
+          result.push({
+            group: subChapter.name,
+            name: section.name,
+            path: section.path,
+          });
+        }))
+      });
     });
     return result;
   };
