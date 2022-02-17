@@ -5,6 +5,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import styles from './SquareImageCard.module.scss'
+import { style } from '@mui/system';
 
 
 const SquareImageCard = (props: { imgLink: string; title: string; description: string; }) => {
@@ -21,7 +22,7 @@ const SquareImageCard = (props: { imgLink: string; title: string; description: s
             <Typography gutterBottom variant="subtitle1" component="div">
                 <b>{props.title}</b>
             </Typography>
-            <Typography variant="body2" color="text.secondary">
+            <Typography className={styles.cardDescription}>
                 {props.description}
             </Typography>
         </CardContent>

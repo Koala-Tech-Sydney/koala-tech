@@ -2,7 +2,6 @@ import SqualImageCard from '../../components/Card/SquareImageCard';
 import { Fragment } from "react";
 import Link from 'next/link'
 import Button from '@mui/material/Button';
-import terminalStyles from "./TerminalDrawing.module.scss"
 import styles from "./homeContent.module.scss";
 
 
@@ -10,24 +9,17 @@ const HomeContent = () => {
   return (
       <div className={styles.homeContent}>
           
-        <div className={terminalStyles.terminalDraw}>
-            <div className={terminalStyles.terminalBar}>
-                <div className={terminalStyles.terminalBtn} id={terminalStyles.btn1}></div>
-                <div className={terminalStyles.terminalBtn} id={terminalStyles.btn2}></div>
-                <div className={terminalStyles.terminalBtn} id={terminalStyles.btn3}></div>
-            </div>
-
-            <div className={terminalStyles.terminalWindow}>
-                $ npm install Koala <br />
-                $ ... Installing ...<br />
-                $ Koala installed success! Happy coding!<br />
-                <HomeCourseSection />
-                <HomeFeatureSection />
-            </div>
+        <div className={styles.homeTerminal}>
+            $ npm install Koala <br />
+            $ ... Installing ...<br />
+            $ Koala installed success! Happy coding!<br />
         </div>
         
+        <HomeCourseSection />
+        <HomeFeatureSection />
+        
         <Link href="/tutorials">
-            <Button variant="contained" color="info" sx={{width: 220, textTransform: 'none', marginBottom: 8}}> View all courses </Button>
+            <Button className={styles.viewAllBtn} variant="contained"> View all courses </Button>
         </Link>  
       </div>        
   );
@@ -46,10 +38,10 @@ const HomeCourseSection = () => {
 }
 
 const HomeCourseList = () => {
-  const imgLink1:string = "";
+  const imgLink1:string = "images/reactCardImg.jpg";
   const imgLink2:string = "images/blockchainCard.jpg";
-  const imgLink3:string = "";
-  const description1: string = "Description 1";
+  const imgLink3:string = "images/comingSoon.jpg";
+  const description1: string = "Don't get left behind. React is the way forward to building fast, interactive web apps.";
   const description2: string = "Description 2";
   const description3: string = "Description 3";
 

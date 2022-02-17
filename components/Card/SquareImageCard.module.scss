@@ -20,6 +20,15 @@
     text-align: left;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
-    border-bottom: 1px solid #ededed;
+    border-bottom: 7px solid black;
+    border-right: 7px solid black;
+    background-color: rgba(40, 40, 40, 0.85);
+
     margin-bottom: 45px;
+    color: rgb(200, 200, 255);
+}
+
+.cardDescription{
+    font-size: 13px;
+    color: white
 }

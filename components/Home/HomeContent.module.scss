@@ -1,9 +1,14 @@
 .homeContent{
-    background-image: url('../../public/images/homeContentBg.jpg');
-    background-size: cover;
     padding-top: 70px;
     padding-bottom: 70px;
     text-align: center;
+    letter-spacing: 1px;
+}
+
+.homeTerminal{
+    text-align: left;
+    margin-left: 40px;
+    margin-bottom: 30px;
 }
 
 .homeCourseSection{
@@ -34,4 +39,15 @@
 
     padding: 20px;
     width: 100%;
+}
+
+.viewAllBtn{
+    background-color: orange;
+    text-transform: none;
+    width: 200px;
+    margin-bottom: 20px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
 }
