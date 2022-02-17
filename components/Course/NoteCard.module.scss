@@ -1,0 +1,38 @@
+.container {
+  color: #000;
+  margin: 1rem 0;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+.title {
+  font-weight: 900;
+  margin: 0.5rem 0;
+  letter-spacing: 1px;
+}
+
+.content {
+  margin: 0.5rem 0;
+  letter-spacing: 1px;
+  line-height: 1.5;
+}
+
+.info {
+  color: #326a83;
+  background-color: #1ab1f5;
+}
+
+.success {
+  color: #1e4620;
+  background-color: #5cb660;
+}
+
+.warning {
+  color: #dc9122;
+  background-color: #ffe28c;
+}
+
+.danger {
+  color: #5f2120;
+  background-color: #f16360;
+}

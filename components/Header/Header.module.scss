@@ -8,6 +8,8 @@
 
   position: -webkit-sticky; /* Safari */
   position: sticky;
+  position: fixed;
+  width: 100vw;
   top: 0;
   z-index: 1;
 }
@@ -21,5 +23,5 @@
 }
 
 .hamburgerMenuBtn {
-  cursor: pointer;
+  color: #fff !important;
 }

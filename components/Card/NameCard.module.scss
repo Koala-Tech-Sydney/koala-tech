@@ -1,0 +1,92 @@
+.card {
+  display: flex;
+  margin: 2rem;
+  border-radius: 25px;
+
+  .primary_section {
+    flex: 2;
+
+    .media_section {
+      position: relative;
+      flex: 1;
+
+      .avatar {
+        position: absolute;
+        left: 35%;
+        height: 45%;
+        width: 30%;
+        bottom: -10%;
+      }
+    }
+
+    .main_section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      .short_description_section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex: 5;
+        position: relative;
+        margin-top: 5%;
+
+        .name {
+          font-size: 1.5rem;
+          font-weight: 700;
+        }
+
+        .textSection {
+          text-align: center;
+          margin: 0.5rem;
+        }
+      }
+
+      .socialMediaButtons {
+        margin-bottom: 1rem;
+
+        * {
+          font-size: 2rem;
+        }
+
+        @media (max-width: 900px) and (min-width: 600px) {
+          * {
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+
+  .primary_section_border {
+    border-right: 1px solid var(--color-primary);
+  }
+
+  .secondary_section {
+    flex: 2;
+    padding: 2rem 3rem !important;
+
+    @media (max-width: 900px) {
+      padding: 1rem 2rem !important;
+    }
+  }
+}
+
+.cardColumn {
+  flex-direction: column;
+}
+
+.expandMoreButton {
+  transition: all 0.5s ease;
+
+  &.expandLess {
+    transform: rotate(180deg);
+  }
+
+  &.expandMore {
+    transform: rotate(0deg);
+  }
+}

@@ -1,17 +1,18 @@
 import { Fragment } from "react";
 import ThemeToggleButton from "../../Button/ThemeToggleButton";
-import Backdrop from "../../Structure/BackDrop";
+// import Backdrop from "../../Structure/BackDrop";
+import Backdrop from "@mui/material/Backdrop";
 import HeaderNavItem from "../HeaderNavBar/HeaderNavItem";
 import HeaderNavList from "../HeaderNavBar/HeaderNavList";
 import CollapseNavList from "./CollapseNavList";
 import CollapseNavItem from "./CollapseNavItem";
 import CollapseNavLink from "./CollapseNavLink";
 
-import CloseButton from "../../../public/images/buttons/close-btn.svg";
+import IconButton from "@mui/material/IconButton";
+import CloseIcon from "@mui/icons-material/Close";
 
 import styles from "./CollapseNavBar.module.scss";
 import HeaderNavLink from "../HeaderNavBar/HeaderNavLink";
-import ArrowButton from "../../Button/ArrowButton";
 
 type Props = {
   toggleCollapseNavBar: () => void;
@@ -20,12 +21,20 @@ type Props = {
 const CollapseNavBar: React.FC<Props> = ({ toggleCollapseNavBar }) => {
   return (
     <Fragment>
-      <Backdrop onClick={toggleCollapseNavBar} />
+      <Backdrop
+        className={styles.backdrop}
+        open={true}
+        onClick={toggleCollapseNavBar}
+      />
       <section className={styles.collapseNavBar}>
         <section className={styles.headerSection}>
           <HeaderNavList>
             <HeaderNavItem>
-              <HeaderNavLink title="Koala Tech" href="" />
+              <HeaderNavLink
+                title="Koala Tech"
+                href="/"
+                onClick={toggleCollapseNavBar}
+              />
             </HeaderNavItem>
             <HeaderNavItem>
               <ThemeToggleButton />
@@ -33,29 +42,44 @@ const CollapseNavBar: React.FC<Props> = ({ toggleCollapseNavBar }) => {
           </HeaderNavList>
           <HeaderNavList>
             <HeaderNavItem>
-              <CloseButton
-                onClick={toggleCollapseNavBar}
+              <IconButton
+                aria-label="Cancel"
                 className={styles.closeButton}
-                fill="#fff"
-                height="1.5rem"
-                width="1.5rem"
-              />
+                onClick={toggleCollapseNavBar}
+              >
+                <CloseIcon />
+              </IconButton>
             </HeaderNavItem>
           </HeaderNavList>
         </section>
         <CollapseNavList>
           <CollapseNavItem>
-            <CollapseNavLink title="Home" href="/"></CollapseNavLink>
-            <ArrowButton />
+            <CollapseNavLink
+              title="Home"
+              href="/"
+              onClick={toggleCollapseNavBar}
+            />
           </CollapseNavItem>
           <CollapseNavItem>
-            <CollapseNavLink title="Tutorial" href="#"></CollapseNavLink>
+            <CollapseNavLink
+              title="Courses"
+              href="/courses"
+              onClick={toggleCollapseNavBar}
+            />
           </CollapseNavItem>
           <CollapseNavItem>
-            <CollapseNavLink title="Support" href="#"></CollapseNavLink>
+            <CollapseNavLink
+              title="Support"
+              href="/support"
+              onClick={toggleCollapseNavBar}
+            />
           </CollapseNavItem>
           <CollapseNavItem>
-            <CollapseNavLink title="About Us" href="#"></CollapseNavLink>
+            <CollapseNavLink
+              title="About Us"
+              href="/about-us"
+              onClick={toggleCollapseNavBar}
+            />
           </CollapseNavItem>
         </CollapseNavList>
       </section>

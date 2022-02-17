@@ -5,14 +5,14 @@ import dracula from "react-syntax-highlighter/dist/cjs/styles/hljs/dracula";
 
 SyntaxHighlighter.registerLanguage("javascript", js);
 
-const JavaScriptFormatter = (props) => {
+const JavaScriptFormatter: React.FC = ({ children }) => {
   return (
     <SyntaxHighlighter
       language="javascript"
       style={dracula}
-    //   showLineNumbers="true"
+      //   showLineNumbers="true"
     >
-      {props.children}
+      {children}
     </SyntaxHighlighter>
   );
 };

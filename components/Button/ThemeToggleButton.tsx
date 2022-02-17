@@ -1,10 +1,14 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../store";
 import Image from "next/image";
 
-import useTheme, { lightTheme, darkTheme } from "../../hooks/useTheme";
-import { themeAction, lightMode } from "../../store/theme";
+import useColorTheme, {
+  lightTheme,
+  darkTheme,
+  lightMode,
+} from "../../hooks/useColorTheme";
+import { colorThemeAction } from "../../store/colorTheme";
 
 import styles from "./ThemeToggleButton.module.scss";
 
@@ -15,15 +19,18 @@ const ThemeToggleButton = () => {
   const [isShining, setIsShining] = useState(false);
 
   // Any change in the Redux store will cause the whole component to be re-evaluated.
-  const currentThemeMode = useSelector<RootState>((state) => state.theme.theme);
-  const currentTheme = currentThemeMode == lightMode ? lightTheme : darkTheme;
-  useTheme(currentTheme);
+  const currentColorThemeMode = useSelector<RootState>(
+    (state) => state.theme.theme
+  );
+  const currentColorTheme =
+    currentColorThemeMode == lightMode ? lightTheme : darkTheme;
+  useColorTheme(currentColorTheme);
 
   const toggleHandler = () => {
-    if (currentThemeMode != lightMode) {
-      dispatch(themeAction.useLightMode());
+    if (currentColorThemeMode != lightMode) {
+      dispatch(colorThemeAction.useLightMode());
     } else {
-      dispatch(themeAction.useDarkMode());
+      dispatch(colorThemeAction.useDarkMode());
     }
   };
 
@@ -37,7 +44,7 @@ const ThemeToggleButton = () => {
 
   const buttonClass =
     styles.button +
-    ` ${currentThemeMode == lightMode ? styles.buttonChecked : ""}
+    ` ${currentColorThemeMode == lightMode ? styles.buttonChecked : ""}
       ${isShining ? styles.buttonOnHover : ""}`;
 
   return (

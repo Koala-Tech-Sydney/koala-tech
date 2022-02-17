@@ -1,0 +1,39 @@
+#footer {
+  width: 100%;
+  background-color: var(--color-tertiary);
+  color: white;
+  text-align: center;
+  padding: 2rem 0;
+
+  .socialMediaButtons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .discord_icon {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  & > * {
+    padding: 1rem 0;
+  }
+
+  @media (max-width: 1200px) and (min-width: 600px) {
+    padding: 1.5rem;
+
+    & > * {
+      padding: 0.8rem 0;
+    }
+  }
+
+  @media (max-width: 600px) {
+    font-size: 0.8rem;
+    padding: 1rem;
+
+    & > * {
+      padding: 0.5rem 0;
+    }
+  }
+}

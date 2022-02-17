@@ -1,3 +1,14 @@
+@use "fonts" as *;
+@use "mui" as *;
+@use "variables";
+
+:root {
+  font-family: Roboto, sans-serif !important;
+
+  @include variables.color;
+  @include variables.font-sizes;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -9,10 +20,31 @@ html {
   color: var(--color-secondary);
   background-color: var(--color-primary);
   scroll-behavior: smooth;
+  // fix the bug where one of the child div of the html element is wider than the
+  // html element caused by a word that is wider than 100vw (due to large font size
+  // , the word is too long or the viewport is simply too narrow).
+  // https://stackoverflow.com/questions/20400755/css-body-width-does-not-fill-100-percent/20401060
+  min-width: fit-content;
 }
 
 a {
   color: #0170b9;
   text-decoration: none;
   transition: all 0.2s linear;
+}
+
+/* This part turns the whole page into three sections such that the footer always stay at the bottom */
+#root {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#main {
+  // add some margin to prevent header and content overlapping
+  margin-top: 4rem;
+}
+
+footer {
+  margin-top: auto;
 }

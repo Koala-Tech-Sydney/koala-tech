@@ -1,4 +1,6 @@
-import useWindowDimensions from "../../hooks/useWindowDimensions";
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
+
 import styles from "./TwoSidesMainSection.module.scss";
 
 type Props = {
@@ -12,9 +14,13 @@ const TwoSidesMainSection: React.FC<Props> = ({
   mainSection,
   rightSection,
 }) => {
-  const [width, _] = useWindowDimensions();
-  const shouldDisplayNoSideSection = !!width ? width < 800 : false;
-  const shouldDisplayAtMostOneSideSection = !!width ? width < 1250 : false;
+  const theme = useTheme();
+  const shouldDisplayNoSideSection = useMediaQuery(
+    theme.breakpoints.down("md")
+  );
+  const shouldDisplayAtMostOneSideSection = useMediaQuery(
+    theme.breakpoints.down("lg")
+  );
 
   let mainSectionClasses: string = styles.mainSection;
 
@@ -23,7 +29,13 @@ const TwoSidesMainSection: React.FC<Props> = ({
     mainSectionClasses += " " + styles["mainSection-100"];
   } else if (!leftSection || !rightSection) {
     // either left or right section is supplied
-    mainSectionClasses += " " + styles["mainSection-75"];
+    if (shouldDisplayNoSideSection) {
+      leftSection = null;
+      rightSection = null;
+      mainSectionClasses += " " + styles["mainSection-100"];
+    } else {
+      mainSectionClasses += " " + styles["mainSection-75"];
+    }
   } else {
     // both left and right section are supplied
     if (shouldDisplayNoSideSection) {
@@ -39,12 +51,14 @@ const TwoSidesMainSection: React.FC<Props> = ({
   }
   return (
     <section className={styles.container}>
-      {!!leftSection && <div className={styles.sideSection}>{leftSection}</div>}
-      <div id={styles.mainSection} className={mainSectionClasses}>
+      {!!leftSection && (
+        <section className={styles.sideSection}>{leftSection}</section>
+      )}
+      <section id={styles.mainSection} className={mainSectionClasses}>
         {mainSection}
-      </div>
+      </section>
       {!!rightSection && (
-        <div className={styles.sideSection}>{rightSection}</div>
+        <section className={styles.sideSection}>{rightSection}</section>
       )}
     </section>
   );

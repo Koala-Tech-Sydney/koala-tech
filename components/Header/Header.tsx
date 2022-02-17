@@ -1,35 +1,27 @@
 import { useState, Fragment } from "react";
 
-import HamburgerMenu from "../../public/images/buttons/hamburger-menu.svg";
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import IconButton from "@mui/material/IconButton";
+import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
+
 import CollapseNavBar from "./CollapseNavBar/CollapseNavBar";
 import HeaderNavList from "./HeaderNavBar/HeaderNavList";
 import HeaderNavItem from "./HeaderNavBar/HeaderNavItem";
 import HeaderNavLink from "./HeaderNavBar/HeaderNavLink";
+import ThemeToggleButton from "../Button/ThemeToggleButton";
 
 import styles from "./Header.module.scss";
 
-import ThemeToggleButton from "../Button/ThemeToggleButton";
-import DropDownNavItems from "./DropDownNavItems";
-import useWindowDimensions from "../../hooks/useWindowDimensions";
-
 const Header = () => {
-  const [width, _] = useWindowDimensions();
-  const isCollapseMode = !!width ? width < 800 : false;
+  const theme = useTheme();
+  const isCollapseMode = useMediaQuery(theme.breakpoints.down("md"));
   const [isCollapseNavBarExpanded, setIsCollapseNavBarExpanded] =
     useState(false);
 
   let headerClass = isCollapseMode
     ? styles.headerCollapseMode
     : styles.headerExpandMode;
-
-  const tutorialDropDownItems = [
-    { name: "React", path: "/tutorials/react" },
-    {
-      name: "Data Structure and Algorithm",
-      path: "/tutorials/data-structure-and-algorithm",
-    },
-    { name: "Blockchain", path: "/tutorials/blockchain" },
-  ];
 
   let toggleCollapseNavBar = () => {
     console.log("Expanded side menu");
@@ -45,13 +37,13 @@ const Header = () => {
       <HeaderNavList>
         {isCollapseMode && (
           <HeaderNavItem className={`${styles.hamburgerMenuBtnContainer}`}>
-            <HamburgerMenu
-              onClick={toggleCollapseNavBar}
+            <IconButton
+              aria-label="Side Menu"
               className={styles.hamburgerMenuBtn}
-              fill="#fff"
-              height="1.2rem"
-              width="1.2rem"
-            />
+              onClick={toggleCollapseNavBar}
+            >
+              <MenuRoundedIcon />
+            </IconButton>
           </HeaderNavItem>
         )}
         <HeaderNavItem>
@@ -66,23 +58,13 @@ const Header = () => {
               <HeaderNavLink title="Home" href="/" />
             </HeaderNavItem>
             <HeaderNavItem>
-              <HeaderNavLink title="Tutorial" href="#">
-                <DropDownNavItems
-                  className={styles.dropDownContainer}
-                  items={tutorialDropDownItems}
-                />
-              </HeaderNavLink>
+              <HeaderNavLink title="Courses" href="/courses" />
             </HeaderNavItem>
             <HeaderNavItem>
-              <HeaderNavLink title="Support" href="#" />
+              <HeaderNavLink title="Support" href="/support" />
             </HeaderNavItem>
             <HeaderNavItem>
-              <HeaderNavLink title="About Us" href="#">
-                <DropDownNavItems
-                  className={styles.dropDownContainer}
-                  items={tutorialDropDownItems}
-                />
-              </HeaderNavLink>
+              <HeaderNavLink title="About Us" href="/about-us" />
             </HeaderNavItem>
             <HeaderNavItem>
               <ThemeToggleButton />

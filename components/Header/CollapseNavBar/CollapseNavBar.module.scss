@@ -13,6 +13,10 @@
   }
 }
 
+.backdrop {
+  z-index: 1;
+}
+
 .headerSection {
   display: flex;
   justify-content: space-between;
@@ -26,7 +30,7 @@
 }
 
 .closeButton {
-  cursor: pointer;
+  color: #fff !important;
   margin-right: 1rem;
 }
 
