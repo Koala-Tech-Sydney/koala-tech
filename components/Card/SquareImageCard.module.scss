@@ -1,0 +1,25 @@
+@media (orientation: landscape) {
+    .siCard{
+        width: 25vw;
+        height: 25vw;
+    }
+
+    .cardImg{height: 12.5vw;}
+}
+  
+@media (orientation: portrait) {
+    .siCard{
+        width: 80vw;
+        height: 80vw;
+    }
+
+    .cardImg{height: 40vw;}
+}
+
+.siCard{
+    text-align: left;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border-bottom: 1px solid #ededed;
+    margin-bottom: 45px;
+}

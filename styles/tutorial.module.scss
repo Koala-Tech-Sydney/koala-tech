@@ -1,0 +1,14 @@
+#tutorialFrontPage{
+    min-height: 100vh;
+    background: #fafafa;
+    padding-left: 8vw;
+    padding-right: 8vw;
+    padding-top: 60px;
+}
+
+.tutPageCoursesList{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
