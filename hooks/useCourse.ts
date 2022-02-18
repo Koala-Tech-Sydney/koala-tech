@@ -1,33 +1,25 @@
-const getSubChapterPath = (name: string, basePath: string): string => {
-  console.log(`${basePath}/${normalizePathName(name)}`);
-  return `${basePath}/${normalizePathName(name)}`;
-};
-
-const normalizePathName = (pathname: string) => {
-  return pathname.toLowerCase().replace(/ /g, "-");
-};
-
-// A course is comprised of a number of chapters.
+// Course -> Unit -> Chapter -> SubChapter
+// A course is comprised of a number of units.
 export type Course = {
   baseURI: string;
-  chapters: Chapter[];
+  units: Unit[];
 };
 
-// A chapter consists of a number of subchapters and it doesn't have a particular page,
-// chapter is just used as part of the path in the final URI.
-export type Chapter = { id: string; name: string; children: SubChapters };
+// A unit consists of a number of chapters and it doesn't have a particular page,
+// Unit is just used as part of the path in the final URI.
+export type Unit = { id: string; name: string; children: Chapter[] };
 
-// A subchapter forms a page and it contains a number of sections.
-export type SubChapters = {
+// A chapter forms a page and it contains a number of subchapters.
+export type Chapter = {
   id: string;
   name: string;
   path: string;
-  children?: Section[];
-}[];
+  children?: SubChapter[];
+};
 
-// A section lives within a subchapter page, it has an anchor link that allows the user
-// to jump to this particular section.
-type Section = {
+// A subchapter lives within a chapter page, it has an anchor link that allows the user
+// to jump to this particular subchapter.
+type SubChapter = {
   id: string;
   name: string;
   path: string;
@@ -37,48 +29,57 @@ const useCourse = (course: Course): Course => {
   console.log("===== useCourse =====");
   return {
     ...course,
-    chapters: course.chapters.map((chapter) => {
-      const chapterPath =
-        "/courses/" + course.baseURI + normalizePathName(chapter.name);
+    units: course.units.map((unit) => {
+      const unitPath =
+        "/courses/" + course.baseURI + normalizePathName(unit.name);
       return {
-        ...chapter,
-        id: chapterPath,
-        children: configureSubChapters(chapter.children, chapterPath),
+        ...unit,
+        id: unitPath,
+        children: configureChapters(unit.children, unitPath),
       };
     }),
   };
 };
 
-const configureSubChapters = (
-  subChapter: SubChapters,
+const configureChapters = (
+  chapters: Chapter[],
   basePath: string
-): SubChapters => {
-  return subChapter.map((subChapter) => {
-    if (!!subChapter.children) {
-      subChapter.path = getSubChapterPath(subChapter.name, basePath);
+): Chapter[] => {
+  return chapters.map((chapter) => {
+    if (!!chapter.children) {
+      chapter.path = getChapterPath(chapter.name, basePath);
       return {
-        ...subChapter,
-        id: getSubChapterPath(subChapter.name, basePath),
-        children: configureSections(subChapter.path, subChapter.children),
+        ...chapter,
+        id: getChapterPath(chapter.name, basePath),
+        children: configureSubChapters(chapter.path, chapter.children),
       };
     }
     return {
-      ...subChapter,
-      id: getSubChapterPath(subChapter.name, basePath),
-      path: getSubChapterPath(subChapter.name, basePath),
+      ...chapter,
+      id: getChapterPath(chapter.name, basePath),
+      path: getChapterPath(chapter.name, basePath),
     };
   });
 };
 
-const configureSections = (
+const configureSubChapters = (
   basePath: string,
-  sections: Section[]
-): Section[] => {
-  return sections.map((section) => {
+  subchapters: SubChapter[]
+): SubChapter[] => {
+  return subchapters.map((chapter) => {
     // {"id":"/courses/blockchain/introduction/what-is-a-blockchain#smart-contract","name":"Smart Contract"}
-    const pathToSection = `${basePath}#${normalizePathName(section.name)}`;
-    return { ...section, id: pathToSection, path: pathToSection };
+    const pathToSubChapter = `${basePath}#${normalizePathName(chapter.name)}`;
+    return { ...chapter, id: pathToSubChapter, path: pathToSubChapter };
   });
+};
+
+const getChapterPath = (name: string, basePath: string): string => {
+  console.log(`${basePath}/${normalizePathName(name)}`);
+  return `${basePath}/${normalizePathName(name)}`;
+};
+
+const normalizePathName = (pathname: string) => {
+  return pathname.toLowerCase().replace(/ /g, "-");
 };
 
 export { useCourse as default, normalizePathName };

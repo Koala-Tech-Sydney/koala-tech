@@ -34,6 +34,11 @@ const WhatIsABlockchain = () => {
         manner.
       </Paragraph>
       <Paragraph>
+        You can think of a blockchain as a decentralized database or distributed
+        database and with Ethereum it also can do computation in a decentralized
+        manner.
+      </Paragraph>
+      <Paragraph>
         Ethereum is by far the most popular and most used blockchain or smart
         contract protocol. Learning how to write smart contracts on the Ethereum
         blockchain can help you understand how blockchains work in depth, and
@@ -50,12 +55,14 @@ const WhatIsABlockchain = () => {
       </Paragraph>
       <Section name="Smart Contract" />
       <Paragraph>
-        Smart contracts are pieces of code on the blockchain that are not run by
-        any centralized intermediary. They are similar to regular traditional
-        contracts that people make between each other but they are written in
-        code (you can see them as programs to be executed later) and executed by
-        the decentralized blockchain network, instead of being written down
-        using pen and executed by the parties involved.
+        A Smart Contract is a program that runs on the Ethereum blockchain.
+        It&apos;s a collection of code (its functions) and data (its state, i.e.
+        variables) that resides at a specific address on the Ethereum
+        blockchain. They are similar to regular traditional contracts that
+        people make between each other but they are written in code (you can see
+        them as programs to be executed later) and executed by the decentralized
+        blockchain network, instead of being written down using pen and executed
+        by the parties involved.
       </Paragraph>
       <Paragraph>
         Smart contract is one of the main differentiators between the Ethereum

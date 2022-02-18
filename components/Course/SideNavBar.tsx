@@ -4,17 +4,17 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import TreeItem from "@mui/lab/TreeItem";
 
-import useCourse, { Course, Chapter } from "../../hooks/useCourse";
+import useCourse, { Course, Unit } from "../../hooks/useCourse";
 
 import styles from "./SideNavBar.module.scss";
 
-const renderChapter = (chapter: Chapter) => {
+const renderUnit = (unit: Unit) => {
   return (
-    <TreeItem key={chapter.id} nodeId={chapter.id} label={chapter.name}>
-      {chapter.children.map((subChapter) => {
+    <TreeItem key={unit.id} nodeId={unit.id} label={unit.name}>
+      {unit.children.map((chapter) => {
         return (
-          <Link key={subChapter.id} href={subChapter.path} passHref>
-            <TreeItem nodeId={subChapter.id} label={subChapter.name} />
+          <Link key={chapter.id} href={chapter.path} passHref>
+            <TreeItem nodeId={chapter.id} label={chapter.name} />
           </Link>
         );
       })}
@@ -37,8 +37,8 @@ const CourseSideNavBar: React.FC<Props> = ({ course }) => {
         defaultExpanded={["root"]}
         defaultExpandIcon={<ChevronRightIcon />}
       >
-        {course.chapters.map((chapter) => {
-          return renderChapter(chapter);
+        {course.units.map((unit) => {
+          return renderUnit(unit);
         })}
       </TreeView>
     </div>
