@@ -19,12 +19,12 @@ const CourseHome: React.FC<Props> = ({ title, course }) => {
         <Fragment>
           <Title>{title}</Title>
           <SearchBar course={course} />
-          {course.chapters.map((chapter) => {
+          {course.units.map((unit) => {
             return (
               <ChapterList
-                key={chapter.name}
-                title={chapter.name}
-                subChapters={chapter.children}
+                key={unit.name}
+                title={unit.name}
+                subChapters={unit.children}
               />
             );
           })}
