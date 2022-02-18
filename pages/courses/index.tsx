@@ -29,7 +29,7 @@ const CourseList = () => {
   return (
     <TwoSidesMainSection
       leftSection={<div></div>}
-      mainSection={<CourseListMainSection />}
+      mainSection={<ChapterListMainSection />}
       rightSection={<div></div>}
     />
   );

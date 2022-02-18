@@ -10,7 +10,7 @@ type Props = {
 
 const ChapterList: React.FC<Props> = ({ title, subChapters }) => {
   return (
-    <section className={styles.container}>
+    <SubChapter className={styles.container}>
       <div className={styles.title}>{title}</div>
       <ol className={styles.list}>
         {subChapters.map((subChapter) => {

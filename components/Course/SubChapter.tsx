@@ -5,7 +5,7 @@ type Props = {
   name: string;
 };
 
-const Section: React.FC<Props> = ({ name }) => {
+const SubChapter: React.FC<Props> = ({ name }) => {
   return (
     <>
       {/* make some space so that the top navigation bar won't cover up the title */}
@@ -15,4 +15,4 @@ const Section: React.FC<Props> = ({ name }) => {
   );
 };
 
-export default Section;
+export default SubChapter;

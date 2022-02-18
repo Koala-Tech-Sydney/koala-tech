@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Section from "../../../../components/Course/Section";
+import SubChapter from "../../../../components/Course/SubChapter";
 import { Paragraph, Hyperlink } from "../../../../components/Text/Text";
 import Chapter from "../../../../components/Course/Chapter";
 import { blockchainCourse } from "..";
@@ -11,7 +11,7 @@ const WhatIsABlockchain = () => {
       course={blockchainCourse}
       requiredReadingTimeInMinute="4"
     >
-      <Section name="History" />
+      <SubChapter name="History" />
       <Paragraph>
         Bitcoin was one of the first protocols to use a revolutionary technology
         called blockchain. The Bitcoin whitepaper was released by a pseudonymous
@@ -46,14 +46,14 @@ const WhatIsABlockchain = () => {
         blockchain, you can apply it to other blockchains as well because the
         concepts are the same.
       </Paragraph>
-      <Section name="Web 3.0" />
+      <SubChapter name="Web 3.0" />
       <Paragraph>
         This is an idea for a new version of the World Wide Web based on the
         blockchain (can connect and interact with the blockchain), which
         incorporates concepts including decentralization and token-based
         economics.
       </Paragraph>
-      <Section name="Smart Contract" />
+      <SubChapter name="Smart Contract" />
       <Paragraph>
         A Smart Contract is a program that runs on the Ethereum blockchain.
         It&apos;s a collection of code (its functions) and data (its state, i.e.
@@ -73,7 +73,7 @@ const WhatIsABlockchain = () => {
         whereas the Ethereum developers view that network as an asset and also a
         utility for people to build these smart contracts.
       </Paragraph>
-      <Section name="Oracle Problem" />
+      <SubChapter name="Oracle Problem" />
       <Paragraph>
         Smart contracts are amazing but they come with a natural fatal flaw,
         which is known as the oracle problem. If you want these smart contracts
@@ -129,7 +129,7 @@ const WhatIsABlockchain = () => {
         majority of DeFi (Decentralized Finance) applications today are hybrid
         smart contracts.
       </Paragraph>
-      <Section name="Chainlink" />
+      <SubChapter name="Chainlink" />
       <Paragraph>
         Chainlink is the most popular and powerful decentralized blockchain
         oracle network built on Ethereum. The network is intended to be used to
