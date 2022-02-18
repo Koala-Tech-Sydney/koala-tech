@@ -50,15 +50,15 @@ const TwoSidesMainSection: React.FC<Props> = ({
     }
   }
   return (
-    <SubChapter className={styles.container}>
+    <section className={styles.container}>
       {!!leftSection && (
-        <SubChapter className={styles.sideSection}>{leftSection}</section>
+        <section className={styles.sideSection}>{leftSection}</section>
       )}
-      <SubChapter id={styles.mainSection} className={mainSectionClasses}>
+      <section id={styles.mainSection} className={mainSectionClasses}>
         {mainSection}
       </section>
       {!!rightSection && (
-        <SubChapter className={styles.sideSection}>{rightSection}</section>
+        <section className={styles.sideSection}>{rightSection}</section>
       )}
     </section>
   );

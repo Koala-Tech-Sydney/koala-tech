@@ -26,8 +26,8 @@ const CollapseNavBar: React.FC<Props> = ({ toggleCollapseNavBar }) => {
         open={true}
         onClick={toggleCollapseNavBar}
       />
-      <SubChapter className={styles.collapseNavBar}>
-        <SubChapter className={styles.headerSection}>
+      <section className={styles.collapseNavBar}>
+        <section className={styles.headerSection}>
           <HeaderNavList>
             <HeaderNavItem>
               <HeaderNavLink
