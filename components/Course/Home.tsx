@@ -24,7 +24,7 @@ const CourseHome: React.FC<Props> = ({ title, course }) => {
               <ChapterList
                 key={unit.name}
                 title={unit.name}
-                subChapters={unit.children}
+                chapters={unit.children}
               />
             );
           })}

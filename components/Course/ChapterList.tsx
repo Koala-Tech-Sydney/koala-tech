@@ -1,32 +1,32 @@
 import Link from "next/link";
-import { SubChapters } from "../../hooks/useCourse";
+import { Chapter } from "../../hooks/useCourse";
 
 import styles from "./ChapterList.module.scss";
 
 type Props = {
   title: string;
-  subChapters: SubChapters;
+  chapters: Chapter[];
 };
 
-const ChapterList: React.FC<Props> = ({ title, subChapters }) => {
+const ChapterList: React.FC<Props> = ({ title, chapters }) => {
   return (
     <section className={styles.container}>
       <div className={styles.title}>{title}</div>
       <ol className={styles.list}>
-        {subChapters.map((subChapter) => {
+        {chapters.map((chapter) => {
           return (
-            <div key={subChapter.name}>
+            <div key={chapter.name}>
               <li className={styles.item}>
-                <Link href={subChapter.path}>
-                  <a className={styles.chapterLink}>{subChapter.name}</a>
+                <Link href={chapter.path}>
+                  <a className={styles.chapterLink}>{chapter.name}</a>
                 </Link>
               </li>
               <ul>
-                {subChapter.children?.map((section) => {
+                {chapter.children?.map((subChapter) => {
                   return (
-                    <li key={section.id} className={styles.item}>
-                      <Link href={section.id}>
-                        <a className={styles.chapterLink}>{section.name}</a>
+                    <li key={subChapter.id} className={styles.item}>
+                      <Link href={subChapter.id}>
+                        <a className={styles.chapterLink}>{subChapter.name}</a>
                       </Link>
                     </li>
                   );

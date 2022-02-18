@@ -1,5 +1,5 @@
 import JavaScriptFormatter from "../../../../components/Formatter/JavaScriptFormatter";
-import Course from "../../../../components/Course/SubChapter";
+import Chapter from "../../../../components/Course/Chapter";
 
 import {
   Subtitle1,
@@ -11,7 +11,7 @@ import { reactCourse } from "..";
 
 const Introduction = () => {
   return (
-    <Course title="Introduction" course={reactCourse}>
+    <Chapter title="Introduction" course={reactCourse}>
       <Paragraph>
         In this section, you will learn how to create a new React app and
         understand the structure of a React project.
@@ -47,7 +47,7 @@ npm start`}</JavaScriptFormatter>
         A folder for storing all of the things that are public to the browser,
         for example the images or other resources.
       </Paragraph>
-    </Course>
+    </Chapter>
   );
 };
 
