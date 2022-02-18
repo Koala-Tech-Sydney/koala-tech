@@ -1,12 +1,12 @@
 import Image from "next/image";
 import Section from "../../../../components/Course/Section";
 import { Paragraph, Hyperlink } from "../../../../components/Text/Text";
-import Course from "../../../../components/Course/SubChapter";
+import Chapter from "../../../../components/Course/Chapter";
 import { blockchainCourse } from "..";
 
 const WhatIsABlockchain = () => {
   return (
-    <Course
+    <Chapter
       title="What is a Blockchain?"
       course={blockchainCourse}
       requiredReadingTimeInMinute="4"
@@ -205,7 +205,7 @@ const WhatIsABlockchain = () => {
         to keep in mind is that we need a decentralized way to bring data from
         the outside world to the blockchain and oracles is our solution.
       </Paragraph>
-    </Course>
+    </Chapter>
   );
 };
 

@@ -1,6 +1,6 @@
 import Section from "../../../../components/Course/Section";
 import { Paragraph } from "../../../../components/Text/Text";
-import Course from "../../../../components/Course/SubChapter";
+import Chapter from "../../../../components/Course/Chapter";
 import { blockchainCourse } from "..";
 
 const AdvantagesOfBlockchain = () => {
@@ -146,7 +146,7 @@ const AdvantagesOfBlockchain = () => {
         determines is the input output that&apos;s exactly what&apos;s gonna
         happen every single time.
       </Paragraph>
-    </Course>
+    </Chapter>
   );
 };
 

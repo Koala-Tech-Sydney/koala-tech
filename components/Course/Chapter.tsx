@@ -4,7 +4,7 @@ import TwoSidesMainSection from "../Structure/TwoSidesMainSection";
 import { Course } from "../../hooks/useCourse";
 import SideNavBar from "./SideNavBar";
 
-import styles from "./SubChapter.module.scss";
+import styles from "./Chapter.module.scss";
 
 type Props = {
   title: string;
@@ -12,7 +12,7 @@ type Props = {
   requiredReadingTimeInMinute?: string;
 };
 
-const Course: React.FC<Props> = ({
+const Chapter: React.FC<Props> = ({
   title,
   course,
   requiredReadingTimeInMinute,
@@ -39,4 +39,4 @@ const Course: React.FC<Props> = ({
   );
 };
 
-export default Course;
+export default Chapter;

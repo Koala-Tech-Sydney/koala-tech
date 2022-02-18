@@ -7,12 +7,12 @@ import {
   Paragraph,
   Hyperlink,
 } from "../../../../components/Text/Text";
-import Course from "../../../../components/Course/SubChapter";
+import Chapter from "../../../../components/Course/Chapter";
 import { reactCourse } from "..";
 
 const JSX = () => {
   return (
-    <Course title="JSX" course={reactCourse}>
+    <Chapter title="JSX" course={reactCourse}>
       <Paragraph>Consider the following variable declaration</Paragraph>
       <JavaScriptFormatter>
         {"const cutestAnimal = <p>Koala</p>;"}
@@ -68,7 +68,7 @@ let MyComponent = <MyComponents[index] />`}</JavaScriptFormatter>
 let index = 1
 // This works like a charm! Now you can use <MyComponent /> in your JSX code.
 let MyComponent = MyComponents[index]`}</JavaScriptFormatter>
-    </Course>
+    </Chapter>
   );
 };
 

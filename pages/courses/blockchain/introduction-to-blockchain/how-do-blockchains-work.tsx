@@ -6,7 +6,7 @@ import {
   Subtitle2,
   Subtitle3,
 } from "../../../../components/Text/Text";
-import Course from "../../../../components/Course/SubChapter";
+import Chapter from "../../../../components/Course/Chapter";
 import { blockchainCourse } from "..";
 
 const HowDoBlockchainsWork = () => {
@@ -315,7 +315,7 @@ const HowDoBlockchainsWork = () => {
         scalability issue, they are what&apos;s known as rollups and they roll
         up their transactions into a layer one like Ethereum.
       </Paragraph>
-    </Course>
+    </Chapter>
   );
 };
 
