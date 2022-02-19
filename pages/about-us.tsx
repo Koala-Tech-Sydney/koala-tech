@@ -69,6 +69,56 @@ const tutorList = [
       },
     ],
   },
+  {
+    name: "Luna Yang",
+    backgroundImage: {
+      uri: "images\\about-us\\lunaHouse.jpg",
+      alt: "House",
+    },
+    avatarImage: {
+      uri: "images\\about-us\\LunaYang.jpg",
+    },
+    position: "Full Stack Developer",
+    shortDescription:
+      "Whenever I look back on the past year, I hope to find that I have learned new knowledge and become a happier person.",
+    longDescription: (
+      <SmallText>
+        Before working as a software developer, I have worked as an audit assistant for 3 years after highschool. 
+        During that time, I felt that many of my works can be automated, and this feeling gradually raises my interests in technology.
+        I decided to go back to university and pursue an engineering degree related to automation. <br /><br />
+
+        During my engineering degree I studied two programming courses, and I started to realize programming is my real passion.
+        I decided to transfer to Computer Science and I completed all COMP courses in 1 year (I transferred all Engineering credits as Electives). 
+        When I transferred to Computer Science, I barely know anything about computer. I don't even know what OS means.<br /><br />
+
+        It was challenging to learn all COMP courses in 1 year, but it was also rewarding. 
+        Besides school, I also learned mobile development and web development by myself.
+        From knowing absolute zero to working as a developer, I know how hard it is to learn and explore everything by yourself.
+        My experience led me to create a learning site to help others learn to code. <br/><br/>
+        
+        If you are interested in coding but hesitate because you're worried you won't be able to do it, 
+        don't worry! Just follow your passion. It will be a wonderful, rewarding journey.  
+      </SmallText>
+    ),
+    socialMedia: [
+      {
+        name: "Facebook",
+        uri: "https://www.facebook.com/luna.yang.3348",
+      },
+      {
+        name: "Instagram",
+        uri: "https://www.instagram.com/lunayang820/",
+      },
+      {
+        name: "GitHub",
+        uri: "https://github.com/LunA820",
+      },
+      {
+        name: "LinkedIn",
+        uri: "https://www.linkedin.com/in/luna-yang-820/",
+      },
+    ],
+  }
 ];
 
 const AboutUs = () => {

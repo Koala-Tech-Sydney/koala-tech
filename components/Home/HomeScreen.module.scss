@@ -1,11 +1,9 @@
-.homeSection1{
+.homeScreen{
     background-image: url('../../public/images/homeBG.jpg');
     background-size: cover;
-}
 
-.homeScreen{
     height: 105vh;
-    width: 100%;
+    width: 100vw;
 
     display: grid;
     grid-template-rows: 18vh 52vh 8vh;

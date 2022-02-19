@@ -1,11 +1,8 @@
 import Card from '@mui/material/Card';
-import { Fragment } from "react";
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
 import styles from './SquareImageCard.module.scss'
-import { style } from '@mui/system';
 
 
 const SquareImageCard = (props: { imgLink: string; title: string; description: string; }) => {
@@ -19,12 +16,12 @@ const SquareImageCard = (props: { imgLink: string; title: string; description: s
         />
 
         <CardContent>
-            <Typography gutterBottom variant="subtitle1" component="div">
+            <div className={styles.cardTitle}>
                 <b>{props.title}</b>
-            </Typography>
-            <Typography className={styles.cardDescription}>
+            </div>
+            <div className={styles.cardDescription}>
                 {props.description}
-            </Typography>
+            </div>
         </CardContent>
 
     </Card>    

@@ -1,26 +1,24 @@
-import SqualImageCard from "../../components/Card/SquareImageCard";
+import SqualImageCard from "../Card/SquareImageCard";
 import Link from "next/link";
 import Button from "@mui/material/Button";
-import styles from "./homeContent.module.scss";
+import styles from "./HomeCourseList.module.scss";
 
-const HomeContent = () => {
+const HomeCourseList = () => {
   return (
     <div className={styles.homeContent}>
       <div className={styles.homeTerminal}>
-        $ npm install Koala <br />
-        $ ... Installing ...
+        <span className={styles.purpleTxt}>rising-star@Koala:</span> ~$  
+        <span className={styles.orangeTxt}> npm</span> install Koala <br />
+        Installing packages ...
         <br />
-        $ Koala installed success! Happy coding!
+        <span className={styles.greenTxt}>Koala installed successfully! Happy coding!</span>
         <br />
       </div>
 
       <HomeCourseSection />
-      <HomeFeatureSection />
-
-      <Link href="/tutorials" passHref>
+      <Link href="/courses" passHref>
         <Button className={styles.viewAllBtn} variant="contained">
-          {" "}
-          View all courses{" "}
+          {" "}View all courses{" "}
         </Button>
       </Link>
     </div>
@@ -32,14 +30,14 @@ const HomeCourseSection = () => {
     <div className={styles.homeCourseSection}>
       <div className={styles.courseListContainer}>
         <div></div>
-        <HomeCourseList />
+        <HomeCourseListContent />
         <div></div>
       </div>
     </div>
   );
 };
 
-const HomeCourseList = () => {
+const HomeCourseListContent = () => {
   const imgLink1 = "images/reactCardImg.jpg";
   const imgLink2 = "images/blockchainCard.jpg";
   const imgLink3 = "images/comingSoon.jpg";
@@ -69,8 +67,5 @@ const HomeCourseList = () => {
   );
 };
 
-const HomeFeatureSection = () => {
-  return <div className={styles.homeFeatureSection}></div>;
-};
 
-export default HomeContent;
+export default HomeCourseList;
