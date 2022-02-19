@@ -77,3 +77,11 @@
     display: flex;
     justify-content: space-around;
 }
+
+.homeScreenBtn{
+    width: 180px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}

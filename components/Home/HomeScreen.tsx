@@ -24,7 +24,7 @@ export default function HomeScreen() {
 
           <div className={styles.homeScreenBtns}>
               <Link href="/courses">
-                  <Button variant="contained" color="success" sx={{width: 170}}>Start Tutorial</Button>
+                  <Button className={styles.homeScreenBtn} variant="contained" color="success">Start Tutorial</Button>
               </Link>
           </div>
         </div>
