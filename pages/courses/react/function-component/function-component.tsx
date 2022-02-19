@@ -1,4 +1,4 @@
-import Course from "../../../../components/Course/SubChapter";
+import Chapter from "../../../../components/Course/Chapter";
 import { reactCourse } from "..";
 import {
   Subtitle1,
@@ -8,7 +8,7 @@ import {
 } from "../../../../components/Text/Text";
 
 const FunctionComponent = () => {
-  return <Course title="Function Component" course={reactCourse}></Course>;
+  return <Chapter title="Function Component" course={reactCourse}></Chapter>;
 };
 
 export default FunctionComponent;

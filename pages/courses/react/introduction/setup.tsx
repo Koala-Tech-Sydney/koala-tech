@@ -7,12 +7,12 @@ import {
   Hyperlink,
 } from "../../../../components/Text/Text";
 
-import Course from "../../../../components/Course/SubChapter";
+import Chapter from "../../../../components/Course/Chapter";
 import { reactCourse } from "..";
 
 const Setup = () => {
   return (
-    <Course title="Setup" course={reactCourse}>
+    <Chapter title="Setup" course={reactCourse}>
       <Subtitle1>Node.js</Subtitle1>
       <Paragraph>
         The most conventient way to set up your React development environment is
@@ -88,7 +88,7 @@ const Setup = () => {
         height="244"
         width="1084"
       />
-    </Course>
+    </Chapter>
   );
 };
 

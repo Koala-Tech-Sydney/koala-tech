@@ -1,24 +1,24 @@
 import Image from "next/image";
-import Section from "../../../../components/Course/Section";
+import SubChapter from "../../../../components/Course/SubChapter";
 import {
   Paragraph,
   Hyperlink,
   Subtitle2,
   Subtitle3,
 } from "../../../../components/Text/Text";
-import Course from "../../../../components/Course/SubChapter";
+import Chapter from "../../../../components/Course/Chapter";
 import { blockchainCourse } from "..";
 
 const HowDoBlockchainsWork = () => {
   return (
-    <Course
+    <Chapter
       title="How Do Blockchains Work?"
       course={blockchainCourse}
       requiredReadingTimeInMinute="7"
     >
-      <Section name="Hash, Block, Blockchain and Distributed Blockchain" />
+      <SubChapter name="Hash, Block, Blockchain and Distributed Blockchain" />
       <Paragraph>TODO: Video</Paragraph>
-      <Section name="Consensus" />
+      <SubChapter name="Consensus" />
       <Paragraph>
         Consensus is the mechanism used to reach an agreement on the state of a
         blockchain. For example, when one node maliciously changes something on
@@ -212,7 +212,7 @@ const HowDoBlockchainsWork = () => {
         confirmations it means that the block that our transaction was in has
         two blocks ahead of it in the longest chain now.
       </Paragraph>
-      <Section name="Attacks" />
+      <SubChapter name="Attacks" />
       <Paragraph>
         There are two types of attacks that can happen in the blockchain world.
       </Paragraph>
@@ -257,7 +257,7 @@ const HowDoBlockchainsWork = () => {
         So if you choose run a node as well you are going to increase the
         security of the network as a whole.
       </Paragraph>
-      <Section name="Scalability" />
+      <SubChapter name="Scalability" />
       <Paragraph>
         Gas prices can get really high if a lot of people want to send a
         transaction at the same time, because a block only has a limited amount
@@ -315,7 +315,7 @@ const HowDoBlockchainsWork = () => {
         scalability issue, they are what&apos;s known as rollups and they roll
         up their transactions into a layer one like Ethereum.
       </Paragraph>
-    </Course>
+    </Chapter>
   );
 };
 

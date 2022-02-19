@@ -3,7 +3,7 @@ import useCourse, { Course } from "../../../hooks/useCourse";
 
 let blockchainCourse: Course = {
   baseURI: "blockchain/",
-  chapters: [
+  units: [
     {
       id: "",
       name: "Introduction to Blockchain",

@@ -3,7 +3,7 @@ import Home from "../../../components/Course/Home";
 
 let reactCourse: Course = {
   baseURI: "react/",
-  chapters: [
+  units: [
     {
       id: "",
       name: "Introduction",

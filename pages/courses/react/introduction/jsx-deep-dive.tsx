@@ -5,11 +5,11 @@ import {
   Paragraph,
   Hyperlink,
 } from "../../../../components/Text/Text";
-import Course from "../../../../components/Course/SubChapter";
+import Chapter from "../../../../components/Course/Chapter";
 import { reactCourse } from "..";
 
 const JSXDeepDive = () => {
-  return <Course title="JSX Deep Dive" course={reactCourse}></Course>;
+  return <Chapter title="JSX Deep Dive" course={reactCourse}></Chapter>;
 };
 
 export default JSXDeepDive;

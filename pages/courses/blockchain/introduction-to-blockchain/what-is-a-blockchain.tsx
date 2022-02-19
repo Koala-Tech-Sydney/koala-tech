@@ -1,17 +1,17 @@
 import Image from "next/image";
-import Section from "../../../../components/Course/Section";
+import SubChapter from "../../../../components/Course/SubChapter";
 import { Paragraph, Hyperlink } from "../../../../components/Text/Text";
-import Course from "../../../../components/Course/SubChapter";
+import Chapter from "../../../../components/Course/Chapter";
 import { blockchainCourse } from "..";
 
 const WhatIsABlockchain = () => {
   return (
-    <Course
+    <Chapter
       title="What is a Blockchain?"
       course={blockchainCourse}
       requiredReadingTimeInMinute="4"
     >
-      <Section name="History" />
+      <SubChapter name="History" />
       <Paragraph>
         Bitcoin was one of the first protocols to use a revolutionary technology
         called blockchain. The Bitcoin whitepaper was released by a pseudonymous
@@ -34,6 +34,11 @@ const WhatIsABlockchain = () => {
         manner.
       </Paragraph>
       <Paragraph>
+        You can think of a blockchain as a decentralized database or distributed
+        database and with Ethereum it also can do computation in a decentralized
+        manner.
+      </Paragraph>
+      <Paragraph>
         Ethereum is by far the most popular and most used blockchain or smart
         contract protocol. Learning how to write smart contracts on the Ethereum
         blockchain can help you understand how blockchains work in depth, and
@@ -41,21 +46,23 @@ const WhatIsABlockchain = () => {
         blockchain, you can apply it to other blockchains as well because the
         concepts are the same.
       </Paragraph>
-      <Section name="Web 3.0" />
+      <SubChapter name="Web 3.0" />
       <Paragraph>
         This is an idea for a new version of the World Wide Web based on the
         blockchain (can connect and interact with the blockchain), which
         incorporates concepts including decentralization and token-based
         economics.
       </Paragraph>
-      <Section name="Smart Contract" />
+      <SubChapter name="Smart Contract" />
       <Paragraph>
-        Smart contracts are pieces of code on the blockchain that are not run by
-        any centralized intermediary. They are similar to regular traditional
-        contracts that people make between each other but they are written in
-        code (you can see them as programs to be executed later) and executed by
-        the decentralized blockchain network, instead of being written down
-        using pen and executed by the parties involved.
+        A Smart Contract is a program that runs on the Ethereum blockchain.
+        It&apos;s a collection of code (its functions) and data (its state, i.e.
+        variables) that resides at a specific address on the Ethereum
+        blockchain. They are similar to regular traditional contracts that
+        people make between each other but they are written in code (you can see
+        them as programs to be executed later) and executed by the decentralized
+        blockchain network, instead of being written down using pen and executed
+        by the parties involved.
       </Paragraph>
       <Paragraph>
         Smart contract is one of the main differentiators between the Ethereum
@@ -66,7 +73,7 @@ const WhatIsABlockchain = () => {
         whereas the Ethereum developers view that network as an asset and also a
         utility for people to build these smart contracts.
       </Paragraph>
-      <Section name="Oracle Problem" />
+      <SubChapter name="Oracle Problem" />
       <Paragraph>
         Smart contracts are amazing but they come with a natural fatal flaw,
         which is known as the oracle problem. If you want these smart contracts
@@ -122,7 +129,7 @@ const WhatIsABlockchain = () => {
         majority of DeFi (Decentralized Finance) applications today are hybrid
         smart contracts.
       </Paragraph>
-      <Section name="Chainlink" />
+      <SubChapter name="Chainlink" />
       <Paragraph>
         Chainlink is the most popular and powerful decentralized blockchain
         oracle network built on Ethereum. The network is intended to be used to
@@ -198,7 +205,7 @@ const WhatIsABlockchain = () => {
         to keep in mind is that we need a decentralized way to bring data from
         the outside world to the blockchain and oracles is our solution.
       </Paragraph>
-    </Course>
+    </Chapter>
   );
 };
 

@@ -1,42 +1,18 @@
-import { Fragment } from "react";
-import { Title, SmallText } from "../Text/Text";
-import TwoSidesMainSection from "../Structure/TwoSidesMainSection";
-import { Course } from "../../hooks/useCourse";
-import SideNavBar from "./SideNavBar";
-
-import styles from "./SubChapter.module.scss";
+import { Subtitle1 } from "../Text/Text";
+import { normalizePathName } from "../../hooks/useCourse";
 
 type Props = {
-  title: string;
-  course: Course;
-  requiredReadingTimeInMinute?: string;
+  name: string;
 };
 
-const Course: React.FC<Props> = ({
-  title,
-  course,
-  requiredReadingTimeInMinute,
-  children,
-}) => {
+const SubChapter: React.FC<Props> = ({ name }) => {
   return (
-    <TwoSidesMainSection
-      leftSection={<SideNavBar course={course} />}
-      mainSection={
-        <Fragment>
-          <Title>
-            {title}
-            {!!requiredReadingTimeInMinute && (
-              <SmallText
-                className={styles.requiredReadingTimeInMinute}
-              >{`${requiredReadingTimeInMinute} minutes of reading`}</SmallText>
-            )}
-          </Title>
-          {children}
-        </Fragment>
-      }
-      rightSection={<div></div>}
-    />
+    <>
+      {/* make some space so that the top navigation bar won't cover up the title */}
+      <div id={normalizePathName(name)} style={{ marginBottom: "6rem" }} />
+      <Subtitle1>{name}</Subtitle1>
+    </>
   );
 };
 
-export default Course;
+export default SubChapter;
