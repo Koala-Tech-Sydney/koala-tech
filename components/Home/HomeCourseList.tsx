@@ -48,11 +48,14 @@ const HomeCourseListContent = () => {
 
   return (
     <div className={styles.homeCourseList}>
-      <SqualImageCard
-        imgLink={imgLink1}
-        title="React"
-        description={description1}
-      />
+      <Link href={"/courses/react"} >
+        <SqualImageCard
+          imgLink={imgLink1}
+          title="React"
+          description={description1}
+        />
+      </Link>
+      
       <SqualImageCard
         imgLink={imgLink2}
         title="Block Chain"

@@ -1,8 +1,8 @@
 import { Fragment } from "react";
 import Link from "next/link";
-import TwoSidesMainSection from "../../components/Structure/TwoSidesMainSection";
 import SquareImageCard from "../../components/Card/SquareImageCard";
 import styles from "./index.module.scss";
+
 
 const tutorialList = [
   {

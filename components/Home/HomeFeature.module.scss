@@ -9,11 +9,22 @@
 @media (orientation: landscape) {
     .contentTitle{font-size: 50px;}
     .contentDescription{font-size: 15px;}
+    .timeSymbol{
+        align-self: center; 
+        font-size: 40px;
+    }
 }
   
 @media (orientation: portrait) {
-    .contentTitle{font-size: 30px;}
+    .contentTitle{font-size: 20px;}
     .contentDescription{font-size: 12px;}
+    .timeSymbol{
+        align-self: self-start;
+        font-size: 20px;
+    }
+    #featureConclusion{
+        font-size: 14px;
+    }
 }
 
 #featureTitle{
@@ -24,9 +35,8 @@
 
 #featureContainer{
     display: grid;
-    grid-template-columns: 25vw 5vw 25vw 5vw 25vw;
+    grid-template-columns: 5fr 1fr 5fr 1fr 5fr;
     margin: 0 7.5vw 0 7.5vw;
-    align-items: center;
     margin-bottom: 40px;
     padding: 20px;
 
@@ -35,10 +45,6 @@
     border-top-left-radius: 30px;
     border-bottom-right-radius: 30px;
     border-bottom-left-radius: 30px;
-}
-
-.timeSymbol{
-    font-size: 40px;
 }
 
 .contentTitle{
