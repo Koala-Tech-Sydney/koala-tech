@@ -18,11 +18,13 @@ const HomeCourseListSection = () => {
       </div>
 
       <CourseList />
-      <Link href="/courses" passHref>
-        <Button className={styles.viewAllBtn} variant="contained">
-          View all courses
-        </Button>
-      </Link>
+      <div className={styles.viewAllCoursesBtnContainer}>
+        <Link href="/courses" passHref>
+          <Button className={styles.viewAllBtn} variant="contained">
+            View all courses
+          </Button>
+        </Link>
+      </div>
     </div>
   );
 };

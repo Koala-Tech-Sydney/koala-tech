@@ -22,13 +22,19 @@
     flex-wrap: wrap;
   }
 
-  .viewAllBtn {
-    background-color: var(--color-warning-tone);
-    text-transform: none;
-    margin: 2rem;
-    border-radius: 30px;
-    width: 40%;
-    min-width: 20rem;
+  .viewAllCoursesBtnContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .viewAllBtn {
+      background-color: var(--color-warning-tone);
+      text-transform: none;
+      margin: 2rem auto;
+      border-radius: 30px;
+      width: 40%;
+      min-width: 20rem;
+    }
   }
 }
 

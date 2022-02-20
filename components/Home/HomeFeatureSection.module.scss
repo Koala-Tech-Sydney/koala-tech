@@ -1,0 +1,46 @@
+#homeFeatureContainer {
+  background-color: var(--color-tint);
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  .contentTitle {
+    border-bottom: solid var(--color-medium-shadeing-tone);
+    font-size: 20px;
+  }
+
+  .contentDescription {
+    font-size: 12px;
+  }
+
+  #featureContainer {
+    display: grid;
+    grid-template-columns: 5fr 1fr 5fr 1fr 5fr;
+    margin: 0 7.5vw 0 7.5vw;
+    margin-bottom: 40px;
+    padding: 20px;
+
+    border: solid grey;
+    border-radius: 30px;
+
+    .timeSymbol {
+      align-self: self-start;
+      font-size: 20px;
+    }
+  }
+
+  #featureConclusion {
+    font-size: 14px;
+  }
+}
+
+#featureTitle {
+  font-size: 25px;
+  color: var(--color-emphasis-tint);
+  margin-bottom: 30px;
+}
+
+.contentDescription {
+  margin-top: 5px;
+  color: var(--color-medium-tint);
+}
