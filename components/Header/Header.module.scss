@@ -6,8 +6,6 @@
   // prevent text from sliding to the second line
   white-space: nowrap;
 
-  position: -webkit-sticky; /* Safari */
-  position: sticky;
   position: fixed;
   width: 100vw;
   top: 0;

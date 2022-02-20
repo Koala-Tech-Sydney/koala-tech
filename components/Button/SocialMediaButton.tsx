@@ -15,7 +15,6 @@ type Props = {
 const SocialMediaButton: React.FC<Props> = ({ name, uri, className }) => {
   let button = null;
   let ariaLabel = "";
-  console.log(name);
   switch (name) {
     case "Discord":
       button = <DiscordIcon className={className} />;

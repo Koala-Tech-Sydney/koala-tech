@@ -40,12 +40,16 @@ const CourseList = () => {
 
   return (
     <div className={styles.courseListContainer}>
-      <SquareImageCard
-        imgLink={imgLink1}
-        title="React"
-        description={description1}
-        alt="React Tutorial"
-      />
+      <Link href="/courses/react" passHref>
+        <a>
+          <SquareImageCard
+            imgLink={imgLink1}
+            title="React"
+            description={description1}
+            alt="React Tutorial"
+          />
+        </a>
+      </Link>
 
       <SquareImageCard
         imgLink={imgLink2}
