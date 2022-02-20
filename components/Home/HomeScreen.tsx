@@ -21,7 +21,7 @@ export default function HomeScreen() {
         <h1 className={styles.slogan}>Build Apps. Build a Better Life.</h1>
 
         <div className={styles.homeScreenBtns}>
-          <Link href="/courses">
+          <Link href="/courses" passHref>
             <Button
               className={styles.homeScreenBtn}
               variant="contained"
