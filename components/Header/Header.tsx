@@ -47,31 +47,29 @@ const Header = () => {
           </HeaderNavItem>
         )}
         <HeaderNavItem>
-          <HeaderNavLink title="Koala Tech" href="/" />
+          <HeaderNavLink title="HI Tech" href="/" />
         </HeaderNavItem>
       </HeaderNavList>
 
-      <HeaderNavList>
-        {!isCollapseMode && (
-          <Fragment>
-            <HeaderNavItem>
-              <HeaderNavLink title="Home" href="/" />
-            </HeaderNavItem>
-            <HeaderNavItem>
-              <HeaderNavLink title="Courses" href="/courses" />
-            </HeaderNavItem>
-            <HeaderNavItem>
-              <HeaderNavLink title="Support" href="/support" />
-            </HeaderNavItem>
-            <HeaderNavItem>
-              <HeaderNavLink title="About Us" href="/about-us" />
-            </HeaderNavItem>
-            <HeaderNavItem>
-              <ThemeToggleButton />
-            </HeaderNavItem>
-          </Fragment>
-        )}
-      </HeaderNavList>
+      {!isCollapseMode && (
+        <HeaderNavList>
+          <HeaderNavItem>
+            <HeaderNavLink title="Home" href="/" />
+          </HeaderNavItem>
+          <HeaderNavItem>
+            <HeaderNavLink title="Courses" href="/courses" />
+          </HeaderNavItem>
+          <HeaderNavItem>
+            <HeaderNavLink title="Support" href="/support" />
+          </HeaderNavItem>
+          <HeaderNavItem>
+            <HeaderNavLink title="About Us" href="/about-us" />
+          </HeaderNavItem>
+          <HeaderNavItem>
+            <ThemeToggleButton />
+          </HeaderNavItem>
+        </HeaderNavList>
+      )}
     </header>
   );
 };
