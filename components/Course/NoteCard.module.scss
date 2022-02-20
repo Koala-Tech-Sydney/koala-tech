@@ -18,21 +18,21 @@
 }
 
 .info {
-  color: #326a83;
-  background-color: #1ab1f5;
+  color: var(--color-info-tone);
+  background-color: var(--color-info-tint);
 }
 
 .success {
-  color: #1e4620;
-  background-color: #5cb660;
+  color: var(--color-success-tone);
+  background-color: var(--color-success-tint);
 }
 
 .warning {
-  color: #dc9122;
-  background-color: #ffe28c;
+  color: var(--color-warning-tone);
+  background-color: var(--color-warning-tint);
 }
 
 .danger {
-  color: #5f2120;
-  background-color: #f16360;
+  color: var(--color-danger-tone);
+  background-color: var(--color-danger-tint);
 }

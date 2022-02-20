@@ -50,6 +50,7 @@ const CardList = () => {
                 imgLink={tutorial.imgPath}
                 title={tutorial.name}
                 description={tutorial.description}
+                alt={tutorial.name}
               />
             </div>
           </Link>
