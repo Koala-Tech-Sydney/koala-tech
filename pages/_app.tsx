@@ -31,11 +31,6 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
           </main>
           <Footer />
         </div>
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9717072844416658"
-          crossOrigin="anonymous"
-        ></script>
       </Provider>
     </ThemeProvider>
   );

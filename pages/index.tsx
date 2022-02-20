@@ -1,7 +1,7 @@
 import styles from "../styles/Home.module.scss";
 import { Fragment } from "react";
 import HomeScreen from "../components/Home/HomeScreen";
-import HomeCourseList from "../components/Home/HomeCourseList";
+import HomeCourseListSection from "../components/Home/HomeCourseListSection";
 import HomeFeature from "../components/Home/HomeFeature";
 
 export default function Home() {
@@ -9,7 +9,7 @@ export default function Home() {
     <Fragment>
       <HomeScreen />
       <HomeFeature />
-      <HomeCourseList />
+      <HomeCourseListSection />
     </Fragment>
   );
 }

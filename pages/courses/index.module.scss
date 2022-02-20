@@ -1,11 +1,12 @@
-#courseListContainer{
-    padding: 40px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+#courseListContainer {
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
-.tutCardContainer{
-    margin-left: 10px;
-    margin-right: 10px;
+.tutCardContainer {
+  margin-left: 10px;
+  margin-right: 10px;
 }

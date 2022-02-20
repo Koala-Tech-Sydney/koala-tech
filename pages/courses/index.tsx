@@ -45,14 +45,12 @@ const CardList = () => {
       {tutorialList.map((tutorial) => {
         return (
           <Link key={tutorial.name} href={tutorial.path} passHref>
-            <div className={styles.tutCardContainer}>
-              <SquareImageCard
-                imgLink={tutorial.imgPath}
-                title={tutorial.name}
-                description={tutorial.description}
-                alt={tutorial.name}
-              />
-            </div>
+            <SquareImageCard
+              imgLink={tutorial.imgPath}
+              title={tutorial.name}
+              description={tutorial.description}
+              alt={tutorial.name}
+            />
           </Link>
         );
       })}

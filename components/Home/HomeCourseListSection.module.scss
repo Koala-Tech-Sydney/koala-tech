@@ -1,0 +1,45 @@
+.homeContent {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  letter-spacing: 1px;
+
+  .homeTerminal {
+    text-align: left;
+    margin-left: 40px;
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: 900px) {
+    .homeTerminal {
+      font-size: 12px;
+    }
+  }
+
+  .courseListContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .viewAllBtn {
+    background-color: var(--color-warning-tone);
+    text-transform: none;
+    margin: 2rem;
+    border-radius: 30px;
+    width: 40%;
+    min-width: 20rem;
+  }
+}
+
+.orangeTxt {
+  color: var(--color-warning-tone);
+}
+
+.greenTxt {
+  color: var(--color-success);
+}
+
+.purpleTxt {
+  color: var(--color-emphasis-tint);
+}

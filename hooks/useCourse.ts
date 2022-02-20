@@ -74,7 +74,6 @@ const configureSubChapters = (
 };
 
 const getChapterPath = (name: string, basePath: string): string => {
-  console.log(`${basePath}/${normalizePathName(name)}`);
   return `${basePath}/${normalizePathName(name)}`;
 };
 
