@@ -1,6 +1,10 @@
 import MUIInstagramIcon from "@mui/icons-material/Instagram";
 
-const InstagramIcon = () => {
+type Props = {
+  className?: string;
+};
+
+const InstagramIcon: React.FC<Props> = ({ className }) => {
   return (
     <>
       <svg width={0} height={0}>
@@ -9,7 +13,10 @@ const InstagramIcon = () => {
           <stop offset={1} stopColor="#F6B754" />
         </linearGradient>
       </svg>
-      <MUIInstagramIcon sx={{ fill: "url(#linearColors)" }} />
+      <MUIInstagramIcon
+        className={className}
+        sx={{ fill: "url(#linearColors)" }}
+      />
     </>
   );
 };

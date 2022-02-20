@@ -2,11 +2,7 @@ import { Fragment, useState } from "react";
 import Avatar from "@mui/material/Avatar";
 import Box from "@mui/material/Box";
 import IconButton from "@mui/material/IconButton";
-import InstagramIcon from "../Icon/InstagramIcon";
-import FacebookIcon from "../Icon/FacebookIcon";
-import TwitterIcon from "../Icon/TwitterIcon";
-import GitHubIcon from "../Icon/GitHubIcon";
-import LinkedInIcon from "../Icon/LinkedinIcon";
+import SocialMediaButton from "../Button/SocialMediaButton";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Stack from "@mui/material/Stack";
 
@@ -22,24 +18,7 @@ import styles from "./NameCard.module.scss";
 import { SmallText } from "../Text/Text";
 
 const getSocialMediaButton = (name: string, uri: string) => {
-  let icon: any;
-  if (name == "Facebook") {
-    icon = <FacebookIcon />;
-  } else if (name == "Instagram") {
-    icon = <InstagramIcon />;
-  } else if (name == "Twitter") {
-    icon = <TwitterIcon />;
-  } else if (name == "GitHub") {
-    icon = <GitHubIcon />;
-  } else if (name == "LinkedIn") {
-    icon = <LinkedInIcon />;
-  }
-
-  return (
-    <a key={name} href={uri}>
-      <IconButton aria-label={name}>{icon}</IconButton>
-    </a>
-  );
+  return <SocialMediaButton key={name} name={name} uri={uri} />;
 };
 
 type ExpandMoreProps = {

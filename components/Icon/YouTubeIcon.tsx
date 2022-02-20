@@ -1,7 +1,11 @@
 import MUIYouTubeIcon from "@mui/icons-material/YouTube";
 
-const YouTubeIcon = () => {
-  return <MUIYouTubeIcon sx={{ color: "#FF0000" }} />;
+type Props = {
+  className?: string;
+};
+
+const YouTubeIcon: React.FC<Props> = ({ className }) => {
+  return <MUIYouTubeIcon className={className} sx={{ color: "#FF0000" }} />;
 };
 
 export default YouTubeIcon;

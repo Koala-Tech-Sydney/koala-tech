@@ -1,7 +1,11 @@
 import MUIGitHubIcon from "@mui/icons-material/GitHub";
 
-const GitHubIcon = () => {
-  return <MUIGitHubIcon sx={{ color: "#3b3b3b" }} />;
+type Props = {
+  className?: string;
+};
+
+const GitHubIcon: React.FC<Props> = ({ className }) => {
+  return <MUIGitHubIcon className={className} sx={{ color: "#3b3b3b" }} />;
 };
 
 export default GitHubIcon;
