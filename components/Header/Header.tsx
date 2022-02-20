@@ -47,7 +47,7 @@ const Header = () => {
           </HeaderNavItem>
         )}
         <HeaderNavItem>
-          <HeaderNavLink title="HI Tech" href="/" />
+          <HeaderNavLink title="Koala Tech" href="/" />
         </HeaderNavItem>
       </HeaderNavList>
 
