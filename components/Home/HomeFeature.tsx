@@ -27,7 +27,7 @@ const HomeFeature = () => {
 
         <div id={styles.featureConclusion}>
             Learning should be as easy, as fast as installing a package. <br/>
-            Let's start your coding journey with us today!
+            Let&apos;s start your coding journey with us today!
         </div>
     </div>
     )
