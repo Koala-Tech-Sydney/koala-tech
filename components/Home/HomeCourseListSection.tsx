@@ -64,30 +64,6 @@ const CourseList = () => {
         description={description3}
         alt="Upcoming tutorial"
       />
-      <SquareImageCard
-        imgLink={imgLink3}
-        title="Course Title"
-        description={description3}
-        alt="Upcoming tutorial"
-      />
-      <SquareImageCard
-        imgLink={imgLink3}
-        title="Course Title"
-        description={description3}
-        alt="Upcoming tutorial"
-      />
-      <SquareImageCard
-        imgLink={imgLink3}
-        title="Course Title"
-        description={description3}
-        alt="Upcoming tutorial"
-      />
-      <SquareImageCard
-        imgLink={imgLink3}
-        title="Course Title"
-        description={description3}
-        alt="Upcoming tutorial"
-      />
     </div>
   );
 };

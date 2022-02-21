@@ -23,8 +23,19 @@
     border: solid grey;
     border-radius: 30px;
 
+    @media (orientation: landscape){
+      .timeSymbol {
+        align-self: center;
+      }
+    }
+    
+    @media (orientation: portrait){
+      .timeSymbol {
+        align-self: self-start;
+      }
+    }
+
     .timeSymbol {
-      align-self: self-start;
       font-size: 20px;
     }
   }

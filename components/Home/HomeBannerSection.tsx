@@ -26,6 +26,8 @@ export default function HomeBannerSection() {
           </div>
         </div>
 
+        <div className={styles.slogan}>Build Apps. Build a Better Life.</div>
+
         <div className={styles.startTutorialBtnContainer}>
           <Link href="/courses" passHref>
             <Button
