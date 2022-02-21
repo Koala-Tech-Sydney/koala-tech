@@ -51,12 +51,16 @@ const CourseList = () => {
         </a>
       </Link>
 
-      <SquareImageCard
-        imgLink={imgLink2}
-        title="Blockchain"
-        description={description2}
-        alt="Blockchain Tutorial"
-      />
+      <Link href="/courses/blockchain" passHref>
+        <a>
+          <SquareImageCard
+          imgLink={imgLink2}
+          title="Blockchain"
+          description={description2}
+          alt="Blockchain Tutorial"
+          />
+        </a>
+      </Link>
 
       <SquareImageCard
         imgLink={imgLink3}
