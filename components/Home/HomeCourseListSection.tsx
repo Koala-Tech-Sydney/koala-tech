@@ -7,6 +7,12 @@ const HomeCourseListSection = () => {
   return (
     <div className={styles.homeContent}>
       <div className={styles.homeTerminal}>
+        <div className={styles.terminalBar}>
+          <div className={styles.terminalBtn}></div>
+          <div className={styles.terminalBtn}></div>
+          <div className={styles.terminalBtn}></div>
+        </div>
+
         <span className={styles.purpleTxt}>rising-star@Koala:</span> ~$
         <span className={styles.orangeTxt}> npm</span> install Koala <br />
         Installing packages ...
