@@ -1,39 +1,7 @@
-import SquareImageCard from "../Card/SquareImageCard";
+import CourseCard from "../Card/CourseCard";
 import Link from "next/link";
 import Button from "@mui/material/Button";
 import styles from "./HomeCourseListSection.module.scss";
-
-const HomeCourseListSection = () => {
-  return (
-    <div className={styles.homeContent}>
-      <div className={styles.homeTerminal}>
-        <div className={styles.terminalBar}>
-          <div className={styles.terminalBtn}></div>
-          <div className={styles.terminalBtn}></div>
-          <div className={styles.terminalBtn}></div>
-        </div>
-
-        <span className={styles.purpleTxt}>rising-star@Koala:</span> ~$
-        <span className={styles.orangeTxt}> npm</span> install Koala <br />
-        Installing packages ...
-        <br />
-        <span className={styles.greenTxt}>
-          Koala installed successfully! Happy coding!
-        </span>
-        <br />
-      </div>
-
-      <CourseList />
-      <div className={styles.viewAllCoursesBtnContainer}>
-        <Link href="/courses" passHref>
-          <Button className={styles.viewAllBtn} variant="contained">
-            View all courses
-          </Button>
-        </Link>
-      </div>
-    </div>
-  );
-};
 
 const CourseList = () => {
   const imgLink1 = "/images/reactCardImg.jpg";
@@ -46,34 +14,61 @@ const CourseList = () => {
 
   return (
     <div className={styles.courseListContainer}>
-      <Link href="/courses/react" passHref>
-        <a>
-          <SquareImageCard
-            imgLink={imgLink1}
-            title="React"
-            description={description1}
-            alt="React Tutorial"
-          />
-        </a>
-      </Link>
-
-      <Link href="/courses/blockchain" passHref>
-        <a>
-          <SquareImageCard
-          imgLink={imgLink2}
-          title="Blockchain"
-          description={description2}
-          alt="Blockchain Tutorial"
-          />
-        </a>
-      </Link>
-
-      <SquareImageCard
-        imgLink={imgLink3}
-        title="Course Title"
-        description={description3}
-        alt="Upcoming tutorial"
+      <CourseCard
+        uri="/courses/react"
+        imgLink={imgLink1}
+        title="React"
+        description={description1}
+        alt="React Tutorial"
       />
+
+      <CourseCard
+        uri="/courses/blockchain"
+        imgLink={imgLink2}
+        title="Blockchain"
+        description={description2}
+        alt="Blockchain Tutorial"
+      />
+
+      <CourseCard
+        uri=""
+        imgLink={imgLink3}
+        title="Data Structure and Algorithm"
+        description={description3}
+        alt="coming soon..."
+      />
+    </div>
+  );
+};
+
+const HomeCourseListSection = () => {
+  return (
+    <div className={styles.container}>
+      <div className={styles.terminal}>
+        <div className={styles.terminalBar}>
+          <div className={styles.terminalBtn}></div>
+          <div className={styles.terminalBtn}></div>
+          <div className={styles.terminalBtn}></div>
+        </div>
+        <span className={styles.purpleTxt}>rising-star@Koala:</span> ~$
+        <span className={styles.orangeTxt}> npm</span> install Koala <br />
+        Installing packages ...
+        <br />
+        <span className={styles.greenTxt}>
+          Koala installed successfully! Happy coding!
+        </span>
+        <br />
+      </div>
+
+      <CourseList />
+
+      <div className={styles.viewAllCoursesBtnContainer}>
+        <Link href="/courses" passHref>
+          <Button className={styles.viewAllBtn} variant="contained">
+            View all courses
+          </Button>
+        </Link>
+      </div>
     </div>
   );
 };

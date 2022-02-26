@@ -9,7 +9,7 @@ export default function Home() {
     <Fragment>
       <HomeBannerSection />
       <HomeFeatureSection />
-      {/* <HomeCourseListSection /> */}
+      <HomeCourseListSection />
     </Fragment>
   );
 }

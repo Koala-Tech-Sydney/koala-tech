@@ -1,39 +1,45 @@
-.homeContent {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+.container {
+  padding: 2rem;
   letter-spacing: 1px;
 
-  .homeTerminal {
+  .terminal {
     text-align: left;
-    margin-left: 50px;
-    margin-right: 50px;
-    margin-bottom: 30px;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 
-    padding: 20px 30px 20px 30px;
-    border: solid grey;
+    padding: 1rem;
+    border: solid var(--color-medium);
     border-bottom: none;
-    
-    .terminalBar{
+
+    .terminalBar {
       display: flex;
       flex-direction: row;
       align-items: flex-start;
-      margin-bottom: 10px;
+      margin-bottom: 1rem;
+
+      .terminalBtn {
+        height: 1rem;
+        width: 1rem;
+        border: solid var(--color-medium);
+        border-radius: 100%;
+        margin: 0 0.3rem;
+      }
     }
 
-    .terminalBtn{
-      height: 20px;
-      width: 20px;
-      border: grey solid;
-      border-radius: 100%;
-      margin: 0 5px 0 5px; 
+    @media (max-width: 900px) {
+      font-size: 0.8rem;
     }
-  }
 
-  @media (max-width: 900px) {
-    .homeTerminal {
-      font-size: 12px;
+    .orangeTxt {
+      color: var(--color-warning-tone);
+    }
+
+    .greenTxt {
+      color: var(--color-success);
+    }
+
+    .purpleTxt {
+      color: var(--color-emphasis-tint);
     }
   }
 
@@ -42,6 +48,16 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+
+    > * {
+      margin: 1rem;
+    }
+
+    @media (max-width: 600px) {
+      > * {
+        margin: 1rem 0.5rem;
+      }
+    }
   }
 
   .viewAllCoursesBtnContainer {
@@ -50,24 +66,17 @@
     align-items: center;
 
     .viewAllBtn {
-      background-color: var(--color-warning-tone);
+      text-align: center;
       text-transform: none;
+      background-color: var(--color-warning-tone);
       margin: 2rem auto;
       border-radius: 30px;
       width: 40%;
       min-width: 10rem;
     }
   }
-}
 
-.orangeTxt {
-  color: var(--color-warning-tone);
-}
-
-.greenTxt {
-  color: var(--color-success);
-}
-
-.purpleTxt {
-  color: var(--color-emphasis-tint);
+  @media (max-width: 300px) {
+    padding: 0.7rem;
+  }
 }

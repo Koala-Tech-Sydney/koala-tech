@@ -1,4 +1,3 @@
-import { ClassNames } from "@emotion/react";
 import styles from "./Text.module.scss";
 
 const Title: React.FC = (props) => {
