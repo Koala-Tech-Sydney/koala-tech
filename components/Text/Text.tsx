@@ -1,3 +1,4 @@
+import { ClassNames } from "@emotion/react";
 import styles from "./Text.module.scss";
 
 const Title: React.FC = (props) => {
@@ -37,12 +38,7 @@ interface HyperlinkProps {
 
 const Hyperlink: React.FC<HyperlinkProps> = ({ href, children }) => {
   return (
-    <a
-      className={styles.hyperlink}
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-    >
+    <a className={styles.hyperlink} href={href}>
       {children}
     </a>
   );
