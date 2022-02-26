@@ -32,7 +32,7 @@ const CourseSideNavBar: React.FC<Props> = ({ course }) => {
   return (
     <div className={styles.side_nav_bar}>
       <div className={styles.courseName}>
-          <Link href={course.landingPageURI} passHref>
+          <Link href={course.baseURI} passHref>
             <a>{course.name}</a>
           </Link>
       </div>

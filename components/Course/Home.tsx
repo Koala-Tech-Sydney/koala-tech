@@ -1,14 +1,16 @@
 import { Fragment } from "react";
+import Link from "next/link";
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+
 import TwoSidesMainSection from "../Structure/TwoSidesMainSection";
 import SearchBar from "./SearchBar";
 import { Title, Paragraph } from "../Text/Text";
 import { Course, Unit, Chapter } from "../../hooks/useCourse";
 import SideNavBar from "./SideNavBar";
-import Accordion from '@mui/material/Accordion';
-import AccordionSummary from '@mui/material/AccordionSummary';
-import AccordionDetails from '@mui/material/AccordionDetails';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import Link from "next/link";
+
 import styles from './Home.module.scss'
 
 
@@ -70,7 +72,7 @@ const UnitList: React.FC<UnitListProps> = ({units}) => {
                     <a>
                       <div className={styles.chContainer}>
                         <div>{chapter.name}</div>
-                        <div className={styles.chMins}>{chapter.min} mins</div>
+                        <div className={styles.chMins}>{chapter.requiredReadingTimeInMinute} mins</div>
                       </div>
                     </a>
                   </Link>                    
@@ -87,7 +89,7 @@ const UnitList: React.FC<UnitListProps> = ({units}) => {
 
 function sum( chList: Chapter[] ) {
   var sum = 0;
-  chList.forEach(ch => {sum += ch.min;})
+  chList.forEach(ch => {sum += ch.requiredReadingTimeInMinute;})
   return sum;
 }
 

@@ -3,8 +3,7 @@ import useCourse, { Course } from "../../../hooks/useCourse";
 
 let blockchainCourse: Course = {
   name: "Blockchain",
-  landingPageURI: "",
-  baseURI: "blockchain/",
+  baseURI: "/courses/blockchain/",
   units: [
     {
       id: "",
@@ -21,7 +20,7 @@ let blockchainCourse: Course = {
             { id: "", name: "Oracle Problem", path: "" },
             { id: "", name: "Chainlink", path: "" },
           ],
-          min: 15
+          requiredReadingTimeInMinute: 15
         },
         {
           id: "",
@@ -35,7 +34,7 @@ let blockchainCourse: Course = {
             { id: "", name: "Removal of Counterparty Party", path: "" },
             { id: "", name: "Trust Minimized Agreements", path: "" },
           ],
-          min: 15
+          requiredReadingTimeInMinute: 15
         },
         {
           id: "",
@@ -51,7 +50,7 @@ let blockchainCourse: Course = {
             { id: "", name: "Attacks", path: "" },
             { id: "", name: "Scalability", path: "" },
           ],
-          min: 15
+          requiredReadingTimeInMinute: 15
         },
       ],
     },
