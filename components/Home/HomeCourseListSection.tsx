@@ -31,7 +31,7 @@ const CourseList = () => {
       />
 
       <CourseCard
-        uri=""
+        uri="#"
         imgLink={imgLink3}
         title="Data Structure and Algorithm"
         description={description3}
