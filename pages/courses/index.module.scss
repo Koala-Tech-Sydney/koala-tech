@@ -4,9 +4,8 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-}
 
-.tutCardContainer {
-  margin-left: 10px;
-  margin-right: 10px;
+  @media (max-width: 600px) {
+    padding: 0.5rem;
+  }
 }
