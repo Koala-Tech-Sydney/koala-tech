@@ -1,4 +1,3 @@
-import Image from "next/image";
 import styles from "./HomeFeatureSection.module.scss";
 
 const title1 = "Simple";
@@ -11,32 +10,32 @@ const paragraph2 =
 const paragraph3 =
   "Koala use minimal example to demonstrate concepts. You no longer need to read or copy and paste tons of meaningless codes to learn a simple concept.";
 
-const HomeFeature = () => {
+const Feature = (props: any) => {
   return (
-    <div id={styles.homeFeatureContainer}>
-      <div id={styles.featureTitle}>&#60; Formula of Koala Tech &#62;</div>
-
-      <div id={styles.featureContainer}>
-        <FeatureContent title={title1} paragraph={paragraph1} />
-        <div className={styles.timeSymbol}>&times;</div>
-        <FeatureContent title={title2} paragraph={paragraph2} />
-        <div className={styles.timeSymbol}>&times;</div>
-        <FeatureContent title={title3} paragraph={paragraph3} />
-      </div>
-
-      <div id={styles.featureConclusion}>
-        Learning should be as easy, as fast as installing a package. <br />
-        Let&apos;s start your coding journey with us today!
-      </div>
+    <div className={styles.feature}>
+      <div className={styles.title}>{props.title}</div>
+      <div className={styles.description}>{props.paragraph}</div>
     </div>
   );
 };
 
-const FeatureContent = (props: any) => {
+const HomeFeature = () => {
   return (
-    <div>
-      <div className={styles.contentTitle}>{props.title}</div>
-      <div className={styles.contentDescription}>{props.paragraph}</div>
+    <div id={styles.homeFeatureContainer}>
+      <div>&#60; Formula of Koala Tech &#62;</div>
+
+      <div id={styles.featureContainer}>
+        <Feature title={title1} paragraph={paragraph1} />
+        <div className={styles.timeSymbol}>&times;</div>
+        <Feature title={title2} paragraph={paragraph2} />
+        <div className={styles.timeSymbol}>&times;</div>
+        <Feature title={title3} paragraph={paragraph3} />
+      </div>
+
+      <div className={styles.conclusion}>
+        Learning should be as easy, as fast as installing a package. <br />
+        Let&apos;s start your coding journey with us today!
+      </div>
     </div>
   );
 };
