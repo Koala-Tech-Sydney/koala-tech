@@ -37,7 +37,12 @@ interface HyperlinkProps {
 
 const Hyperlink: React.FC<HyperlinkProps> = ({ href, children }) => {
   return (
-    <a className={styles.hyperlink} href={href}>
+    <a
+      className={styles.hyperlink}
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       {children}
     </a>
   );
