@@ -10,11 +10,11 @@ import styles from "./SideNavBar.module.scss";
 
 const renderUnit = (unit: Unit) => {
   return (
-    <TreeItem key={unit.id} nodeId={unit.id} label={unit.name}>
+    <TreeItem className={styles.unitContainer} key={unit.id} nodeId={unit.id} label={unit.name}>
       {unit.children.map((chapter) => {
         return (
           <Link key={chapter.id} href={chapter.path} passHref>
-            <TreeItem nodeId={chapter.id} label={chapter.name} />
+            <TreeItem className={styles.chContainer} nodeId={chapter.id} label={chapter.name} />
           </Link>
         );
       })}
@@ -31,6 +31,12 @@ const CourseSideNavBar: React.FC<Props> = ({ course }) => {
 
   return (
     <div className={styles.side_nav_bar}>
+      <div className={styles.courseName}>
+          <Link href={course.landingPageURI} passHref>
+            <a>{course.name}</a>
+          </Link>
+      </div>
+
       <TreeView
         aria-label="Side Navigation Bar"
         defaultCollapseIcon={<ExpandMoreIcon />}
