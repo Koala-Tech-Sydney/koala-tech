@@ -36,7 +36,7 @@ const Support = () => {
           </Hyperlink>
           <Subtitle1>Crytocurrency Donations</Subtitle1>
           <Paragraph>
-            Wallet: 0x5520ADf9bB6179fD1065d57Ea3b0d286BD9F3858
+            Wallet: <span className={styles.crypto_address}>0x5520ADf9bB6179fD1065d57Ea3b0d286BD9F3858</span>
           </Paragraph>
         </>
       }
