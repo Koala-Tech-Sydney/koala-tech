@@ -1,6 +1,6 @@
 #homeFeatureContainer {
   text-align: center;
-  padding: 1.5rem 0;
+  padding: 2.5rem 0;
   background-color: var(--color-tint);
 
   #featureContainer {
@@ -17,6 +17,10 @@
 
     @media (max-width: 600px) {
       flex-direction: column;
+    }
+
+    > * {
+      padding: 1rem;
     }
   }
 

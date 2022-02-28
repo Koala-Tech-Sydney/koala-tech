@@ -1,13 +1,13 @@
 .container {
-  padding: 2rem;
+  padding: 2.5rem 1rem;
   letter-spacing: 1px;
 
   @media (max-width: 600px) {
-    padding: 0.5rem;
+    padding: 2rem 0.5rem;
   }
 
   @media (max-width: 300px) {
-    padding: 0rem;
+    padding: 1rem 0rem;
   }
 
   .terminal {
