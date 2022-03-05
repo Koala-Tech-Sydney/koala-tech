@@ -1,18 +1,18 @@
 import { Fragment } from "react";
-import ThemeToggleButton from "../../Button/ThemeToggleButton";
-// import Backdrop from "../../Structure/BackDrop";
+import IconButton from "@mui/material/IconButton";
+import CloseIcon from "@mui/icons-material/Close";
 import Backdrop from "@mui/material/Backdrop";
+
+import ThemeToggleButton from "../../Button/ThemeToggleButton";
 import HeaderNavItem from "../HeaderNavBar/HeaderNavItem";
 import HeaderNavList from "../HeaderNavBar/HeaderNavList";
 import CollapseNavList from "./CollapseNavList";
 import CollapseNavItem from "./CollapseNavItem";
 import CollapseNavLink from "./CollapseNavLink";
-
-import IconButton from "@mui/material/IconButton";
-import CloseIcon from "@mui/icons-material/Close";
+import HeaderNavLink from "../HeaderNavBar/HeaderNavLink";
+// import Backdrop from "../../Structure/BackDrop";
 
 import styles from "./CollapseNavBar.module.scss";
-import HeaderNavLink from "../HeaderNavBar/HeaderNavLink";
 
 type Props = {
   toggleCollapseNavBar: () => void;

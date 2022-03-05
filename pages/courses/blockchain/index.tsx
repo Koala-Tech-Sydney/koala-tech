@@ -2,7 +2,8 @@ import Home from "../../../components/Course/Home";
 import useCourse, { Course } from "../../../hooks/useCourse";
 
 let blockchainCourse: Course = {
-  baseURI: "blockchain/",
+  name: "Blockchain",
+  baseURI: "/courses/blockchain/",
   units: [
     {
       id: "",
@@ -19,6 +20,7 @@ let blockchainCourse: Course = {
             { id: "", name: "Oracle Problem", path: "" },
             { id: "", name: "Chainlink", path: "" },
           ],
+          requiredReadingTimeInMinute: 15
         },
         {
           id: "",
@@ -32,6 +34,7 @@ let blockchainCourse: Course = {
             { id: "", name: "Removal of Counterparty Party", path: "" },
             { id: "", name: "Trust Minimized Agreements", path: "" },
           ],
+          requiredReadingTimeInMinute: 15
         },
         {
           id: "",
@@ -47,6 +50,7 @@ let blockchainCourse: Course = {
             { id: "", name: "Attacks", path: "" },
             { id: "", name: "Scalability", path: "" },
           ],
+          requiredReadingTimeInMinute: 15
         },
       ],
     },
@@ -71,6 +75,7 @@ let blockchainCourse: Course = {
       children: [],
     },
   ],
+  description: "Block Chain course description ..."
 };
 
 const BlockchainCourseHome = () => {
