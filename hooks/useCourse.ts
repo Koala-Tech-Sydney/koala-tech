@@ -2,7 +2,9 @@
 // A course is comprised of a number of units.
 export type Course = {
   baseURI: string;
+  name: string;
   units: Unit[];
+  description: string;
 };
 
 // A unit consists of a number of chapters and it doesn't have a particular page,
@@ -15,6 +17,7 @@ export type Chapter = {
   name: string;
   path: string;
   children?: SubChapter[];
+  requiredReadingTimeInMinute: number;
 };
 
 // A subchapter lives within a chapter page, it has an anchor link that allows the user
@@ -31,7 +34,7 @@ const useCourse = (course: Course): Course => {
     ...course,
     units: course.units.map((unit) => {
       const unitPath =
-        "/courses/" + course.baseURI + normalizePathName(unit.name);
+        course.baseURI + normalizePathName(unit.name);
       return {
         ...unit,
         id: unitPath,
