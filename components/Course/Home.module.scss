@@ -1,43 +1,43 @@
-.unitListContainer{
-    margin-top: 2rem;
+.unitListContainer {
+  margin-top: 2rem;
 }
 
-.accordionContainer{
-    margin-bottom: 1.2rem;
-    font-family: Roboto, sans-serif;
+.accordionContainer {
+  margin-bottom: 1.2rem;
+  font-family: Roboto, sans-serif;
 
-    .kAccordion{
-        border-radius: 1rem;
-        background-color: rgba(40, 40, 40, 0.9);
-        color: var(--color-info);
-    
-        .expandIcon{
-            color: var(--color-info);
-        }
-    
-        .chapterNum{
-            font-size: 0.7rem;
-            color: var(--color-tran-grey-thick);
-            margin-top: 0.5rem;
-        }
+  .kAccordion {
+    border-radius: 1rem;
+    background-color: rgba(40, 40, 40, 0.9);
+    color: var(--color-info);
 
-        .detailContainer{
-            border-top: solid 0.1rem var(--color-tran-grey-middle);
-            
-            .chContainer{
-                border-radius: 0.5rem;
-                background-color: var(--color-tran-black-thick);
-                padding: 0.6rem;
-                margin-top: 15px;
-                color: white;
-                font-size: 0.8rem;
-                display: flex;
-                justify-content: space-between;
-
-                .chMins{
-                    color: var(--color-tran-grey-thick);
-                }
-            }
-        }
+    .expandIcon {
+      color: var(--color-info);
     }
+
+    .chapterNum {
+      font-size: 0.7rem;
+      color: var(--color-light-tone);
+      margin-top: 0.5rem;
+    }
+
+    .detailContainer {
+      border-top: solid 0.1rem var(--color-medium);
+
+      .chContainer {
+        border-radius: 0.5rem;
+        background-color: var(--color-dark-shade);
+        padding: 0.6rem;
+        margin-top: 15px;
+        color: white;
+        font-size: 0.8rem;
+        display: flex;
+        justify-content: space-between;
+
+        .chMins {
+          color: var(--color-light-tone);
+        }
+      }
+    }
+  }
 }
