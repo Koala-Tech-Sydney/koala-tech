@@ -6,6 +6,8 @@ import DiscordIcon from "../Icon/DiscordIcon";
 import GitHubIcon from "../Icon/GitHubIcon";
 import LinkedInIcon from "../Icon/LinkedinIcon";
 
+import styles from "./SocialMediaButton.module.scss";
+
 type Props = {
   name: string;
   uri: string;
@@ -15,30 +17,31 @@ type Props = {
 const SocialMediaButton: React.FC<Props> = ({ name, uri, className }) => {
   let button = null;
   let ariaLabel = "";
+  let iconClass = styles.icon + " " + className;
   switch (name) {
     case "Discord":
-      button = <DiscordIcon className={className} />;
+      button = <DiscordIcon className={iconClass} />;
       ariaLabel = "Discord";
       break;
     case "Instagram":
       ariaLabel = "Instagram";
-      button = <InstagramIcon className={className} />;
+      button = <InstagramIcon className={iconClass} />;
       break;
     case "Facebook":
       ariaLabel = "Facebook";
-      button = <FacebookIcon className={className} />;
+      button = <FacebookIcon className={iconClass} />;
       break;
     case "YouTube":
       ariaLabel = "YouTube";
-      button = <YouTubeIcon className={className} />;
+      button = <YouTubeIcon className={iconClass} />;
       break;
     case "GitHub":
       ariaLabel = "GitHub";
-      button = <GitHubIcon className={className} />;
+      button = <GitHubIcon className={iconClass} />;
       break;
     case "LinkedIn":
       ariaLabel = "LinkedIn";
-      button = <LinkedInIcon className={className} />;
+      button = <LinkedInIcon className={iconClass} />;
       break;
   }
 

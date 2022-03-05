@@ -1,0 +1,9 @@
+.icon {
+  height: 1.5rem!important;
+  width: 1.5rem!important;
+
+  @media (max-width: 600px) {
+    height: 1rem!important;
+    width: 1rem!important;
+  }
+}

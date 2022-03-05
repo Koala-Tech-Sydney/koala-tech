@@ -6,9 +6,8 @@ import styles from "./HomeBannerSection.module.scss";
 
 export default function HomeBannerSection() {
   return (
-    <div className={styles.homeBannerSection}>
+    <div className={styles.bannerContainer}>
       <Image
-        className={styles.bannerBackgroundImage}
         layout="fill"
         objectFit="cover"
         src="/images/homeBG.jpg"
@@ -16,7 +15,7 @@ export default function HomeBannerSection() {
         priority
       />
 
-      <div className={styles.bannerContentContainer}>
+      <div className={styles.banner}>
         <div className={styles.logo}>
           <div className={styles.title}>
             <span className={styles.first_char}>K</span>oala_Tech
@@ -28,12 +27,9 @@ export default function HomeBannerSection() {
 
         <div className={styles.slogan}>Build Apps. Build a Better Life.</div>
 
-        <div className={styles.startTutorialBtnContainer}>
+        <div>
           <Link href="/courses" passHref>
-            <Button
-              className={styles.startTutorialBtn}
-              variant="contained"
-            >
+            <Button className={styles.startTutorialBtn} variant="contained">
               Start Tutorial
             </Button>
           </Link>

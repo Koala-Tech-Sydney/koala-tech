@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import Link from "next/link";
-import SquareImageCard from "../../components/Card/SquareImageCard";
+import CourseCard from "../../components/Card/CourseCard";
 import styles from "./index.module.scss";
 
 const tutorialList = [
@@ -44,16 +44,14 @@ const CardList = () => {
     <Fragment>
       {tutorialList.map((tutorial) => {
         return (
-          <Link key={tutorial.name} href={tutorial.path} passHref>
-            <a>
-              <SquareImageCard
-                imgLink={tutorial.imgPath}
-                title={tutorial.name}
-                description={tutorial.description}
-                alt={tutorial.name}
-              />
-            </a>
-          </Link>
+          <CourseCard
+            key={tutorial.name}
+            uri={tutorial.path}
+            imgLink={tutorial.imgPath}
+            title={tutorial.name}
+            description={tutorial.description}
+            alt={tutorial.name}
+          />
         );
       })}
     </Fragment>

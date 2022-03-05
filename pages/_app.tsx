@@ -13,7 +13,6 @@ import Footer from "../components/Footer/Footer";
 
 import "../styles/globals.scss";
 
-
 const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
     <ThemeProvider theme={globalTheme}>
@@ -21,8 +20,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
         <Head>
           <title>Koala Tech</title>
           <meta name="description" content="online coding tutorial" />
-          <link rel="icon" href="/koala.jpg" />
-          <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css' />
+          <link rel="icon" href="/koala.png" />
         </Head>
         <div id="root">
           <Header />

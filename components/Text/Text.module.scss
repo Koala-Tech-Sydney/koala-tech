@@ -1,50 +1,75 @@
 .title {
-  font-size: var(--h4);
+  font-size: 3rem;
   font-weight: 600;
   margin: 2rem 0;
   letter-spacing: 1px;
+
+  @media (max-width: 600px) {
+    font-size: 2rem;
+  }
 }
 
 .subtitle1 {
-  font-size: var(--h3);
+  font-size: 2.4rem;
   font-weight: 700;
   margin: 1.5rem 0;
   letter-spacing: 1px;
+
+  @media (max-width: 600px) {
+    font-size: 1.5rem;
+  }
 }
 
 .subtitle2 {
   color: var(--color-medium);
-  font-size: var(--h2);
+  font-size: 1.8rem;
   font-weight: 700;
   margin: 1.5rem 0;
   letter-spacing: 1px;
+
+  @media (max-width: 600px) {
+    font-size: 1.2rem;
+  }
 }
 
 .subtitle3 {
   color: var(--color-medium-shade);
-  font-size: var(--h1);
+  font-size: 1.25rem;
   font-weight: 700;
   margin: 1.5rem 0;
-  letter-spacing: 1px;
+  letter-spacing: 0.9px;
 }
 
 .paragraph {
-  font-size: var(--p);
+  font-size: 1rem;
   font-weight: 200;
   margin: 1rem 0;
   letter-spacing: 1px;
   line-height: 1.5;
+
+  @media (max-width: 600px) {
+    font-size: 0.7rem;
+  }
 }
 
 .small_text {
-  font-size: var(--sm);
+  font-size: 0.8rem;
   margin: 1rem 0;
   letter-spacing: 1px;
+
+  @media (max-width: 600px) {
+    font-size: 0.5rem;
+  }
 }
 
 .hyperlink {
+  word-break: break-all;
   text-decoration: none;
   border-bottom: 1px solid #71c21b;
+
+  @media (max-width: 600px) {
+    font-size: 0.7rem;
+  }
 }
 
 .hyperlink:hover {
