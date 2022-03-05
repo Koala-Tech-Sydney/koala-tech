@@ -1,42 +1,41 @@
 .unitListContainer{
-    margin-top: 30px;
+    margin-top: 2rem;
 }
 
 .accordionContainer{
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 1.2rem;
     font-family: Roboto, sans-serif;
 
     .kAccordion{
-        border-radius: 15px;
+        border-radius: 1rem;
         background-color: rgba(40, 40, 40, 0.9);
-        color: #61dafb;
+        color: var(--color-info);
     
         .expandIcon{
-            color: #61dafb;
+            color: var(--color-info);
         }
     
         .chapterNum{
-            font-size: 14px;
-            color: rgba(220, 220, 220, 0.8);
-            margin-top: 5px;
+            font-size: 0.7rem;
+            color: var(--color-tran-grey-thick);
+            margin-top: 0.5rem;
         }
 
         .detailContainer{
-            border-top: solid 1px rgba(220, 220, 220, 0.6);
+            border-top: solid 0.1rem var(--color-tran-grey-middle);
             
             .chContainer{
-                border-radius: 10px;
-                background-color: rgba(50, 50, 50, 0.9);
-                padding: 10px;
+                border-radius: 0.5rem;
+                background-color: var(--color-tran-black-thick);
+                padding: 0.6rem;
                 margin-top: 15px;
                 color: white;
-                font-size: 15px;
+                font-size: 0.8rem;
                 display: flex;
                 justify-content: space-between;
 
                 .chMins{
-                    color: rgba(220, 220, 220, 0.8);
+                    color: var(--color-tran-grey-thick);
                 }
             }
         }

@@ -1,7 +1,7 @@
+import Image from "next/image";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
-import Image from "next/image";
 import styles from "./SquareImageCard.module.scss";
 
 type Props = {

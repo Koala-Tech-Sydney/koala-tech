@@ -43,6 +43,15 @@
   --color-light-shade: #d7d8da;
   --color-light-tint: #f5f6f9;
   --color-light-tone: #b2b2b2;
+
+  --color-tran-grey-thick: rgba(220, 220, 220, 0.8);
+  --color-tran-grey-middle: rgba(220, 220, 220, 0.6);
+  --color-tran-grey-thin: rgba(220, 220, 220, 0.4);
+  --color-tran-black-thick: rgba(50, 50, 50, 0.9);
+  --color-tran-black-middle: rgba(50, 50, 50, 0.8);
+  --color-tran-black-thin: rgba(50, 50, 50, 0.7);
+
+
 }
 
 @mixin font-sizes {
