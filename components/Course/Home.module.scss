@@ -1,42 +1,35 @@
-.unitListContainer {
-  margin-top: 2rem;
-}
-
-.accordionContainer {
-  margin-bottom: 1.2rem;
+.kAccordion {
+  margin: 1.2rem 0;
   font-family: Roboto, sans-serif;
+  border-radius: 1rem;
+  background-color: var(--color-dark-tint);
+  color: var(--color-info);
 
-  .kAccordion {
-    border-radius: 1rem;
-    background-color: rgba(40, 40, 40, 0.9);
+  .expandIcon {
     color: var(--color-info);
+  }
 
-    .expandIcon {
-      color: var(--color-info);
-    }
+  .chapterNum {
+    color: var(--color-light-tone);
+    font-size: 0.7rem;
+    margin-top: 0.5rem;
+  }
 
-    .chapterNum {
-      font-size: 0.7rem;
-      color: var(--color-light-tone);
-      margin-top: 0.5rem;
-    }
+  .detailContainer {
+    border-top: solid 0.1rem var(--color-medium);
 
-    .detailContainer {
-      border-top: solid 0.1rem var(--color-medium);
+    .chContainer {
+      color: white;
+      background-color: var(--color-dark-shade);
+      border-radius: 0.5rem;
+      padding: 0.6rem;
+      margin-top: 15px;
+      font-size: 0.8rem;
+      display: flex;
+      justify-content: space-between;
 
-      .chContainer {
-        border-radius: 0.5rem;
-        background-color: var(--color-dark-shade);
-        padding: 0.6rem;
-        margin-top: 15px;
-        color: white;
-        font-size: 0.8rem;
-        display: flex;
-        justify-content: space-between;
-
-        .chMins {
-          color: var(--color-light-tone);
-        }
+      .chMins {
+        color: var(--color-light-tone);
       }
     }
   }
