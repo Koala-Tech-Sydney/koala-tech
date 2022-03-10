@@ -14,33 +14,33 @@ let reactCourse: Course = {
       id: "",
       name: "Introduction",
 
-      children: [
+      chapters: [
         {
           id: "",
           name: "Setup",
           path: "",
-          children: [],
+          subchapters: [],
           requiredReadingTimeInMinute: 15,
         },
         {
           id: "",
           name: "Introduction",
           path: "",
-          children: [],
+          subchapters: [],
           requiredReadingTimeInMinute: 15,
         },
         {
           id: "",
           name: "JSX",
           path: "",
-          children: [],
+          subchapters: [],
           requiredReadingTimeInMinute: 15,
         },
         {
           id: "",
           name: "JSX Deep Dive",
           path: "",
-          children: [],
+          subchapters: [],
           requiredReadingTimeInMinute: 15,
         },
       ],
@@ -48,12 +48,12 @@ let reactCourse: Course = {
     {
       id: "",
       name: "Function Component",
-      children: [
+      chapters: [
         {
           id: "",
           name: "Function Component",
           path: "",
-          children: [],
+          subchapters: [],
           requiredReadingTimeInMinute: 15,
         },
       ],

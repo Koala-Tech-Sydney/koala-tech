@@ -11,11 +11,7 @@ import { blockchainCourse } from "..";
 
 const HowDoBlockchainsWork = () => {
   return (
-    <Chapter
-      title="How Do Blockchains Work?"
-      course={blockchainCourse}
-      requiredReadingTimeInMinute="7"
-    >
+    <Chapter course={blockchainCourse}>
       <SubChapter name="Hash, Block, Blockchain and Distributed Blockchain" />
       <Paragraph>TODO: Video</Paragraph>
       <SubChapter name="Consensus" />

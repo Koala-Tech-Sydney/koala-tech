@@ -5,11 +5,7 @@ import { blockchainCourse } from "..";
 
 const AdvantagesOfBlockchain = () => {
   return (
-    <Chapter
-      title="Advantages of Blockchain"
-      course={blockchainCourse}
-      requiredReadingTimeInMinute="4"
-    >
+    <Chapter course={blockchainCourse}>
       <Paragraph>
         Now you understand a little bit what a smart contract is, before
         understanding the inner working mechanism of a blockchain, it is a good

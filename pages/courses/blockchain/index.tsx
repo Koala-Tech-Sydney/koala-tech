@@ -8,25 +8,25 @@ let blockchainCourse: Course = {
     {
       id: "",
       name: "Introduction to Blockchain",
-      children: [
+      chapters: [
         {
           id: "",
           name: "What is a Blockchain?",
           path: "",
-          children: [
+          subchapters: [
             { id: "", name: "History", path: "" },
             { id: "", name: "Web 3.0", path: "" },
             { id: "", name: "Smart Contract", path: "" },
             { id: "", name: "Oracle Problem", path: "" },
             { id: "", name: "Chainlink", path: "" },
           ],
-          requiredReadingTimeInMinute: 15
+          requiredReadingTimeInMinute: 6,
         },
         {
           id: "",
           name: "Advantages of Blockchain",
           path: "",
-          children: [
+          subchapters: [
             { id: "", name: "Decentralization", path: "" },
             { id: "", name: "Transparency and Flexibility", path: "" },
             { id: "", name: "Speed and Efficiency", path: "" },
@@ -34,13 +34,13 @@ let blockchainCourse: Course = {
             { id: "", name: "Removal of Counterparty Party", path: "" },
             { id: "", name: "Trust Minimized Agreements", path: "" },
           ],
-          requiredReadingTimeInMinute: 15
+          requiredReadingTimeInMinute: 4,
         },
         {
           id: "",
           name: "How Do Blockchains Work?",
           path: "",
-          children: [
+          subchapters: [
             {
               id: "",
               name: "Hash, Block, Blockchain and Distributed Blockchain",
@@ -50,32 +50,32 @@ let blockchainCourse: Course = {
             { id: "", name: "Attacks", path: "" },
             { id: "", name: "Scalability", path: "" },
           ],
-          requiredReadingTimeInMinute: 15
+          requiredReadingTimeInMinute: 7,
         },
       ],
     },
     {
       id: "",
       name: "Solidity Basic Bootcamp",
-      children: [],
+      chapters: [],
     },
     {
       id: "",
       name: "Solidity Intermediate Bootcamp",
-      children: [],
+      chapters: [],
     },
     {
       id: "",
       name: "Solidity Advanced Bootcamp",
-      children: [],
+      chapters: [],
     },
     {
       id: "",
       name: "Solidity Mastery Bootcamp",
-      children: [],
+      chapters: [],
     },
   ],
-  description: "Block Chain course description ..."
+  description: "Block Chain course description ...",
 };
 
 const BlockchainCourseHome = () => {

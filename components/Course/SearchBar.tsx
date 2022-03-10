@@ -15,8 +15,8 @@ const SearchBar: React.FC<Props> = ({ course }) => {
   const getSearchList = (units: Unit[]) => {
     let result: { group: string; name: string; path: string }[] = [];
     units.forEach((unit) => {
-      unit.children.forEach((chapter) => {
-        chapter.children?.forEach((subchapter) => {
+      unit.chapters.forEach((chapter) => {
+        chapter.subchapters?.forEach((subchapter) => {
           result.push({
             group: chapter.name,
             name: subchapter.name,

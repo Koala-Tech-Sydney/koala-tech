@@ -11,7 +11,7 @@ import styles from "./SideNavBar.module.scss";
 const renderUnit = (unit: Unit) => {
   return (
     <TreeItem className={styles.unitContainer} key={unit.id} nodeId={unit.id} label={unit.name}>
-      {unit.children.map((chapter) => {
+      {unit.chapters.map((chapter) => {
         return (
           <Link key={chapter.id} href={chapter.path} passHref>
             <TreeItem className={styles.chContainer} nodeId={chapter.id} label={chapter.name} />

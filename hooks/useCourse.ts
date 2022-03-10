@@ -9,14 +9,14 @@ export type Course = {
 
 // A unit consists of a number of chapters and it doesn't have a particular page,
 // Unit is just used as part of the path in the final URI.
-export type Unit = { id: string; name: string; children: Chapter[] };
+export type Unit = { id: string; name: string; chapters: Chapter[] };
 
 // A chapter forms a page and it contains a number of subchapters.
 export type Chapter = {
   id: string;
   name: string;
   path: string;
-  children?: SubChapter[];
+  subchapters?: SubChapter[];
   requiredReadingTimeInMinute: number;
 };
 
@@ -33,12 +33,12 @@ const useCourse = (course: Course): Course => {
   return {
     ...course,
     units: course.units.map((unit) => {
-      const unitPath =
-        course.baseURI + normalizePathName(unit.name);
+      const unitPath = course.baseURI + normalizePathName(unit.name);
+      console.log(`unit: ${unitPath}`);
       return {
         ...unit,
         id: unitPath,
-        children: configureChapters(unit.children, unitPath),
+        chapters: configureChapters(unit.chapters, unitPath),
       };
     }),
   };
@@ -49,18 +49,19 @@ const configureChapters = (
   basePath: string
 ): Chapter[] => {
   return chapters.map((chapter) => {
-    if (!!chapter.children) {
-      chapter.path = getChapterPath(chapter.name, basePath);
+    chapter.path = getChapterPath(chapter.name, basePath);
+    if (!!chapter.subchapters) {
+      console.log(`chapter: ${chapter.path}`);
       return {
         ...chapter,
-        id: getChapterPath(chapter.name, basePath),
-        children: configureSubChapters(chapter.path, chapter.children),
+        id: chapter.path,
+        subchapters: configureSubChapters(chapter.path, chapter.subchapters),
       };
     }
     return {
       ...chapter,
-      id: getChapterPath(chapter.name, basePath),
-      path: getChapterPath(chapter.name, basePath),
+      id: chapter.path,
+      path: chapter.path,
     };
   });
 };
@@ -72,6 +73,7 @@ const configureSubChapters = (
   return subchapters.map((chapter) => {
     // {"id":"/courses/blockchain/introduction/what-is-a-blockchain#smart-contract","name":"Smart Contract"}
     const pathToSubChapter = `${basePath}#${normalizePathName(chapter.name)}`;
+    console.log(`subchapter: ${pathToSubChapter}`);
     return { ...chapter, id: pathToSubChapter, path: pathToSubChapter };
   });
 };
@@ -81,7 +83,7 @@ const getChapterPath = (name: string, basePath: string): string => {
 };
 
 const normalizePathName = (pathname: string) => {
-  return pathname.toLowerCase().replace(/ /g, "-");
+  return pathname.toLowerCase().replace(/ /g, "-").replace(/\?/g, "");
 };
 
 export { useCourse as default, normalizePathName };

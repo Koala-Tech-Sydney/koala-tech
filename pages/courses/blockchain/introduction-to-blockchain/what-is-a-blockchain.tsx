@@ -6,11 +6,7 @@ import { blockchainCourse } from "..";
 
 const WhatIsABlockchain = () => {
   return (
-    <Chapter
-      title="What is a Blockchain?"
-      course={blockchainCourse}
-      requiredReadingTimeInMinute="4"
-    >
+    <Chapter course={blockchainCourse}>
       <SubChapter name="History" />
       <Paragraph>
         Bitcoin was one of the first protocols to use a revolutionary technology

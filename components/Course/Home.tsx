@@ -47,9 +47,9 @@ const UnitList: React.FC<UnitListProps> = ({units}) => {
 
   return(
     <Fragment>
-      {units.map(u => {
+      {units.map(unit => {
         return(
-          <div key={u.name} className={styles.accordionContainer}>
+          <div key={unit.id} className={styles.accordionContainer}>
             <Accordion className={styles.kAccordion}>
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon className={styles.expandIcon}/>}
@@ -58,16 +58,16 @@ const UnitList: React.FC<UnitListProps> = ({units}) => {
                 className={styles.unitTitle}
               >
                 <div>
-                  <div>{u.name} </div>
+                  <div>{unit.name} </div>
                   <div className={styles.chapterNum}>
-                    {u.children.length} chapters 
-                    ({sum(u.children)} mins)
+                    {unit.chapters.length} chapters 
+                    ({sum(unit.chapters)} mins)
                   </div>
                 </div>
               </AccordionSummary>
 
               <AccordionDetails className={styles.detailContainer}>
-                {u.children.map(chapter => {
+                {unit.chapters.map(chapter => {
                   return <Link key={chapter.id} href={chapter.path} passHref>
                     <a>
                       <div className={styles.chContainer}>
