@@ -8,7 +8,7 @@ import {
 } from "../../../../components/Text/Text";
 
 const FunctionComponent = () => {
-  return <Chapter title="Function Component" course={reactCourse}></Chapter>;
+  return <Chapter course={reactCourse}></Chapter>;
 };
 
 export default FunctionComponent;

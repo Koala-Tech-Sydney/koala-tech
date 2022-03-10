@@ -12,7 +12,7 @@ import { reactCourse } from "..";
 
 const Setup = () => {
   return (
-    <Chapter title="Setup" course={reactCourse}>
+    <Chapter course={reactCourse}>
       <Subtitle1>Node.js</Subtitle1>
       <Paragraph>
         The most conventient way to set up your React development environment is

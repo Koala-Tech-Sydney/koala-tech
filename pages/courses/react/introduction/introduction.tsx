@@ -11,7 +11,7 @@ import { reactCourse } from "..";
 
 const Introduction = () => {
   return (
-    <Chapter title="Introduction" course={reactCourse}>
+    <Chapter course={reactCourse}>
       <Paragraph>
         In this section, you will learn how to create a new React app and
         understand the structure of a React project.

@@ -9,7 +9,7 @@ import Chapter from "../../../../components/Course/Chapter";
 import { reactCourse } from "..";
 
 const JSXDeepDive = () => {
-  return <Chapter title="JSX Deep Dive" course={reactCourse}></Chapter>;
+  return <Chapter course={reactCourse}></Chapter>;
 };
 
 export default JSXDeepDive;

@@ -12,7 +12,7 @@ import { reactCourse } from "..";
 
 const JSX = () => {
   return (
-    <Chapter title="JSX" course={reactCourse}>
+    <Chapter course={reactCourse}>
       <Paragraph>Consider the following variable declaration</Paragraph>
       <JavaScriptFormatter>
         {"const cutestAnimal = <p>Koala</p>;"}
