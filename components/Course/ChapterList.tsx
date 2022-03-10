@@ -22,7 +22,7 @@ const ChapterList: React.FC<Props> = ({ title, chapters }) => {
                 </Link>
               </li>
               <ul>
-                {chapter.children?.map((subChapter) => {
+                {chapter.subchapters?.map((subChapter) => {
                   return (
                     <li key={subChapter.id} className={styles.item}>
                       <Link href={subChapter.id}>
