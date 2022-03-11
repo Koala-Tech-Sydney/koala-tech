@@ -20,7 +20,7 @@ let reactCourse: Course = {
           name: "Setup",
           path: "",
           subchapters: [],
-          requiredReadingTimeInMinute: 15,
+          requiredReadingTimeInMinute: 4,
         },
         {
           id: "",

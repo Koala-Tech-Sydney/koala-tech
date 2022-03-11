@@ -7,13 +7,19 @@ import styles from "./JavaScriptFormatter.module.scss";
 
 SyntaxHighlighter.registerLanguage("javascript", js);
 
-const JavaScriptFormatter: React.FC = ({ children }) => {
+type Props = {
+  showLineNumbers?: boolean;
+};
+const JavaScriptFormatter: React.FC<Props> = ({
+  showLineNumbers = true,
+  children,
+}) => {
   return (
     <SyntaxHighlighter
       className={styles.formatter}
       language="javascript"
       style={dracula}
-      showLineNumbers={true}
+      showLineNumbers={showLineNumbers}
     >
       {children}
     </SyntaxHighlighter>
