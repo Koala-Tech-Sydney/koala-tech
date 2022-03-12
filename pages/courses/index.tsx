@@ -1,5 +1,4 @@
 import { Fragment } from "react";
-import Link from "next/link";
 import CourseCard from "../../components/Card/CourseCard";
 import styles from "./index.module.scss";
 
@@ -17,10 +16,11 @@ const tutorialList = [
     description: "",
   },
   {
-    name: "Coming...",
-    path: "/courses/",
-    imgPath: "/images/comingSoon.jpg",
-    description: "Under development",
+    name: "Rust",
+    path: "/courses/rust",
+    imgPath: "/images/courses/rust.png",
+    description:
+      "Rust is a general-purpose programming language designed for performance and safety.",
   },
   {
     name: "Coming...",
