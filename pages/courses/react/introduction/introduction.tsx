@@ -138,13 +138,15 @@ npm start // spin up the local server for your react application`}</JavaScriptFo
         root div we mentioned above.
       </Paragraph>
       <Image
-        src="/images/courses/react/introduction/inspector.png"
+        src="/imagePs/courses/react/introduction/inspector.png"
         alt="Inspecting the root div and the App Component"
         height="124"
         width="460"
       />
       <Subtitle3>src/index.css</Subtitle3>
-      This is the global CSS file for your React application.
+      <Paragraph>
+        This is the global CSS file for your React application.
+      </Paragraph>
       <Subtitle2>package.json</Subtitle2>
       <Paragraph>
         This lists all of the dependencies, in which you can run `npm install`

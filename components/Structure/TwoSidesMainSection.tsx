@@ -1,6 +1,8 @@
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 
+import { GoogleAd } from "../GoogleAd";
+
 import styles from "./TwoSidesMainSection.module.scss";
 
 type Props = {
@@ -58,7 +60,14 @@ const TwoSidesMainSection: React.FC<Props> = ({
         {mainSection}
       </section>
       {!!rightSection && (
-        <section className={styles.sideSection}>{rightSection}</section>
+        <section className={styles.sideSection}>
+          <>
+            {rightSection}
+            <GoogleAd />
+            <GoogleAd />
+            <GoogleAd />
+          </>
+        </section>
       )}
     </section>
   );
