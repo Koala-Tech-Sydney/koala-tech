@@ -7,20 +7,23 @@ const tutorialList = [
   {
     name: "React",
     path: "/courses/react",
-    imgPath: "/images/reactCardImg.jpg",
-    description: "",
+    imgPath: "/images/courses/react/react-course.jpg",
+    description:
+      "A state of the art JavaScript framework for building fast and interactive applications.",
   },
   {
     name: "Blockchain",
     path: "/courses/blockchain",
-    imgPath: "/images/blockchainCard.jpg",
-    description: "",
+    imgPath: "/images/courses/blockchain/blockchain-course.png",
+    description:
+      "Blockchain technologies are used for building a world of more trust and freedom.",
   },
   {
-    name: "Coming...",
-    path: "/courses/",
-    imgPath: "/images/comingSoon.jpg",
-    description: "Under development",
+    name: "Rust",
+    path: "/courses/rust",
+    imgPath: "/images/courses/rust/rust.png",
+    description:
+      "Rust is a general-purpose language designed for performance, safety and concurrency.",
   },
   {
     name: "Coming...",
