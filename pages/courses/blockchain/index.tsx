@@ -80,7 +80,7 @@ let blockchainCourse: Course = {
 
 const BlockchainCourseHome = () => {
   blockchainCourse = useCourse(blockchainCourse);
-  return <Home title="Blockchain" course={blockchainCourse} />;
+  return <Home course={blockchainCourse} />;
 };
 
 export { BlockchainCourseHome as default, blockchainCourse };

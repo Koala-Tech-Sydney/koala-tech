@@ -4,13 +4,14 @@ import Button from "@mui/material/Button";
 import styles from "./HomeCourseListSection.module.scss";
 
 const CourseList = () => {
-  const imgLink1 = "/images/reactCardImg.jpg";
-  const imgLink2 = "/images/blockchainCard.jpg";
-  const imgLink3 = "/images/comingSoon.jpg";
+  const imgLink1 = "/images/courses/react/react-course.jpg";
+  const imgLink2 = "/images/courses/blockchain/blockchain-course.png";
+  const imgLink3 = "/images/courses/comingSoon.jpg";
   const description1 =
-    "Don't get left behind. React is the way forward to building fast, interactive web apps.";
-  const description2 = "Description 2 and some other stuff mate";
-  const description3 = "Description 3 and some other description";
+    "A state of the art JavaScript framework for building fast and interactive applications.";
+  const description2 =
+    "Blockchain technologies are used for building a world of more trust and freedom.";
+  const description3 = "...";
 
   return (
     <div className={styles.courseListContainer}>

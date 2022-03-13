@@ -13,16 +13,15 @@ import SideNavBar from "./SideNavBar";
 import styles from "./Home.module.scss";
 
 type Props = {
-  title: string;
   course: Course;
 };
-const CourseHome: React.FC<Props> = ({ title, course }) => {
+const CourseHome: React.FC<Props> = ({ course }) => {
   return (
     <TwoSidesMainSection
       leftSection={<SideNavBar course={course} />}
       mainSection={
         <>
-          <Title>{title}</Title>
+          <Title>{course.name}</Title>
           <Paragraph>{course.description}</Paragraph>
           <hr />
           <br />
@@ -48,9 +47,9 @@ const UnitList: React.FC<UnitListProps> = ({ units }) => {
 };
 
 type UnitAccordianProps = {
-  unit: Unit
-}
-const UnitAccordian: React.FC<UnitAccordianProps> = ({unit}) => {
+  unit: Unit;
+};
+const UnitAccordian: React.FC<UnitAccordianProps> = ({ unit }) => {
   return (
     <Accordion className={styles.kAccordion}>
       <AccordionSummary

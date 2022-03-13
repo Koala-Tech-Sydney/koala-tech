@@ -66,7 +66,7 @@ const ReactCourseHome = () => {
   reactCourse = useCourse(reactCourse);
   // console.log(chapters);
 
-  return <Home title="React" course={reactCourse} />;
+  return <Home course={reactCourse} />;
 };
 
 export { ReactCourseHome as default, reactCourse };
