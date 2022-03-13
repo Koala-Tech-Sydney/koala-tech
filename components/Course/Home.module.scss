@@ -2,25 +2,25 @@
   margin: 1.2rem 0;
   font-family: Roboto, sans-serif;
   border-radius: 1rem !important;
-  background-color: var(--color-dark-tint);
-  color: var(--color-info);
+  background-color: var(--color-dark-tint) !important;
+  color: var(--color-info) !important;
 
   .expandIcon {
-    color: var(--color-info);
+    color: var(--color-info) !important;
   }
 
   .chapterNum {
-    color: var(--color-light-tone);
+    color: var(--color-light-tone) !important;
     font-size: 0.7rem;
     margin-top: 0.5rem;
   }
 
   .detailContainer {
-    border-top: solid 0.1rem var(--color-medium);
+    border-top: solid 0.1rem var(--color-medium) !important;
 
     .chContainer {
       color: white;
-      background-color: var(--color-dark-shade);
+      background-color: var(--color-dark-shade) !important;
       border-radius: 0.5rem;
       padding: 0.6rem;
       margin-top: 15px;
@@ -29,7 +29,7 @@
       justify-content: space-between;
 
       .chMins {
-        color: var(--color-light-tone);
+        color: var(--color-light-tone) !important;
       }
     }
   }
