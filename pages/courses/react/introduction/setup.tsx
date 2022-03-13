@@ -41,17 +41,17 @@ const Setup = () => {
         you need.
       </Paragraph>
       <Image
-        src="/images/courses/react/setup/extension-tab.png"
-        alt="Visual Studio Code extension tab"
-        height="450"
-        width="454"
+        src="/images/vscode/extensions/vscode-extension.png"
+        alt="Visual Studio Code extension"
+        height="406"
+        width="1090"
       />
       <Subtitle2>Prettier</Subtitle2>
       <Image
-        src="/images/courses/react/setup/prettier.png"
-        alt="Prettier"
-        height="244"
-        width="844"
+        src="/images/vscode/extensions/vscode-extension-prettier.png"
+        alt="Visual Studio Code Prettier extension"
+        height="229"
+        width="774"
       />
       <Paragraph>
         After that, go to &apos;Settings&apos; and search for the keyword
@@ -69,24 +69,31 @@ const Setup = () => {
       />
       <Subtitle2>Bracket Pair Colorizer</Subtitle2>
       <Image
-        src="/images/courses/react/setup/bracket-pair-colorizer.png"
-        alt="Bracket Pair Colorizer"
-        height="243"
-        width="786"
+        src="/images/vscode/extensions/vscode-extension-bracket-pair-colorizer.png"
+        alt="Visual Studio Code Bracket Pair Colorizer extension"
+        height="232"
+        width="775"
       />
       <Subtitle2>Material Icon Theme</Subtitle2>
       <Image
-        src="/images/courses/react/setup/material-icon-theme.png"
-        alt="Material Icon Theme"
-        height="234"
-        width="757"
+        src="/images/vscode/extensions/vscode-extension-material-icon-theme.png"
+        alt="Visual Studio Code Material Icon Theme extension"
+        height="228"
+        width="735"
       />
-      <Subtitle2>React Snippets</Subtitle2>
+      <Subtitle2>Simple React Snippets</Subtitle2>
       <Image
-        src="/images/courses/react/setup/react-snippets.png"
-        alt="React Snippets"
-        height="244"
-        width="1084"
+        src="/images/vscode/extensions/vscode-extension-simple-react-snippets.png"
+        alt="Visual Studio Code Simple React Snippets extension"
+        height="220"
+        width="760"
+      />
+      <Subtitle2>ES7 + React/Redux/React-Native Snippets</Subtitle2>
+      <Image
+        src="/images/vscode/extensions/vscode-extension-react-redux-react-native-snippets.png"
+        alt="Visual Studio Code ES7 + React/Redux/React-Native Snippets extension"
+        height="220"
+        width="760"
       />
     </Chapter>
   );

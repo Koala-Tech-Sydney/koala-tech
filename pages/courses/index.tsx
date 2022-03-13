@@ -1,9 +1,8 @@
 import { Fragment } from "react";
-import Link from "next/link";
 import CourseCard from "../../components/Card/CourseCard";
 import styles from "./index.module.scss";
 
-const tutorialList = [
+const courseList = [
   {
     name: "React",
     path: "/courses/react",
@@ -28,7 +27,7 @@ const tutorialList = [
   {
     name: "Coming...",
     path: "/courses/",
-    imgPath: "/images/comingSoon.jpg",
+    imgPath: "/images/courses/comingSoon.jpg",
     description: "Under development",
   },
 ];
@@ -45,15 +44,15 @@ const CardList = () => {
   return (
     // TODO: just a temporary solution to make the courses accessible!
     <Fragment>
-      {tutorialList.map((tutorial) => {
+      {courseList.map((course) => {
         return (
           <CourseCard
-            key={tutorial.name}
-            uri={tutorial.path}
-            imgLink={tutorial.imgPath}
-            title={tutorial.name}
-            description={tutorial.description}
-            alt={tutorial.name}
+            key={course.name}
+            uri={course.path}
+            imgLink={course.imgPath}
+            title={course.name}
+            description={course.description}
+            alt={course.name}
           />
         );
       })}
