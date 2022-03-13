@@ -4,9 +4,9 @@ import Button from "@mui/material/Button";
 import styles from "./HomeCourseListSection.module.scss";
 
 const CourseList = () => {
-  const imgLink1 = "/images/reactCardImg.jpg";
-  const imgLink2 = "/images/blockchainCard.jpg";
-  const imgLink3 = "/images/comingSoon.jpg";
+  const imgLink1 = "/images/courses/react/react-course.jpg";
+  const imgLink2 = "/images/courses/blockchain/blockchain-course.png";
+  const imgLink3 = "/images/courses/comingSoon.jpg";
   const description1 =
     "Don't get left behind. React is the way forward to building fast, interactive web apps.";
   const description2 = "Description 2 and some other stuff mate";

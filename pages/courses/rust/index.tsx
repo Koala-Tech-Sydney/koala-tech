@@ -14,7 +14,14 @@ let rustCourse: Course = {
       chapters: [
         {
           id: "",
-          name: "Setup & Hello World",
+          name: "Setup",
+          path: "",
+          subchapters: [],
+          requiredReadingTimeInMinute: 3,
+        },
+        {
+          id: "",
+          name: "Hello World",
           path: "",
           subchapters: [],
           requiredReadingTimeInMinute: 5,
