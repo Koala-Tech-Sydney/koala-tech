@@ -47,6 +47,7 @@ const Setup = () => {
         height="406"
         width="1090"
       />
+      <Paragraph>Search for and install the following extensions.</Paragraph>
       <Subtitle2>Rust</Subtitle2>
       <Image
         src="/images/vscode/extensions/vscode-extension-rust.png"

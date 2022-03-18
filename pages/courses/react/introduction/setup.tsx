@@ -79,17 +79,6 @@ const Setup = () => {
         height="232"
         width="775"
       />
-      <Subtitle2>React Snippets</Subtitle2>
-      <Paragraph>
-        This extension provides code snippets for React application development.
-      </Paragraph>
-      <Subtitle2>Material Icon Theme</Subtitle2>
-      <Image
-        src="/images/vscode/extensions/vscode-extension-material-icon-theme.png"
-        alt="Visual Studio Code Material Icon Theme extension"
-        height="228"
-        width="735"
-      />
       <Subtitle2>Simple React Snippets</Subtitle2>
       <Image
         src="/images/vscode/extensions/vscode-extension-simple-react-snippets.png"
