@@ -36,7 +36,15 @@ const Support = () => {
           </Hyperlink>
           <Subtitle1>Crytocurrency Donations</Subtitle1>
           <Paragraph>
-            Wallet: <span className={styles.crypto_address}>0x5520ADf9bB6179fD1065d57Ea3b0d286BD9F3858</span>
+            MetaMask Wallet:{" "}
+            <span className={styles.crypto_address}>
+              0x5520ADf9bB6179fD1065d57Ea3b0d286BD9F3858
+            </span>
+            <br />
+            Solana Wallet:{" "}
+            <span className={styles.crypto_address}>
+              2fZ2LZtDLfyfG6e2b4BHkcxAmDLtka8et95PPcLiJ6PP
+            </span>
           </Paragraph>
         </>
       }

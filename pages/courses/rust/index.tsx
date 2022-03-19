@@ -17,7 +17,7 @@ let rustCourse: Course = {
           name: "Setup",
           path: "",
           subchapters: [],
-          requiredReadingTimeInMinute: 3,
+          requiredReadingTimeInMinute: 4,
         },
         {
           id: "",
@@ -25,6 +25,13 @@ let rustCourse: Course = {
           path: "",
           subchapters: [],
           requiredReadingTimeInMinute: 5,
+        },
+        {
+          id: "",
+          name: "Cargo",
+          path: "",
+          subchapters: [],
+          requiredReadingTimeInMinute: 8,
         },
         {
           id: "",

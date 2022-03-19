@@ -10,6 +10,7 @@ SyntaxHighlighter.registerLanguage("javascript", js);
 type Props = {
   showLineNumbers?: boolean;
 };
+
 const JavaScriptFormatter: React.FC<Props> = ({
   showLineNumbers = true,
   children,

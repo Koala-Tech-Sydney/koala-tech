@@ -79,13 +79,6 @@ const Setup = () => {
         height="232"
         width="775"
       />
-      <Subtitle2>Material Icon Theme</Subtitle2>
-      <Image
-        src="/images/vscode/extensions/vscode-extension-material-icon-theme.png"
-        alt="Visual Studio Code Material Icon Theme extension"
-        height="228"
-        width="735"
-      />
       <Subtitle2>Simple React Snippets</Subtitle2>
       <Image
         src="/images/vscode/extensions/vscode-extension-simple-react-snippets.png"
