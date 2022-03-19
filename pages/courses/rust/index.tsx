@@ -1,7 +1,28 @@
 import useCourse, { Course } from "../../../hooks/useCourse";
 import Home from "../../../components/Course/Home";
 
-const courseDescription = "[TODO]";
+const courseDescription = (
+  <>
+    Rust is a general-purpose language focusing on speed, safety and
+    concurrency. It is as fast as some lower-level languages like C++ while
+    providing features from both lower-level languages and higher-level
+    languages.
+    <br />
+    <br />
+    It is also suitable for people who are interested in learning about system
+    programming. Many people have learned about topics like operating systems
+    development through Rust.
+    <br />
+    <br />
+    Another thing that makes Rust a very interesting language to learn is it
+    doesn’t have garbage collection, instead, there’s the concept of ownership.
+    However, this unique characteristic also makes it a harder language to learn
+    for people who have just started learning programming, therefore, it’s not
+    recommended to choose Rust as your first programming language. For
+    programmers with more experience though, Rust is an amazing language to
+    learn.
+  </>
+);
 
 let rustCourse: Course = {
   name: "Rust",

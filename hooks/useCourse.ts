@@ -4,7 +4,7 @@ export type Course = {
   baseURI: string;
   name: string;
   units: Unit[];
-  description: string;
+  description: string | JSX.Element;
 };
 
 // A unit consists of a number of chapters and it doesn't have a particular page,
