@@ -153,31 +153,6 @@ let x: f32 = 1.5;`}</RustFormatter>
         showLineNumbers={false}
       >{`let x = true; // equivalent to let x: bool = false;
 let x = false;`}</RustFormatter>
-      <SubChapter name="Tuple" />
-      <Paragraph>A tuple in Rust can store a collection of values.</Paragraph>
-      <RustFormatter
-        showLineNumbers={false}
-      >{`let tup: (i32, f64, u8) = (500, 6.4, 1);`}</RustFormatter>
-      <Paragraph>
-        You can access each individual value within a tuple using the dot
-        notation.
-      </Paragraph>
-      <RustFormatter
-        showLineNumbers={false}
-      >{`let tup = (20, 25, 50, (1, 5, 3), true, "Rust");
-println!("{}", tup.4); // true
-println!("{}", (tup.3).2); // 3`}</RustFormatter>
-      <Paragraph>
-        You can assign values inside a tuple to multiple variables at once.
-      </Paragraph>
-      <RustFormatter showLineNumbers={false}>{`let tup = (20, 25, 40);
-let (a, b, c) = tup;`}</RustFormatter>
-      <Paragraph>
-        If you want to ignore some of the values, you can assign them to _.
-      </Paragraph>
-      <RustFormatter
-        showLineNumbers={false}
-      >{`let (_, _, c) = tup;`}</RustFormatter>
     </Chapter>
   );
 };

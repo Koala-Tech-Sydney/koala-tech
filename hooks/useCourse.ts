@@ -83,7 +83,11 @@ const getChapterPath = (name: string, basePath: string): string => {
 };
 
 const normalizePathName = (pathname: string) => {
-  return pathname.toLowerCase().replace(/ /g, "-").replace(/\?/g, "");
+  return pathname
+    .toLowerCase()
+    .replace(/ /g, "-")
+    .replace(/\?/g, "")
+    .replace(/\,/g, "");
 };
 
 export { useCourse as default, normalizePathName };
