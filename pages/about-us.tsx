@@ -19,7 +19,7 @@ const tutorList = [
       "Don't focus on your goal, instead, focus on the building blocks of your goal.",
     longDescription: (
       <SmallText>
-        When I started learning to code, I found coding hard because
+        When I first started learning how to code, I found coding hard because
         understanding those new concepts aren&apos;t easy.
         <br />
         <br />

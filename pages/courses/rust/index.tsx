@@ -14,7 +14,7 @@ const courseDescription = (
     development through Rust.
     <br />
     <br />
-    Another thing that makes Rust a very interesting language to learn is it
+    Another aspect that makes Rust a very interesting language to learn is it
     doesn’t have garbage collection, instead, there’s the concept of ownership.
     However, this unique characteristic also makes it a harder language to learn
     for people who have just started learning programming, therefore, it’s not
@@ -58,22 +58,15 @@ let rustCourse: Course = {
           id: "",
           name: "Variable",
           path: "",
-          subchapters: [],
-          requiredReadingTimeInMinute: 5,
-        },
-        {
-          id: "",
-          name: "Tuple",
-          path: "",
-          subchapters: [],
-          requiredReadingTimeInMinute: 5,
-        },
-        {
-          id: "",
-          name: "String",
-          path: "",
-          subchapters: [],
-          requiredReadingTimeInMinute: 5,
+          subchapters: [
+            { id: "", name: "Integer", path: "" },
+            { id: "", name: "Float", path: "" },
+            { id: "", name: "Char", path: "" },
+            { id: "", name: "Boolean", path: "" },
+            { id: "", name: "String", path: "" },
+            { id: "", name: "Tuple", path: "" },
+          ],
+          requiredReadingTimeInMinute: 6,
         },
         {
           id: "",
