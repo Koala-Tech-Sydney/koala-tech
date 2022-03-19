@@ -31,7 +31,7 @@ let rustCourse: Course = {
           name: "Cargo",
           path: "",
           subchapters: [],
-          requiredReadingTimeInMinute: 6,
+          requiredReadingTimeInMinute: 8,
         },
         {
           id: "",
