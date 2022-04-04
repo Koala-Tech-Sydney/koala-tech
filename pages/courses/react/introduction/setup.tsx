@@ -4,7 +4,9 @@ import {
   Subtitle1,
   Subtitle2,
   Paragraph,
+  FeaturedText,
   Hyperlink,
+  HotKey,
 } from "../../../../components/Text/Text";
 
 import Chapter from "../../../../components/Course/Chapter";
@@ -35,9 +37,9 @@ const Setup = () => {
         extensions to make your coding journey MUCH easier!
         <br />
         <br />
-        Open VS Code, there is a tab called the &apos;Extensions&apos; in the
-        left bar. You can use the search bar here to search for extensions that
-        you need.
+        Open VS Code, there is a tab called the{" "}
+        <FeaturedText>Extensions</FeaturedText> in the left bar. You can use the
+        search bar here to search for extensions that you need.
       </Paragraph>
       <Image
         src="/images/vscode/extensions/vscode-extension.png"
@@ -56,11 +58,12 @@ const Setup = () => {
         width="774"
       />
       <Paragraph>
-        After that, go to &apos;Settings&apos; and search for the keyword
-        &apos;format&apos;. Then select Prettier as your default formatter and
-        turn on the &apos;Format On Save&apos; option. Once you have done that,
-        every time you write some code, you can hold Ctrl + S (Windows) or
-        Command + X (Mac), then VS Code will format the code for you.
+        After that, go to <FeaturedText>Settings</FeaturedText> and search for the keyword{" "}
+        <FeaturedText>format</FeaturedText>. Then select Prettier as your
+        default formatter and turn on the <FeaturedText>Format On Save</FeaturedText> option.
+        Once you have done that, every time you write some code, you can hold{" "}
+        <HotKey>Ctrl + S</HotKey> (Windows) or <HotKey>Command + X</HotKey>{" "}
+        (Mac), then VS Code will format the code for you.
       </Paragraph>
       <Image
         src="/images/courses/react/setup/prettier-setting.png"
@@ -96,7 +99,7 @@ const Setup = () => {
       <Subtitle2>Material Icon Theme</Subtitle2>
       <Paragraph>
         This is optional, it prepends a material icon for each filename shown in
-        the &apos;Explorer&apos; tab in VS Code.
+        the <FeaturedText>Explorer</FeaturedText> tab in VS Code.
       </Paragraph>
       <Image
         src="/images/courses/react/setup/material-icon-theme.png"

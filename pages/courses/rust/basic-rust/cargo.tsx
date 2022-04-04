@@ -69,7 +69,7 @@ $ cd hello-world`}</ShellFormatter>
       />
       <Paragraph>
         Open up Cargo.toml. The section starting with the line [package] are
-        statements for configuring a package. The last line [dependencies] is
+        statements foor configuring a package. The last line [dependencies] is
         the start of a section for you to list any crates (packages of Rust
         code) that your project will depend on so that Cargo knows to download
         and compile those. We won&apos;t need any crates for this Hello World

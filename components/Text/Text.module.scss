@@ -60,6 +60,20 @@
   }
 }
 
+.featured_text {
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.1rem 0.25rem;
+  margin: 1rem 0;
+  border-radius: 0.3rem;
+  letter-spacing: 1px;
+  background-color: #71c21b;
+
+  @media (max-width: 600px) {
+    font-size: 0.5rem;
+  }
+}
+
 .hyperlink {
   word-break: break-all;
   text-decoration: none;
@@ -73,4 +87,16 @@
 .hyperlink:hover {
   color: var(--color-secondary);
   border-bottom: 1px solid red;
+}
+
+.hotkey {
+  font-size: 0.8rem;
+  padding: 0.1rem 0.25rem;
+  font-weight: 400;
+  background-color: grey;
+  border-radius: 0.3rem;
+
+  @media (max-width: 600px) {
+    font-size: 0.5rem;
+  }
 }

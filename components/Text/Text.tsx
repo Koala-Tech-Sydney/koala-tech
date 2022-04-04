@@ -25,11 +25,22 @@ type SmallTextProps = {
   className?: string;
 };
 
-const SmallText: React.FC<SmallTextProps> = (props) => {
+const SmallText: React.FC<SmallTextProps> = ({ className, children }) => {
   const smallTextClassName = `${styles.small_text} ${
-    !!props.className ? props.className : ""
+    !!className ? className : ""
   }`;
-  return <div className={smallTextClassName}>{props.children}</div>;
+  return <div className={smallTextClassName}>{children}</div>;
+};
+
+type FeaturedTextProps = {
+  className?: string;
+};
+
+const FeaturedText: React.FC<FeaturedTextProps> = ({ className, children }) => {
+  const featuredTextClassName = `${styles.featured_text} ${
+    !!className ? className : ""
+  }`;
+  return <span className={featuredTextClassName}>{children}</span>;
 };
 
 interface HyperlinkProps {
@@ -49,6 +60,15 @@ const Hyperlink: React.FC<HyperlinkProps> = ({ href, children }) => {
   );
 };
 
+type HotKeyProps = {
+  className?: string;
+};
+
+const HotKey: React.FC<HotKeyProps> = ({ className, children }) => {
+  const hotKeyClassName = `${styles.hotkey} ${!!className ? className : ""}`;
+  return <span className={hotKeyClassName}>{children}</span>;
+};
+
 export {
   Title,
   Subtitle1,
@@ -56,5 +76,7 @@ export {
   Subtitle3,
   Paragraph,
   SmallText,
+  FeaturedText,
   Hyperlink,
+  HotKey,
 };

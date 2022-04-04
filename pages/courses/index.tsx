@@ -8,7 +8,7 @@ const courseList = [
     path: "/courses/react",
     imgPath: "/images/courses/react/react-course.jpg",
     description:
-      "A state of the art JavaScript framework for building fast and interactive applications.",
+      "A state of the art JavaScript framework developed by Meta (Facebook) for building fast and interactive applications.",
   },
   {
     name: "Blockchain",
