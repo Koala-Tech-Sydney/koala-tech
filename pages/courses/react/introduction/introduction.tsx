@@ -2,6 +2,7 @@ import Image from "next/image";
 
 import JavaScriptFormatter from "../../../../components/Formatter/JavaScriptFormatter";
 import Chapter from "../../../../components/Course/Chapter";
+import SubChapter from "../../../../components/Course/SubChapter";
 
 import {
   Subtitle1,
@@ -9,7 +10,7 @@ import {
   Subtitle3,
   Paragraph,
   Hyperlink,
-  HotKey
+  HotKey,
 } from "../../../../components/Text/Text";
 import { reactCourse } from "..";
 
@@ -17,19 +18,20 @@ const Introduction = () => {
   return (
     <Chapter course={reactCourse}>
       <Paragraph>
-        In this section, you will learn how to create a new React app for each
-        chapter later in the course and take a glance at the structure of a
-        React project.
+        In this section, you will learn briefly about what is React, how to
+        create a new React app for each chapter later in the course and take a
+        glance at the structure of a React project.
       </Paragraph>
-      <Subtitle1>Create React App</Subtitle1>
+      <SubChapter name="What is React?" />
+      <SubChapter name="Create React App" />
       <Paragraph>
         <Hyperlink href="https://create-react-app.dev/">
           Create React App
         </Hyperlink>{" "}
-        is a tool developed by Facebook, it is one of the best way to create a
+        is a tool developed by Facebook, it is one of the best ways to create a
         new React application. It sets up the development environment with the
         latest JavaScript features enabled and provides a great developer
-        experience with all the features it provided out of the box.
+        experience with all the features it provides out of the box.
       </Paragraph>
       <JavaScriptFormatter>{`npx create-react-app your-app-name
 cd your-app-name
@@ -55,7 +57,7 @@ npm start // spin up the local server for your react application`}</JavaScriptFo
         Now you have successfully run your first React app, we will take some
         time to understand how the code creates this application.
       </Paragraph>
-      <Subtitle1>Project Structure</Subtitle1>
+      <SubChapter name="Project Structure" />
       <Paragraph>
         Often, I find it helpful to study the project structure of a framework
         before learning it, we will introduce the most important files and
@@ -72,7 +74,7 @@ npm start // spin up the local server for your react application`}</JavaScriptFo
       <Paragraph>
         The single html file that gets served to the client&apos;s browser along
         with a lot of JavaScript files and other resources once the browser
-        sends a GET request to our server. Once the browser received this html
+        sends a GET request to our server. Once the browser receives this html
         file, it will render it and then run the JavaScript code to inject all
         our React components to the div with id=&quot;root&quot;.
       </Paragraph>
@@ -107,7 +109,7 @@ npm start // spin up the local server for your react application`}</JavaScriptFo
         called JSX, it works here because React does additional transformation
         work to turn them into JavaScript function calls before the JavaScript
         is run. These special html-style tags are also known as React
-        components, you can consider an React component to be one part of a
+        components, you can consider a React component to be one part of a
         webpage and a webpage is formed by combining many React components.
       </Paragraph>
       <JavaScriptFormatter showLineNumbers={false}>{`<React.StrictMode>
@@ -119,8 +121,8 @@ npm start // spin up the local server for your react application`}</JavaScriptFo
       </Paragraph>
       <Paragraph>
         If you look at the JavaScript source code on the browser side, you can
-        see the html App tag above get transformed into the following JavaScript
-        function call before getting served to the browser.
+        see the html App tag above gets transformed into the following
+        JavaScript function call before getting served to the browser.
       </Paragraph>
       <Image
         src="/images/courses/react/introduction/jsx-source.png"
@@ -134,12 +136,12 @@ npm start // spin up the local server for your react application`}</JavaScriptFo
         to the console if there are warnings to report.
       </Paragraph>
       <Paragraph>
-        &lt;App&gt; is the component created by create-react-app for you, it
+        &lt;App&gt; is the component created by create-react-app for you. It
         acts as the root component of your React app to be rendered within the
         root div we mentioned above.
       </Paragraph>
       <Image
-        src="/imagePs/courses/react/introduction/inspector.png"
+        src="/images/courses/react/introduction/inspector.png"
         alt="Inspecting the root div and the App Component"
         height="124"
         width="460"
