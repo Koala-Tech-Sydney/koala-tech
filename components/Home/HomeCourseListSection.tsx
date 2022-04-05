@@ -8,7 +8,7 @@ const CourseList = () => {
   const imgLink2 = "/images/courses/blockchain/blockchain-course.png";
   const imgLink3 = "/images/courses/comingSoon.jpg";
   const description1 =
-    "A state of the art JavaScript framework for building fast and interactive applications.";
+    "A state of the art JavaScript framework developed by Meta (Facebook) for building fast and interactive applications.";
   const description2 =
     "Blockchain technologies are used for building a world of more trust and freedom.";
   const description3 = "...";

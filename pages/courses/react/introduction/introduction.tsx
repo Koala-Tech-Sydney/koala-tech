@@ -9,6 +9,7 @@ import {
   Subtitle3,
   Paragraph,
   Hyperlink,
+  HotKey
 } from "../../../../components/Text/Text";
 import { reactCourse } from "..";
 
