@@ -1,16 +1,9 @@
 import Image from "next/image";
 
-import JavaScriptFormatter from "../../../../components/Formatter/JavaScriptFormatter";
+import ReactFormatter from "../../../../components/Formatter/ReactFormatter";
 import ShellFormatter from "../../../../components/Formatter/ShellFormatter";
 import Chapter from "../../../../components/Course/Chapter";
-import {
-  Subtitle2,
-  Subtitle3,
-  Paragraph,
-  Hyperlink,
-  FeaturedText,
-} from "../../../../components/Text/Text";
-import SubChapter from "../../../../components/Course/SubChapter";
+import { Paragraph } from "../../../../components/Text/Text";
 import { reactCourse } from "..";
 import Link from "next/link";
 
@@ -47,7 +40,7 @@ $ npm start # spin up the local server for your react application`}</ShellFormat
       <Paragraph>
         Replace the content of public/index.html by the following.
       </Paragraph>
-      <JavaScriptFormatter>{`<!DOCTYPE html>
+      <ReactFormatter>{`<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -57,20 +50,20 @@ $ npm start # spin up the local server for your react application`}</ShellFormat
   <body>
     <div id="root"></div>
   </body>
-</html>`}</JavaScriptFormatter>
+</html>`}</ReactFormatter>
       <Paragraph>Replace the content of src/App.js by the following.</Paragraph>
-      <JavaScriptFormatter>{`function App() {
+      <ReactFormatter>{`function App() {
    return (
      <div>
      </div>
    );
  }
   
- export default App;`}</JavaScriptFormatter>
+ export default App;`}</ReactFormatter>
       <Paragraph>
         Replace the content of src/index.js by the following.
       </Paragraph>
-      <JavaScriptFormatter>{`import React from 'react';
+      <ReactFormatter>{`import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
@@ -80,7 +73,7 @@ ReactDOM.render(
     <App />
   </React.StrictMode>,
   document.getElementById('root')
-);`}</JavaScriptFormatter>
+);`}</ReactFormatter>
       <Paragraph>
         Last but not least, delete all the content in src/index.css.
       </Paragraph>

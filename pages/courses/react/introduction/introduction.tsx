@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import JavaScriptFormatter from "../../../../components/Formatter/JavaScriptFormatter";
+import ReactFormatter from "../../../../components/Formatter/ReactFormatter";
 import ShellFormatter from "../../../../components/Formatter/ShellFormatter";
 import Chapter from "../../../../components/Course/Chapter";
 import {
@@ -21,7 +21,7 @@ const Introduction = () => {
         create a new React app for each chapter later in the course and take a
         glance at the structure of a React project.
       </Paragraph>
-    <SubChapter name="What is React?" />
+      <SubChapter name="What is React?" />
       <Paragraph>
         React is a frontend framework for creating Single Page Apps (SPA).
       </Paragraph>
@@ -104,9 +104,9 @@ $ npm start # spin up the local server for your react application`}</ShellFormat
         file, it will render it and then run the JavaScript code to inject all
         our React components to the div with id=&quot;root&quot;.
       </Paragraph>
-      <JavaScriptFormatter
+      <ReactFormatter
         showLineNumbers={false}
-      >{`<div id="root"></div>`}</JavaScriptFormatter>
+      >{`<div id="root"></div>`}</ReactFormatter>
       <Subtitle2>src</Subtitle2>
       <Subtitle3>src/index.js</Subtitle3>
       <Paragraph>
@@ -115,21 +115,21 @@ $ npm start # spin up the local server for your react application`}</ShellFormat
         to the DOM under the div with id=&quot;root&quot; which is defined in
         public/index.html.
       </Paragraph>
-      <JavaScriptFormatter showLineNumbers={false}>{`ReactDOM.render(
+      <ReactFormatter showLineNumbers={false}>{`ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
   document.getElementById('root')
-);`}</JavaScriptFormatter>
+);`}</ReactFormatter>
       <Paragraph>
         You may notice there&apos;s a CSS file import statement, which is
         impossible in normal JavaScript, it works because React does additional
         work under the hood to make this CSS file available globally in the
         browser.
       </Paragraph>
-      <JavaScriptFormatter
+      <ReactFormatter
         showLineNumbers={false}
-      >{`import './index.css';`}</JavaScriptFormatter>
+      >{`import './index.css';`}</ReactFormatter>
       <Paragraph>
         You may also notice the following html-style code, this is a syntax
         called JSX, it works here because React does additional transformation
@@ -139,9 +139,9 @@ $ npm start # spin up the local server for your react application`}</ShellFormat
         webpage and a webpage is formed by combining many React components, e.g.
         a navigation bar on the top of the website is a component.
       </Paragraph>
-      <JavaScriptFormatter showLineNumbers={false}>{`<React.StrictMode>
+      <ReactFormatter showLineNumbers={false}>{`<React.StrictMode>
   <App />
-</React.StrictMode>`}</JavaScriptFormatter>
+</React.StrictMode>`}</ReactFormatter>
       <Paragraph>
         Don&apos;t worry if you don&apos;t understand how this transformation
         works yet, you will soon be introduced to this concept later in this
