@@ -30,7 +30,14 @@ let reactCourse: Course = {
             { id: "", name: "Create React App", path: "" },
             { id: "", name: "Project Structure", path: "" },
           ],
-          requiredReadingTimeInMinute: 15,
+          requiredReadingTimeInMinute: 6,
+        },
+        {
+          id: "",
+          name: "Preparing a starter project",
+          path: "",
+          subchapters: [],
+          requiredReadingTimeInMinute: 3,
         },
         {
           id: "",

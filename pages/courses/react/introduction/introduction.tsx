@@ -17,11 +17,11 @@ const Introduction = () => {
   return (
     <Chapter course={reactCourse}>
       <Paragraph>
-        In this section, you will learn briefly about what is React, how to
+        In this chapter, you will learn briefly about what is React, how to
         create a new React app for each chapter later in the course and take a
         glance at the structure of a React project.
       </Paragraph>
-      <SubChapter name="What is React?" />
+    <SubChapter name="What is React?" />
       <Paragraph>
         React is a frontend framework for creating Single Page Apps (SPA).
       </Paragraph>
@@ -39,15 +39,15 @@ const Introduction = () => {
         In a SPA, when the client browser visits the website the first time, the
         server only needs to send a single html page to the client browser once
         and then React takes over and manages the whole website in the browser.
-        No additional requests are required to be sent to the server when you’re
-        visiting another webpage under the same website. That is done by sending
-        index.html along with a compiled React.js bundle which controls the
-        whole application to the client browser in the first request. React
-        injects content into index.html dynamically using the JavaScript code
-        coming from the bundle, when the user clicks on a URL to send a request
-        for a webpage, React steps in and intercepts that request from going to
-        the server and updates the DOM directly using JavaScript to show the
-        content in another route to the user.
+        No additional requests are required to be sent to the server when
+        you&apos;re visiting another webpage under the same website. That is
+        done by sending index.html along with a compiled React.js bundle which
+        controls the whole application to the client browser in the first
+        request. React injects content into index.html dynamically using the
+        JavaScript code coming from the bundle, when the user clicks on a URL to
+        send a request for a webpage, React steps in and intercepts that request
+        from going to the server and updates the DOM directly using JavaScript
+        to show the content in another route to the user.
       </Paragraph>
       <SubChapter name="Create React App" />
       <Paragraph>
