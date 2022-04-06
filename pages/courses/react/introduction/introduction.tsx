@@ -1,17 +1,16 @@
 import Image from "next/image";
 
 import JavaScriptFormatter from "../../../../components/Formatter/JavaScriptFormatter";
+import ShellFormatter from "../../../../components/Formatter/ShellFormatter";
 import Chapter from "../../../../components/Course/Chapter";
-import SubChapter from "../../../../components/Course/SubChapter";
-
 import {
-  Subtitle1,
   Subtitle2,
   Subtitle3,
   Paragraph,
   Hyperlink,
-  HotKey,
+  FeaturedText,
 } from "../../../../components/Text/Text";
+import SubChapter from "../../../../components/Course/SubChapter";
 import { reactCourse } from "..";
 
 const Introduction = () => {
@@ -23,6 +22,33 @@ const Introduction = () => {
         glance at the structure of a React project.
       </Paragraph>
       <SubChapter name="What is React?" />
+      <Paragraph>
+        React is a frontend framework for creating Single Page Apps (SPA).
+      </Paragraph>
+      <Paragraph>
+        In a normal web application, when we visit a new URL, let&apos;s say{" "}
+        <FeaturedText>https://koala-techs.com</FeaturedText>, the client browser
+        sends a GET request to the server that is hosting this website to
+        retrieve the content of this webpage to show to the user. Later when we
+        access an URL under this website let&apos;s say{" "}
+        <FeaturedText>https://koala-techs.com/about-us</FeaturedText>, the
+        client browser again sends another request to the server to retrieve the
+        content of this webpage.
+      </Paragraph>
+      <Paragraph>
+        In a SPA, when the client browser visits the website the first time, the
+        server only needs to send a single html page to the client browser once
+        and then React takes over and manages the whole website in the browser.
+        No additional requests are required to be sent to the server when you’re
+        visiting another webpage under the same website. That is done by sending
+        index.html along with a compiled React.js bundle which controls the
+        whole application to the client browser in the first request. React
+        injects content into index.html dynamically using the JavaScript code
+        coming from the bundle, when the user clicks on a URL to send a request
+        for a webpage, React steps in and intercepts that request from going to
+        the server and updates the DOM directly using JavaScript to show the
+        content in another route to the user.
+      </Paragraph>
       <SubChapter name="Create React App" />
       <Paragraph>
         <Hyperlink href="https://create-react-app.dev/">
@@ -33,9 +59,9 @@ const Introduction = () => {
         latest JavaScript features enabled and provides a great developer
         experience with all the features it provides out of the box.
       </Paragraph>
-      <JavaScriptFormatter>{`npx create-react-app your-app-name
-cd your-app-name
-npm start // spin up the local server for your react application`}</JavaScriptFormatter>
+      <ShellFormatter>{`$ npx create-react-app your-app-name
+$ cd your-app-name
+$ npm start # spin up the local server for your react application`}</ShellFormatter>
       <Paragraph>
         After the commands above run successfully, the following browser page
         would pop up, this is a starter React app created by create-react-app.
@@ -60,7 +86,7 @@ npm start // spin up the local server for your react application`}</JavaScriptFo
       <SubChapter name="Project Structure" />
       <Paragraph>
         Often, I find it helpful to study the project structure of a framework
-        before learning it, we will introduce the most important files and
+        before learning it. We will introduce the most important files and
         folders in a React project. You do not need to know them by heart for
         now, merely be aware of their existence and understand a little bit of
         their purposes can help you a lot in learning React.
@@ -110,14 +136,16 @@ npm start // spin up the local server for your react application`}</JavaScriptFo
         work to turn them into JavaScript function calls before the JavaScript
         is run. These special html-style tags are also known as React
         components, you can consider a React component to be one part of a
-        webpage and a webpage is formed by combining many React components.
+        webpage and a webpage is formed by combining many React components, e.g.
+        a navigation bar on the top of the website is a component.
       </Paragraph>
       <JavaScriptFormatter showLineNumbers={false}>{`<React.StrictMode>
   <App />
 </React.StrictMode>`}</JavaScriptFormatter>
       <Paragraph>
         Don&apos;t worry if you don&apos;t understand how this transformation
-        works yet, I will soon explain it to you later in this unit.
+        works yet, you will soon be introduced to this concept later in this
+        unit.
       </Paragraph>
       <Paragraph>
         If you look at the JavaScript source code on the browser side, you can
