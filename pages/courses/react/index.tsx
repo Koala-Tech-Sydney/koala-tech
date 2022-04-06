@@ -25,7 +25,11 @@ let reactCourse: Course = {
           id: "",
           name: "Introduction",
           path: "",
-          subchapters: [],
+          subchapters: [
+            { id: "", name: "What is React?", path: "" },
+            { id: "", name: "Create React App", path: "" },
+            { id: "", name: "Project Structure", path: "" },
+          ],
           requiredReadingTimeInMinute: 15,
         },
         {
