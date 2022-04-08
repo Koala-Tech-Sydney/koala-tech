@@ -54,28 +54,9 @@ let blockchainCourse: Course = {
         },
       ],
     },
-    {
-      id: "",
-      name: "Solidity Basic Bootcamp",
-      chapters: [],
-    },
-    {
-      id: "",
-      name: "Solidity Intermediate Bootcamp",
-      chapters: [],
-    },
-    {
-      id: "",
-      name: "Solidity Advanced Bootcamp",
-      chapters: [],
-    },
-    {
-      id: "",
-      name: "Solidity Mastery Bootcamp",
-      chapters: [],
-    },
   ],
-  description: "Block Chain course description ...",
+  description:
+    "Building blockchain applications is building a world with more freedom and accountability.",
 };
 
 const BlockchainCourseHome = () => {
