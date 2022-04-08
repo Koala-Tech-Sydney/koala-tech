@@ -9,6 +9,7 @@ import {
   Paragraph,
   Hyperlink,
   FeaturedText,
+  HotKey,
 } from "../../../../components/Text/Text";
 import SubChapter from "../../../../components/Course/SubChapter";
 import { reactCourse } from "..";
@@ -102,7 +103,8 @@ $ npm start # spin up the local server for your react application`}</ShellFormat
         with a lot of JavaScript files and other resources once the browser
         sends a GET request to our server. Once the browser receives this html
         file, it will render it and then run the JavaScript code to inject all
-        our React components to the div with id=&quot;root&quot;.
+        our React components to the div with{" "}
+        <FeaturedText>id=&quot;root&quot;</FeaturedText>.
       </Paragraph>
       <ReactFormatter
         showLineNumbers={false}
@@ -112,8 +114,9 @@ $ npm start # spin up the local server for your react application`}</ShellFormat
       <Paragraph>
         This is the first JavaScript file to be run by the browser, it is
         responsible for rendering all of the React components (i.e. HTML nodes)
-        to the DOM under the div with id=&quot;root&quot; which is defined in
-        public/index.html.
+        to the DOM under the div with{" "}
+        <FeaturedText>id=&quot;root&quot;</FeaturedText> which is defined in{" "}
+        <FeaturedText>public/index.html</FeaturedText>.
       </Paragraph>
       <ReactFormatter showLineNumbers={false}>{`ReactDOM.render(
   <React.StrictMode>
@@ -159,14 +162,15 @@ $ npm start # spin up the local server for your react application`}</ShellFormat
         width="988"
       />
       <Paragraph>
-        &lt;React.StrictMode&gt; is a built-in component added by some people to
-        ask React to do additional checks during development, and send warnings
-        to the console if there are warnings to report.
+        <FeaturedText>&lt;React.StrictMode&gt;</FeaturedText> is a built-in
+        component added by some people to ask React to do additional checks
+        during development, and send warnings to the console if there are
+        warnings to report.
       </Paragraph>
       <Paragraph>
-        &lt;App&gt; is the component created by create-react-app for you. It
-        acts as the root component of your React app to be rendered within the
-        root div we mentioned above.
+        <FeaturedText>&lt;App&gt;</FeaturedText> is the component created by
+        create-react-app for you. It acts as the root component of your React
+        app to be rendered within the root div we mentioned above.
       </Paragraph>
       <Image
         src="/images/courses/react/introduction/inspector.png"
@@ -180,8 +184,8 @@ $ npm start # spin up the local server for your react application`}</ShellFormat
       </Paragraph>
       <Subtitle2>package.json</Subtitle2>
       <Paragraph>
-        This lists all of the dependencies, in which you can run `npm install`
-        to install all of them.
+        This lists all of the dependencies, in which you can run{" "}
+        <HotKey>npm install</HotKey> to install all of them.
       </Paragraph>
       <Subtitle2>package-lock.json</Subtitle2>
       <Paragraph>

@@ -3,7 +3,7 @@ import Image from "next/image";
 import ReactFormatter from "../../../../components/Formatter/ReactFormatter";
 import ShellFormatter from "../../../../components/Formatter/ShellFormatter";
 import Chapter from "../../../../components/Course/Chapter";
-import { Paragraph } from "../../../../components/Text/Text";
+import { Paragraph, FeaturedText } from "../../../../components/Text/Text";
 import { reactCourse } from "..";
 import Link from "next/link";
 
@@ -38,7 +38,8 @@ $ npm start # spin up the local server for your react application`}</ShellFormat
         width="232"
       />
       <Paragraph>
-        Replace the content of public/index.html by the following.
+        Replace the content of <FeaturedText>public/index.html</FeaturedText> by
+        the following.
       </Paragraph>
       <ReactFormatter>{`<!DOCTYPE html>
 <html lang="en">
@@ -51,7 +52,7 @@ $ npm start # spin up the local server for your react application`}</ShellFormat
     <div id="root"></div>
   </body>
 </html>`}</ReactFormatter>
-      <Paragraph>Replace the content of src/App.js by the following.</Paragraph>
+      <Paragraph>Replace the content of <FeaturedText>src/App.js</FeaturedText> by the following.</Paragraph>
       <ReactFormatter>{`function App() {
    return (
      <div>
@@ -61,7 +62,7 @@ $ npm start # spin up the local server for your react application`}</ShellFormat
   
  export default App;`}</ReactFormatter>
       <Paragraph>
-        Replace the content of src/index.js by the following.
+        Replace the content of <FeaturedText>src/index.js</FeaturedText> by the following.
       </Paragraph>
       <ReactFormatter>{`import React from 'react';
 import ReactDOM from 'react-dom';
@@ -75,7 +76,7 @@ ReactDOM.render(
   document.getElementById('root')
 );`}</ReactFormatter>
       <Paragraph>
-        Last but not least, delete all the content in src/index.css.
+        Last but not least, delete all the content in <FeaturedText>src/index.css</FeaturedText>.
       </Paragraph>
       <Paragraph>
         Congratulations! You now have a brand new React project to start playing
