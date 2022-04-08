@@ -99,7 +99,29 @@ let reactCourse: Course = {
     {
       id: "",
       name: "Styling",
-      chapters: [],
+      chapters: [
+        {
+          id: "",
+          name: "Inline Styles",
+          path: "",
+          subchapters: [],
+          requiredReadingTimeInMinute: 4,
+        },
+        {
+          id: "",
+          name: "Component Styles",
+          path: "",
+          subchapters: [],
+          requiredReadingTimeInMinute: 7,
+        },
+        {
+          id: "",
+          name: "Global Styles",
+          path: "",
+          subchapters: [],
+          requiredReadingTimeInMinute: 7,
+        },
+      ],
     },
   ],
   description: courseDescription,
