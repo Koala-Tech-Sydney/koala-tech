@@ -18,6 +18,13 @@ const courseList = [
       "Blockchain technologies are used for building a world of more trust and freedom.",
   },
   {
+    name: "Solidity",
+    path: "/courses/solidity",
+    imgPath: "/images/courses/solidity/solidity-course.png",
+    description:
+      "Solidity is a language for writing smart contracts on the Ethereum blockchain.",
+  },
+  {
     name: "Rust",
     path: "/courses/rust",
     imgPath: "/images/courses/rust/rust.png",
