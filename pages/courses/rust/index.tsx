@@ -31,7 +31,6 @@ let rustCourse: Course = {
     {
       id: "",
       name: "Basic Rust",
-
       chapters: [
         {
           id: "",
@@ -174,7 +173,6 @@ let rustCourse: Course = {
     {
       id: "",
       name: "Intermediate Rust",
-
       chapters: [
         {
           id: "",
@@ -251,7 +249,6 @@ let rustCourse: Course = {
     {
       id: "",
       name: "Advanced Rust",
-
       chapters: [
         {
           id: "",
