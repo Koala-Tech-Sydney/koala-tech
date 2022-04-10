@@ -1,14 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import {
-  Subtitle1,
-  Subtitle2,
-  Paragraph,
-  Hyperlink,
-  HotKey,
-  FeaturedText,
-} from "../../../../components/Text/Text";
+import { Subtitle2, Paragraph } from "../../../../components/Text/Text";
 import Chapter from "../../../../components/Course/Chapter";
 import { solidityCourse } from "..";
 import SolidityFormatter from "../../../../components/Formatter/SolidityFormatter";
@@ -99,8 +92,15 @@ contract Storage {
       </Paragraph>
       <Paragraph>
         Currently, not all types for constants and immutables are implemented.
-        For example, the constant keyword supports only value types and string,
-        while the immutable keyword supports only value types.
+        For example, the constant keyword supports only{" "}
+        <Link href="/courses/solidity/basic-solidity/value-types">
+          value types
+        </Link>{" "}
+        and string, while the immutable keyword supports only{" "}
+        <Link href="/courses/solidity/basic-solidity/value-types">
+          value types
+        </Link>
+        .
       </Paragraph>
       <Subtitle2>Constant</Subtitle2>
       <Paragraph>

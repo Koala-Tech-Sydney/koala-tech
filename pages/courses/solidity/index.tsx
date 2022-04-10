@@ -37,7 +37,7 @@ let solidityCourse: Course = {
           name: "Value Types",
           path: "",
           subchapters: [],
-          requiredReadingTimeInMinute: 6,
+          requiredReadingTimeInMinute: 4,
         },
         {
           id: "",
