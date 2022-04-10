@@ -4,11 +4,11 @@ const title1 = "Simple";
 const title2 = "Depth";
 const title3 = "Practical";
 const paragraph1 =
-  "Koala use minimal example to demonstrate concepts. You no longer need to read or copy and paste tons of meaningless codes to learn a simple concept.";
+  "Koala use minimal examples to demonstrate concepts. You no longer need to read or copy and paste tons of over-complicated codes to learn a simple concept.";
 const paragraph2 =
-  "Koala use minimal example to demonstrate concepts. You no longer need to read or copy and paste tons of meaningless codes to learn a simple concept.";
+  "Koala go into each knowledge in depth if necessary, it teaches you not only how to use a tool, but also how to apply it using the best practices.";
 const paragraph3 =
-  "Koala use minimal example to demonstrate concepts. You no longer need to read or copy and paste tons of meaningless codes to learn a simple concept.";
+  "Koala think being practical is usually better than being over-theoretical, coding should be fun, so we provide practice exercises for you to get your hands dirty!";
 
 const Feature = (props: any) => {
   return (
