@@ -200,6 +200,19 @@ let solidityCourse: Course = {
         },
       ],
     },
+    {
+      id: "",
+      name: "Ethereum Virtual Machine",
+      chapters: [
+        {
+          id: "",
+          name: "How are addresses computed?",
+          path: "",
+          subchapters: [],
+          requiredReadingTimeInMinute: 13,
+        },
+      ],
+    },
   ],
   description: courseDescription,
 };
