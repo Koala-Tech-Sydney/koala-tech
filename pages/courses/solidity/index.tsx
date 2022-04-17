@@ -44,7 +44,7 @@ let solidityCourse: Course = {
           name: "Functions",
           path: "",
           subchapters: [],
-          requiredReadingTimeInMinute: 6,
+          requiredReadingTimeInMinute: 7,
         },
         {
           id: "",
@@ -90,6 +90,20 @@ let solidityCourse: Course = {
         },
         {
           id: "",
+          name: "Global Variables",
+          path: "",
+          subchapters: [],
+          requiredReadingTimeInMinute: 6,
+        },
+        {
+          id: "",
+          name: "Units",
+          path: "",
+          subchapters: [],
+          requiredReadingTimeInMinute: 6,
+        },
+        {
+          id: "",
           name: "What is ERC",
           path: "",
           subchapters: [],
@@ -117,14 +131,7 @@ let solidityCourse: Course = {
       chapters: [
         {
           id: "",
-          name: "Global Variables",
-          path: "",
-          subchapters: [],
-          requiredReadingTimeInMinute: 6,
-        },
-        {
-          id: "",
-          name: "Units",
+          name: "Free Functions",
           path: "",
           subchapters: [],
           requiredReadingTimeInMinute: 6,
@@ -190,6 +197,19 @@ let solidityCourse: Course = {
           path: "",
           subchapters: [],
           requiredReadingTimeInMinute: 6,
+        },
+      ],
+    },
+    {
+      id: "",
+      name: "Ethereum Virtual Machine",
+      chapters: [
+        {
+          id: "",
+          name: "How are addresses computed?",
+          path: "",
+          subchapters: [],
+          requiredReadingTimeInMinute: 13,
         },
       ],
     },

@@ -1,14 +1,4 @@
-import Image from "next/image";
-import Link from "next/link";
-
-import {
-  Subtitle1,
-  Subtitle2,
-  Paragraph,
-  Hyperlink,
-  HotKey,
-  FeaturedText,
-} from "../../../../components/Text/Text";
+import { Paragraph, FeaturedText } from "../../../../components/Text/Text";
 import Chapter from "../../../../components/Course/Chapter";
 import { solidityCourse } from "..";
 import SolidityFormatter from "../../../../components/Formatter/SolidityFormatter";
@@ -68,7 +58,9 @@ int256 b = int256(a);`}</SolidityFormatter>
         Solidity type system at compile-time. The difference between payable and
         non-payable addresses is gone in the compiled contract code.
       </Paragraph>
-      <SolidityFormatter showLineNumbers={false}>{`address koalaAddress = 0x5520ADf9bB6179fD1065d57Ea3b0d286BD9F3858;
+      <SolidityFormatter
+        showLineNumbers={false}
+      >{`address koalaAddress = 0x5520ADf9bB6179fD1065d57Ea3b0d286BD9F3858;
 address payable payableKoalaAddress = payable(0x5520ADf9bB6179fD1065d57Ea3b0d286BD9F3858);`}</SolidityFormatter>
       <Paragraph>
         address payable can be implicitly or explicitly cast to address, whereas
@@ -83,14 +75,18 @@ address payable payableKoalaAddress = payable(0x5520ADf9bB6179fD1065d57Ea3b0d286
         <FeaturedText>msg.sender</FeaturedText> will be yours or someone else’s
         account address respectively.
       </Paragraph>
-      <SolidityFormatter showLineNumbers={false}>{`address payable addr1 = payable(msg.sender);
+      <SolidityFormatter
+        showLineNumbers={false}
+      >{`address payable addr1 = payable(msg.sender);
 address addr2 = addr1;
 address addr3 = address(addr1);`}</SolidityFormatter>
       <Paragraph>
         Explicit conversions to and from address are allowed for uint160,
         integer literals, bytes20 and contract types.
       </Paragraph>
-      <SolidityFormatter showLineNumbers={false}>{`address addr1 = address(0x5520ADf9bB6179fD1065d57Ea3b0d286BD9F3858);
+      <SolidityFormatter
+        showLineNumbers={false}
+      >{`address addr1 = address(0x5520ADf9bB6179fD1065d57Ea3b0d286BD9F3858);
 address addr2 = address(131);`}</SolidityFormatter>
       <SubChapter name="Enum" />
       <Paragraph>
