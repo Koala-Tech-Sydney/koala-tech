@@ -26,7 +26,7 @@ const Footer = () => {
           uri={"https://github.com/fongchinghinunsw"}
         />
       </Stack>
-      <div>Copyright © 2022 · KoalaTech</div>
+      <div>Copyright © 2023 · KoalaTech</div>
     </footer>
   );
 };
